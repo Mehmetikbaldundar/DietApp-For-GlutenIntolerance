@@ -2,7 +2,6 @@
 using RevivalGF.Entites.Enums;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -10,11 +9,18 @@ using System.Threading.Tasks;
 
 namespace RevivalGF.Entites.Concrete
 {
-    public class BodyAnalysis : IBodyAnalysis, IBaseEntity
+    public class UserDetails : IUserDetails, IBaseEntity
     {
         [ForeignKey("User")]
-        public int AnalysisID { get; set; }
-        public decimal BodyMassIndex { get; set; }
+        public int DetailsID { get; set; }
+        public string Email { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public Gender Gender { get; set; }
+        public double Height { get; set; }
+        public double Weight { get; set; }
+        public GlutenIntolerance GlutenIntolerance { get; set; }
+        public DateTime BirthDate { get; set; }
         public User User { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? ModifiedDate { get; set; }

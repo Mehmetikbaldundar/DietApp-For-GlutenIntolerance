@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RevivalGF.Entites.Concrete
+namespace RevivalGF.Entites.Enums
 {
-    public class Food
+    public enum MealCategories
     {
     }
 }

@@ -8,5 +8,8 @@ namespace RevivalGF.Entites.Enums
 {
     public enum GlutenRisk
     {
+        None = 0,
+        LowRisk= 1,
+        HighRisk= 5,
     }
 }

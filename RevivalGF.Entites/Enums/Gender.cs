@@ -8,11 +8,7 @@ namespace RevivalGF.Entites.Enums
 {
     public enum Gender
     {
-
+        Man=1,
+        Woman,
     }
-    public enum Cinsiyet
-    {
-
-    }
-
 }

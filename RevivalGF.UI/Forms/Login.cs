@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace RevivalGF.UI.Forms
+
 {
     public partial class Login : Form
     {
@@ -16,6 +18,7 @@ namespace RevivalGF.UI.Forms
         {
             InitializeComponent();
         }
+
 
         private void pbNext_DoubleClick(object sender, EventArgs e)
         {
@@ -44,5 +47,6 @@ namespace RevivalGF.UI.Forms
         }
 
         #endregion
+
     }
 }

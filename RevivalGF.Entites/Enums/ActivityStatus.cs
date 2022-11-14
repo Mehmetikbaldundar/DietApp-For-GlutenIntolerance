@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace RevivalGF.Entites.Enums
 {
-    public enum MeauserementUnit
+    public enum ActivityStatus
     {
+        LightlyActive = 1,
+        ModeratelyActive,
+        Active,
+        VeryActive,
     }
 }

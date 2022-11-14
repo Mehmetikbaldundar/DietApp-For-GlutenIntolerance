@@ -13,13 +13,15 @@ namespace RevivalGF.Entites.Abstract
         int MealID { get; set; }
         string MealName { get; set; }
         string Recipe { get; set; }
-        float Calorie { get; set; }
-        float Carbonhydrade { get; set; }
-        float Fat { get; set; }
-        float Protein { get; set; }
-        int GlutenRisk { get; set; }
-        List<Food> Foods { get; set; }
+        decimal Calorie { get; set; }
+        decimal Carbonhydrade { get; set; }
+        decimal Fat { get; set; }
+        decimal Protein { get; set; }
+        decimal Gram { get; set; }
+        GlutenRisk GlutenRisk { get; set; }
+        int? AlternativeFoodID { get; set; }        
         int MealReportID { get; set; }
-        MealReport MealReport { get; set; }
+        MealReport MealReport { get; set; }   
+        MealCategories MealCategories { get; set; }
     }
 }

@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RevivalGF.DataAccess
+namespace RevivalGF.Entites.Enums
 {
-    public class Class1
+    public enum Repast
     {
+        Breakfast=1,
+        Lunch,
+        Dinner,
+        Snack,
     }
 }

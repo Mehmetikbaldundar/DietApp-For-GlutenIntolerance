@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace RevivalGF.Entites.Enums
 {
-    public enum TargetedDiet
+    public enum GlutenIntolerance
     {
-        LoseWeight=1,
-        MaintainWeight,
-        GainWeight,
+        None = 0,
+        GlutenIntolerance,
+        Celiac,
     }
 }

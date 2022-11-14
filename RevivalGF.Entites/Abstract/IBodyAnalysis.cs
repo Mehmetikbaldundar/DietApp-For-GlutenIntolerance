@@ -10,7 +10,7 @@ namespace RevivalGF.Entites.Abstract
     public interface IBodyAnalysis
     {
         int AnalysisID { get; set; }
-        float BodyMassIndex { get; set; }        
+        decimal BodyMassIndex { get; set; }        
         User User { get; set; }
     }
 }
