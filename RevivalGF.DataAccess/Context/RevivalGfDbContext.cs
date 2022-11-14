@@ -11,9 +11,11 @@ namespace RevivalGF.DataAccess.Context
 {
     public class RevivalGfDbContext : DbContext
     {
-        public RevivalGfDbContext() : base("Server=DESKTOP-IKBAL\\MSSQLSERVER2019;Database=NRM1-RevivalGfDb;Trusted_Connection=True;") //- DB LOKASYON -
+        public RevivalGfDbContext() : base("Server=DESKTOP-ORUQO20;Database=NRM1_DIET2;Trusted_Connection=True;") //- DB LOKASYON -
         {
             Database.SetInitializer(new CreateDatabaseIfNotExists<RevivalGfDbContext>()); // Default
+            
+                    
         }
         public DbSet<Activity> Activities { get; set; }
         public DbSet<BodyAnalysis> BodyAnalyses { get; set; }

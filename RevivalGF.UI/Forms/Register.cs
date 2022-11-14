@@ -17,103 +17,95 @@ namespace RevivalGF.UI.Forms
     {
         public Register()
         {
+            db = new RevivalGfDbContext();
             InitializeComponent();
         }
         private void Register_Load(object sender, EventArgs e)
         {
             rdbMen.Checked = true;
+            cbActivityLevel.DataSource = Enum.GetValues(typeof(ActivityStatus));
+            cbGoal.DataSource = Enum.GetValues(typeof(TargetedDiet));
+            cbDisease.DataSource = Enum.GetValues(typeof(GlutenIntolerance));
+
         }
 
         RevivalGfDbContext db;
         private void pbNext_DoubleClick(object sender, EventArgs e)
         {
             RegisterCheck();
-
-            #region RegisterFormControl
-            //if (cbAccepted.Checked)
-            //{
-            ////if (tbUsername.Text != "" && tbEmail.Text != "" && tbPassword.Text != "" && tbPassword.Text == tbRepeatPassword.Text && tbHeight.Text != "" && tbWeight.Text != "" &&   tbAge.Text != "" && cbActivityLevel.SelectedIndex != 0 && cbGoal.SelectedIndex != 0 && cbDisease.SelectedIndex != 0)
-            //{
-            ////cinsiyet kontrolü eklenecek
-            ////parola kontrolü eklenecektir (min 8 karakter özel harf ve hatchleme)
-            //MessageBox.Show("Registration successfully created.");
-            //Forms.Login login = new Login();
-            //login.Show();
-            //this.Close();
-            //}
-            //else
-            //{
-            //MessageBox.Show("\r\nPlease make sure that the fields marked with * are filled.");
-            //}
-            //}
-            //else
-            //{
-            //MessageBox.Show("Please accept the KVK terms.\r\n");
-            //}
-            #endregion
+         
         }
 
         private void RegisterCheck()
         {
             Login login = new Login();
-
-            if (tbPassword.Text != "" && tbRepeatPassword.Text != "")
+            if (cbAccepted.Checked)
             {
-                if (GenaralControl() == true)
+                if (tbPassword.Text != "" && tbRepeatPassword.Text != "")
                 {
-                    if (UserNameExist(tbUsername.Text) == false)
+                    if (GenaralControl() == true)
                     {
-                        User NewUser = new User()
+                        if (UserNameExist(tbUsername.Text) == false)
                         {
-                            UserName = tbUsername.Text,
-                            Password = login.PasswordWithSha256(tbPassword.Text),
-                        };
-                        db.Users.Add(NewUser);
-                        UserDetails NewUserDetails = new UserDetails()
-                        {
-                            Email = tbEmail.Text,
-                            Name = tbFirstName.Text,
-                            Surname = tbLastName.Text,
-                            Gender = rdbWomen.Checked ? Gender.Woman : Gender.Man,
-                            Height = Convert.ToDouble(tbHeight.Text),
-                            Weight = Convert.ToDouble(tbWeight.Text),
-                            BirthDate = dtpBirthDate.Value,
-                            GlutenIntolerance = (GlutenIntolerance)cbDisease.SelectedIndex + 1
-                        };
-                        db.UserDetails.Add(NewUserDetails);
-                        PhysicallyGoal physicallyGoal = new PhysicallyGoal()
-                        {
-                            ActivityStatus = (ActivityStatus)cbActivityLevel.SelectedIndex + 1,
-                            TargetedDiet = (TargetedDiet)cbGoal.SelectedIndex + 1,
-                        };
-                        db.PhysicallyGoals.Add(physicallyGoal);
-                        db.SaveChanges();
+                            User NewUser = new User()
+                            {
+                                UserName = tbUsername.Text,
+                                Password = login.PasswordWithSha256(tbPassword.Text),
+                            };
+                            db.Users.Add(NewUser);
+                            db.SaveChanges();
+                            UserDetails NewUserDetails = new UserDetails()
+                            {
+                                Email = tbEmail.Text,
+                                Name = tbFirstName.Text.Trim(),
+                                Surname = tbLastName.Text.Trim(),
+                                Gender = rdbWomen.Checked ? Gender.Woman : Gender.Man,
+                                Height = Convert.ToDouble(tbHeight.Text),
+                                Weight = Convert.ToDouble(tbWeight.Text),
+                                BirthDate = dtpBirthDate.Value,
+                                GlutenIntolerance = (GlutenIntolerance)cbDisease.SelectedIndex + 1
+                            };
+                            db.UserDetails.Add(NewUserDetails);
+                            db.SaveChanges();
+                            PhysicallyGoal physicallyGoal = new PhysicallyGoal()
+                            {
+                                ActivityStatus = (ActivityStatus)cbActivityLevel.SelectedIndex + 1,
+                                TargetedDiet = (TargetedDiet)cbGoal.SelectedIndex + 1,
+                            };
+                            db.PhysicallyGoals.Add(physicallyGoal);
+                            db.SaveChanges();
 
-                        MessageBox.Show("Registation Successful");
+                            MessageBox.Show("Registation Successful");
+                        }
+                        else
+                            MessageBox.Show("Username already exists. Please enter a different Username");
                     }
                     else
-                        MessageBox.Show("Username already exists. Please enter a different Username");
+                    {
+                        if (UserNameCheck(tbUsername.Text) == false)
+                            MessageBox.Show("Username cannot be empty !! ");
+
+                        if (PasswordRules(tbPassword.Text) == false)
+                            MessageBox.Show("Incorrect Password .. \n Please check to Password Rules");
+
+                        if (PasswordCheck(tbPassword.Text, tbRepeatPassword.Text) == false)
+                            MessageBox.Show("Passwords do not match");
+                    }
                 }
-                else
+                else if (tbUsername.Text == "" && tbPassword.Text == "" && tbRepeatPassword.Text == "")
                 {
                     if (UserNameCheck(tbUsername.Text) == false)
                         MessageBox.Show("Username cannot be empty !! ");
 
-                    if (PasswordRules(tbPassword.Text) == false)
-                        MessageBox.Show("Incorrect Password .. \n Please check to Password Rules");
-
                     if (PasswordCheck(tbPassword.Text, tbRepeatPassword.Text) == false)
-                        MessageBox.Show("Passwords do not match");
+                        MessageBox.Show("Password cannot be empty !! ");
                 }
             }
-            else if (tbUsername.Text == "" && tbPassword.Text == "" && tbRepeatPassword.Text == "")
+            else
             {
-                if (UserNameCheck(tbUsername.Text) == false)
-                    MessageBox.Show("Username cannot be empty !! ");
-
-                if (PasswordCheck(tbPassword.Text, tbRepeatPassword.Text) == false)
-                    MessageBox.Show("Password cannot be empty !! ");
+                MessageBox.Show("Please accept the KVK terms.\r\n");
             }
+            
         }
         private bool UserNameCheck(string username)
         {
@@ -169,5 +161,119 @@ namespace RevivalGF.UI.Forms
             }
             else return false;
         }
+        #region *remove/add
+        private void tbUsername_TextChanged(object sender, EventArgs e)
+        {
+            if (tbUsername.Text != "")
+            {
+                label15.Visible = false;
+            }
+            else
+            {
+                label15.Visible = true;
+            }
+        }
+
+        private void tbEmail_TextChanged(object sender, EventArgs e)
+        {
+            if (tbEmail.Text != "")
+            {
+                label17.Visible = false;
+            }
+            else
+            {
+                label17.Visible = true;
+            }
+        }
+        private void tbPassword_TextChanged(object sender, EventArgs e)
+        {
+
+            if (tbPassword.Text != "")
+            {
+                label16.Visible = false;
+            }
+            else
+            {
+                label16.Visible = true;
+            }
+        }
+        private void tbRepeatPassword_TextChanged(object sender, EventArgs e)
+        {
+
+            if (tbRepeatPassword.Text != "")
+            {
+                label18.Visible = false;
+            }
+            else
+            {
+                label18.Visible = true;
+            }
+        }
+        private void tbFirstName_TextChanged(object sender, EventArgs e)
+        {
+            if (tbFirstName.Text != "")
+            {
+                label10.Visible = false;
+            }
+            else
+            {
+                label10.Visible = true;
+            }
+        }
+
+        private void tbLastName_TextChanged(object sender, EventArgs e)
+        {
+            if (tbFirstName.Text != "")
+            {
+                label7.Visible = false;
+            }
+            else
+            {
+                label7.Visible = true;
+            }
+        }
+        private void tbHeight_TextChanged(object sender, EventArgs e)
+        {
+            if (tbHeight.Text != "")
+            {
+                label20.Visible = false;
+            }
+            else
+            {
+                label20.Visible = true;
+            }
+        }
+        private void tbWeight_TextChanged(object sender, EventArgs e)
+        {
+            if (tbHeight.Text != "")
+            {
+                label22.Visible = false;
+            }
+            else
+            {
+                label22.Visible = true;
+            }
+        }
+        private void dtpBirthDate_ValueChanged(object sender, EventArgs e)
+        {
+            label28.Visible = false;
+        }
+
+        private void cbActivityLevel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            label19.Visible = false;
+        }
+
+        private void cbGoal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            label21.Visible = false;
+        }
+
+        private void cbDisease_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            label30.Visible = false;
+        }
+
+        #endregion
     }
 }
