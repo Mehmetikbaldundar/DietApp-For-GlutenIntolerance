@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RevivalGF.DataAccess.Context;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,10 +19,19 @@ namespace RevivalGF.UI.Forms
         {
             InitializeComponent();
         }
+        RevivalGfDbContext db; 
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+            db = new RevivalGfDbContext(); // Db connected
+            tbPassword.UseSystemPasswordChar = false;
+        }
+        public static int id;
+        public static string userName;
 
         private void pbNext_DoubleClick(object sender, EventArgs e)
         {
+            var userNameControl = db.
             Forms.MainForm main = new MainForm();
             main.Show();
             this.Hide();
