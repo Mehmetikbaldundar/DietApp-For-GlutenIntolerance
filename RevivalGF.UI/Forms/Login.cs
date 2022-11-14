@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RevivalGF.UI
+
+namespace RevivalGF.UI.Forms
+
 {
     public partial class Login : Form
     {
@@ -17,9 +19,34 @@ namespace RevivalGF.UI
             InitializeComponent();
         }
 
-        private void pbNext_Click(object sender, EventArgs e)
+
+        private void pbNext_DoubleClick(object sender, EventArgs e)
         {
-            
+            Forms.MainForm main = new MainForm();
+            main.Show();
+            this.Hide();
         }
+
+        private void lblRegister_DoubleClick(object sender, EventArgs e)
+        {
+            Forms.Register register = new Register();
+            register.Show();
+            this.Hide();
+
+        }
+
+        #region MethodsforLoginScreen
+        private void CheckLoginInfo()
+        {
+            string username = tbUsername.Text.Trim();
+            string password =tbPassword.Text.Trim();
+            if (username=="" || password=="")
+            {
+                MessageBox.Show("Email and password fields cannot be empty.", "WARNING");
+            }
+        }
+
+        #endregion
+
     }
 }

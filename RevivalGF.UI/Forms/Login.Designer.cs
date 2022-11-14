@@ -1,4 +1,6 @@
-﻿namespace RevivalGF.UI
+
+    ﻿namespace RevivalGF.UI.Forms
+
 {
     partial class Login
     {
@@ -34,7 +36,9 @@
             this.lblRegister = new System.Windows.Forms.Label();
             this.lblInfo = new System.Windows.Forms.Label();
             this.pbNext = new System.Windows.Forms.PictureBox();
-            this.txPassword = new System.Windows.Forms.TextBox();
+
+            this.tbPassword = new System.Windows.Forms.TextBox();
+
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,13 +56,18 @@
             this.gbLogin.Controls.Add(this.lblRegister);
             this.gbLogin.Controls.Add(this.lblInfo);
             this.gbLogin.Controls.Add(this.pbNext);
-            this.gbLogin.Controls.Add(this.txPassword);
+
+            this.gbLogin.Controls.Add(this.tbPassword);
+
+
             this.gbLogin.Controls.Add(this.tbUsername);
             this.gbLogin.Controls.Add(this.label4);
             this.gbLogin.Controls.Add(this.label3);
             this.gbLogin.Controls.Add(this.label2);
             this.gbLogin.Controls.Add(this.label1);
-            this.gbLogin.Location = new System.Drawing.Point(158, 106);
+
+            this.gbLogin.Location = new System.Drawing.Point(146, 79);
+
             this.gbLogin.Name = "gbLogin";
             this.gbLogin.Size = new System.Drawing.Size(485, 238);
             this.gbLogin.TabIndex = 3;
@@ -84,6 +93,9 @@
             this.lblRegister.Size = new System.Drawing.Size(269, 16);
             this.lblRegister.TabIndex = 7;
             this.lblRegister.Text = "If you do not have an account, click to register.";
+
+            this.lblRegister.DoubleClick += new System.EventHandler(this.lblRegister_DoubleClick);
+
             // 
             // lblInfo
             // 
@@ -105,6 +117,17 @@
             this.pbNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbNext.TabIndex = 6;
             this.pbNext.TabStop = false;
+
+            this.pbNext.DoubleClick += new System.EventHandler(this.pbNext_DoubleClick);
+            // 
+            // tbPassword
+            // 
+            this.tbPassword.BackColor = System.Drawing.Color.SeaShell;
+            this.tbPassword.Location = new System.Drawing.Point(44, 133);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(204, 22);
+            this.tbPassword.TabIndex = 4;
+
             this.pbNext.Click += new System.EventHandler(this.pbNext_Click);
             // 
             // txPassword
@@ -114,6 +137,7 @@
             this.txPassword.Name = "txPassword";
             this.txPassword.Size = new System.Drawing.Size(204, 22);
             this.txPassword.TabIndex = 4;
+
             // 
             // tbUsername
             // 
@@ -169,9 +193,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gbLogin);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+
             this.Name = "Login";
             this.Text = "Login";
             this.gbLogin.ResumeLayout(false);
@@ -189,7 +215,9 @@
         private System.Windows.Forms.Label lblRegister;
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.PictureBox pbNext;
-        private System.Windows.Forms.TextBox txPassword;
+
+        private System.Windows.Forms.TextBox tbPassword;
+
         private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
