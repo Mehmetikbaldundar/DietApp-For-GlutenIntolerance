@@ -31,5 +31,18 @@ namespace RevivalGF.UI.Forms
             this.Hide();
 
         }
+
+        #region MethodsforLoginScreen
+        private void CheckLoginInfo()
+        {
+            string username = tbUsername.Text.Trim();
+            string password =tbPassword.Text.Trim();
+            if (username=="" || password=="")
+            {
+                MessageBox.Show("Email and password fields cannot be empty.", "WARNING");
+            }
+        }
+
+        #endregion
     }
 }

@@ -34,7 +34,7 @@
             this.lblRegister = new System.Windows.Forms.Label();
             this.lblInfo = new System.Windows.Forms.Label();
             this.pbNext = new System.Windows.Forms.PictureBox();
-            this.txPassword = new System.Windows.Forms.TextBox();
+            this.tbPassword = new System.Windows.Forms.TextBox();
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.gbLogin.Controls.Add(this.lblRegister);
             this.gbLogin.Controls.Add(this.lblInfo);
             this.gbLogin.Controls.Add(this.pbNext);
-            this.gbLogin.Controls.Add(this.txPassword);
+            this.gbLogin.Controls.Add(this.tbPassword);
             this.gbLogin.Controls.Add(this.tbUsername);
             this.gbLogin.Controls.Add(this.label4);
             this.gbLogin.Controls.Add(this.label3);
@@ -108,13 +108,13 @@
             this.pbNext.TabStop = false;
             this.pbNext.DoubleClick += new System.EventHandler(this.pbNext_DoubleClick);
             // 
-            // txPassword
+            // tbPassword
             // 
-            this.txPassword.BackColor = System.Drawing.Color.SeaShell;
-            this.txPassword.Location = new System.Drawing.Point(44, 133);
-            this.txPassword.Name = "txPassword";
-            this.txPassword.Size = new System.Drawing.Size(204, 22);
-            this.txPassword.TabIndex = 4;
+            this.tbPassword.BackColor = System.Drawing.Color.SeaShell;
+            this.tbPassword.Location = new System.Drawing.Point(44, 133);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(204, 22);
+            this.tbPassword.TabIndex = 4;
             // 
             // tbUsername
             // 
@@ -191,7 +191,7 @@
         private System.Windows.Forms.Label lblRegister;
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.PictureBox pbNext;
-        private System.Windows.Forms.TextBox txPassword;
+        private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
