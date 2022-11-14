@@ -25,13 +25,13 @@ namespace RevivalGF.Entites.Concrete
         public int? AlternativeFoodID { get; set; }
         public int MealReportID { get; set; }
         public MealReport MealReport { get; set; }
-        public DateTime CreatedDate { get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
         public DateTime? ModifiedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
         public string CreatedBy { get; set; }
         public string DeletedBy { get; set; }
         public string ModifiedBy { get; set; }
-        public Status Status { get; set; }
+        public Status Status { get; set; } = Status.Active;
         public virtual Meal RiskyFoods { get; set; }
         public virtual ICollection<Meal> AlternativeFoods { get; } = new HashSet<Meal>();
         public MealCategories MealCategories { get; set; }

@@ -22,13 +22,13 @@ namespace RevivalGF.Entites.Concrete
         public int GoalID { get; set; }
         public PhysicallyGoal PhysicallyGoal { get; set; }
         public Water Water { get; set; }
-        public DateTime CreatedDate { get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
         public DateTime? ModifiedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
         public string CreatedBy { get; set; }
         public string DeletedBy { get; set; }
         public string ModifiedBy { get; set; }
-        public Status Status { get; set; }
+        public Status Status { get; set; } = Status.Active;
         public UserDetails UserDetails { get; set; }
         public bool Tutorial { get; set; }
     }

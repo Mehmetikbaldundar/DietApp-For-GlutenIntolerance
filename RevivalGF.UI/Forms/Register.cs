@@ -53,7 +53,7 @@ namespace RevivalGF.UI.Forms
                                 Password = login.PasswordWithSha256(tbPassword.Text),
                             };
                             db.Users.Add(NewUser);
-                            db.SaveChanges();
+                            
                             UserDetails NewUserDetails = new UserDetails()
                             {
                                 Email = tbEmail.Text,
@@ -62,11 +62,11 @@ namespace RevivalGF.UI.Forms
                                 Gender = rdbWomen.Checked ? Gender.Woman : Gender.Man,
                                 Height = Convert.ToDouble(tbHeight.Text),
                                 Weight = Convert.ToDouble(tbWeight.Text),
-                                BirthDate = dtpBirthDate.Value,
+                                BirthDate = Convert.ToDateTime(dtpBirthDate.Value),   //hata olabilir
                                 GlutenIntolerance = (GlutenIntolerance)cbDisease.SelectedIndex + 1
                             };
                             db.UserDetails.Add(NewUserDetails);
-                            db.SaveChanges();
+                            //db.SaveChanges();
                             PhysicallyGoal physicallyGoal = new PhysicallyGoal()
                             {
                                 ActivityStatus = (ActivityStatus)cbActivityLevel.SelectedIndex + 1,
