@@ -21,7 +21,7 @@ namespace RevivalGF.Entites.Concrete
         public List<Medicament> Medicaments { get; set; }
         public int GoalID { get; set; }
         public PhysicallyGoal PhysicallyGoal { get; set; }
-        public List<Water> Waters { get; set; }
+        public Water Water { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime? ModifiedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
@@ -30,5 +30,6 @@ namespace RevivalGF.Entites.Concrete
         public string ModifiedBy { get; set; }
         public Status Status { get; set; }
         public UserDetails UserDetails { get; set; }
+        public bool Tutorial { get; set; }
     }
 }

@@ -43,9 +43,8 @@ namespace RevivalGF.DataAccess.Mapping
             this.HasRequired(s => s.UserDetails)
                 .WithRequiredPrincipal(x => x.User);
 
-            this.HasMany(g => g.Waters)
-                .WithRequired(s => s.User)
-                .HasForeignKey(s => s.UserID);
+            this.HasRequired(s => s.Water)
+                .WithRequiredPrincipal(x => x.User);
         }
     }
 }

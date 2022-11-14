@@ -20,7 +20,8 @@ namespace RevivalGF.Entites.Abstract
         List<Medicament> Medicaments { get; set; }
         int GoalID { get; set; }
         PhysicallyGoal PhysicallyGoal { get; set; }
-        List<Water> Waters { get; set; }
+        Water Water { get; set; }
         UserDetails UserDetails { get; set; }
+        bool Tutorial { get; set; }
     }
 }
