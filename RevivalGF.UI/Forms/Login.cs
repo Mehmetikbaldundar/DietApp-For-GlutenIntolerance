@@ -26,7 +26,7 @@ namespace RevivalGF.UI.Forms
         private void Login_Load(object sender, EventArgs e)
         {
             db = new RevivalGfDbContext(); // Db connected
-            tbPassword.UseSystemPasswordChar = false;
+            tbPassword.UseSystemPasswordChar = false;  // for **** appearance
         }
 
         public static int id;
@@ -34,7 +34,7 @@ namespace RevivalGF.UI.Forms
 
         private void pbNext_DoubleClick(object sender, EventArgs e)
         {
-            var userNameControl = db.Users.Where(x => x.UserName == tbUsername.Text).FirstOrDefault();
+            var userNameControl = db.Users.Where(x => x.UserName == tbUsername.Text.Trim()).FirstOrDefault();
             if (userNameControl != null)
             {
                 userName = userNameControl.UserName;
@@ -45,6 +45,7 @@ namespace RevivalGF.UI.Forms
             {
                 MessageBox.Show("Please enter a valid Username or Password.");
             }
+            LoginCannotbeBlank();
         }
 
         private void lblRegister_DoubleClick(object sender, EventArgs e)
@@ -55,27 +56,11 @@ namespace RevivalGF.UI.Forms
 
         }
 
-        #region MethodsforLoginScreen
-        private void CheckLoginInfo()
-        {
-            string username = tbUsername.Text.Trim();
-            string password = tbPassword.Text.Trim();
-            if (username == "" || password == "")
-            {
-                MessageBox.Show("Email and password fields cannot be empty.", "WARNING");
-            }
-        }
 
-        #endregion
-
-        private void Login_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
+        #region LoginMethods
         private void LoginCheck()
         {
-            var userNameControl = db.Users.Where(x => x.UserName == tbUsername.Text).FirstOrDefault();
+            var userNameControl = db.Users.Where(x => x.UserName == tbUsername.Text.Trim()).FirstOrDefault();
             if (userNameControl != null)
             {
                 if (userNameControl.Password == PasswordWithSha256(tbPassword.Text))
@@ -93,6 +78,22 @@ namespace RevivalGF.UI.Forms
             else
                 MessageBox.Show("User Not Found !!");
         }
+        private void LoginCannotbeBlank()
+        {
+            string username = tbUsername.Text.Trim();
+            string password = tbPassword.Text.Trim();
+            if (username == "" || password == "")
+            {
+                MessageBox.Show("Email and password fields cannot be empty.", "WARNING");
+            }
+        }
+        #endregion
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+       
 
         public string PasswordWithSha256(string text)
         {
@@ -105,5 +106,6 @@ namespace RevivalGF.UI.Forms
             }
             return builder.ToString();
         }
+       
     }
 }
