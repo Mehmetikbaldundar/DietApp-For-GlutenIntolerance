@@ -2,6 +2,7 @@
 using RevivalGF.Entites.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ namespace RevivalGF.Entites.Concrete
 {
     public class MealReport : IMealReport, IBaseEntity
     {
+        [Key]
         public int MealReportID { get; set; }
         public DateTime ReportDate { get; set; }
         public decimal Portion { get; set; }

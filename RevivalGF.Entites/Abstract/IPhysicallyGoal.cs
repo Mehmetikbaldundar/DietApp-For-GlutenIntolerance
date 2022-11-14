@@ -12,6 +12,7 @@ namespace RevivalGF.Entites.Abstract
     {
         int GoalID { get; set; }
         TargetedDiet TargetedDiet { get; set; }
+        ActivityStatus ActivityStatus { get; set; }
         decimal DietCalorieControl { get; set; }
         List<User> Users { get; set; }
     }

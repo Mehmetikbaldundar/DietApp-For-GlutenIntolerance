@@ -2,6 +2,7 @@
 using RevivalGF.Entites.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,17 +11,10 @@ namespace RevivalGF.Entites.Concrete
 {
     public class User : IUser, IBaseEntity
     {
+        [Key]
         public int UserID { get; set; }
         public string UserName { get; set; }
-        public string Password { get; set; }
-        public string Email { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public Gender Gender { get; set; }
-        public Cinsiyet Cinsiyet { get; set; }
-        public double Height { get; set; }
-        public double Weight { get; set; }
-        public DateTime BirthDate { get; set; }
+        public string Password { get; set; }       
         public List<Activity> Activities { get; set; }
         public BodyAnalysis BodyAnalysis { get; set; }
         public List<MealReport> MealReports { get; set; }
@@ -35,5 +29,6 @@ namespace RevivalGF.Entites.Concrete
         public string DeletedBy { get; set; }
         public string ModifiedBy { get; set; }
         public Status Status { get; set; }
+        public UserDetails UserDetails { get; set; }
     }
 }

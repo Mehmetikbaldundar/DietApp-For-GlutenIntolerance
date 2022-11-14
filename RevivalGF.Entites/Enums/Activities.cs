@@ -8,9 +8,24 @@ namespace RevivalGF.Entites.Enums
 {
     public enum Activities
     {
-        LightlyActive=1,
-        ModeratelyActive,
-        Active,
-        VeryActive,
+        GucAntremani = 1,
+        Yuruyus,
+        BisikleteBinme,
+        Kosu,
+        KondisyonBisikleti,
+        Yoga,
+        Yuzme,
+        Boks,
+        DaireselAntreman,
+        DansEtmek,
+        EvdeYapilanEgzersiz,
+        FonskiyonelAntreman,
+        Futbol,
+        KickBoks,
+        Kurek,
+        Voleybol,
+        Basketbol,
+        Jimnastik,
+        Zumba,
     }
 }

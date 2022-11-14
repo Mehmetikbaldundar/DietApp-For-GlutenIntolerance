@@ -50,6 +50,7 @@
     <Compile Include="Abstract\IMedicament.cs" />
     <Compile Include="Abstract\IPhysicallyGoal.cs" />
     <Compile Include="Abstract\IUser.cs" />
+    <Compile Include="Abstract\IUserDetails.cs" />
     <Compile Include="Abstract\IWater.cs" />
     <Compile Include="Concrete\Activity.cs" />
     <Compile Include="Concrete\BodyAnalysis.cs" />
@@ -58,10 +59,14 @@
     <Compile Include="Concrete\Medicament.cs" />
     <Compile Include="Concrete\PhysicallyGoal.cs" />
     <Compile Include="Concrete\User.cs" />
+    <Compile Include="Concrete\UserDetails.cs" />
     <Compile Include="Concrete\Water.cs" />
     <Compile Include="Enums\Activities.cs" />
+    <Compile Include="Enums\ActivityStatus.cs" />
     <Compile Include="Enums\Gender.cs" />
+    <Compile Include="Enums\GlutenIntolerance.cs" />
     <Compile Include="Enums\GlutenRisk.cs" />
+    <Compile Include="Enums\MealCategories.cs" />
     <Compile Include="Enums\Repast.cs" />
     <Compile Include="Enums\Status.cs" />
     <Compile Include="Enums\TargetedDiet.cs" />

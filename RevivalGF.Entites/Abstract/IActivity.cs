@@ -10,12 +10,11 @@ using System.Threading.Tasks;
 namespace RevivalGF.Entites.Abstract
 {
     public interface IActivity
-    {
-        [Key]
+    {        
         int ActivityID { get; set; }
-        decimal ActivityFaktor { get; set; }
-        Activities Activity { get; set; }
-        float Calorie { get; set; }
+        Activities Activities { get; set; }
+        decimal ActivityFaktor { get; set; }       
+        decimal Calorie { get; set; }
         List<User> Users { get; set; }
 
     }
