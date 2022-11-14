@@ -8,5 +8,9 @@ namespace RevivalGF.Entites.Enums
 {
     public enum Activities
     {
+        LightlyActive=1,
+        ModeratelyActive,
+        Active,
+        VeryActive,
     }
 }

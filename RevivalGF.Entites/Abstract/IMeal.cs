@@ -17,9 +17,11 @@ namespace RevivalGF.Entites.Abstract
         float Carbonhydrade { get; set; }
         float Fat { get; set; }
         float Protein { get; set; }
-        int GlutenRisk { get; set; }
-        List<Food> Foods { get; set; }
+        float Gram { get; set; }
+        GlutenRisk GlutenRisk { get; set; }
+        int? AlternativeFoodID { get; set; }        
         int MealReportID { get; set; }
         MealReport MealReport { get; set; }
+        Repast Repast { get; set; }
     }
 }
