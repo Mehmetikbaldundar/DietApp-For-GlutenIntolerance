@@ -128,15 +128,7 @@
             this.tbPassword.Size = new System.Drawing.Size(204, 22);
             this.tbPassword.TabIndex = 4;
 
-            this.pbNext.Click += new System.EventHandler(this.pbNext_Click);
-            // 
-            // txPassword
-            // 
-            this.txPassword.BackColor = System.Drawing.Color.SeaShell;
-            this.txPassword.Location = new System.Drawing.Point(44, 133);
-            this.txPassword.Name = "txPassword";
-            this.txPassword.Size = new System.Drawing.Size(204, 22);
-            this.txPassword.TabIndex = 4;
+
 
             // 
             // tbUsername
