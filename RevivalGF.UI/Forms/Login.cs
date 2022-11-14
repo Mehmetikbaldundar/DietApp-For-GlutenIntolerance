@@ -26,7 +26,7 @@ namespace RevivalGF.UI.Forms
         private void Login_Load(object sender, EventArgs e)
         {
             db = new RevivalGfDbContext(); // Db connected
-            tbPassword.UseSystemPasswordChar = false;  // for **** appearance
+            tbPassword.UseSystemPasswordChar = true;  // for **** appearance
         }
 
         public static int id;

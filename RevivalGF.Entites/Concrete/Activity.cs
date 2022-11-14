@@ -17,13 +17,13 @@ namespace RevivalGF.Entites.Concrete
         public decimal ActivityFaktor { get; set; }
         public decimal Calorie { get; set; }
         public List<User> Users { get; set; }
-        public DateTime CreatedDate { get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
         public DateTime? ModifiedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
-        public string CreatedBy { get; set; }
+        public string CreatedBy { get; set; } 
         public string DeletedBy { get; set; }
         public string ModifiedBy { get; set; }
-        public Status Status { get; set; }       
+        public Status Status { get; set; } = Status.Active;
 
     }
 }
