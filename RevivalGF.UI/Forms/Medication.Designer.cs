@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Medication));
             this.tbMedicationTime = new System.Windows.Forms.TextBox();
             this.tbMedicationName = new System.Windows.Forms.TextBox();
             this.pbNext = new System.Windows.Forms.PictureBox();
@@ -57,7 +56,7 @@
             // pbNext
             // 
             this.pbNext.BackColor = System.Drawing.Color.Transparent;
-            this.pbNext.Image = ((System.Drawing.Image)(resources.GetObject("pbNext.Image")));
+            this.pbNext.Image = global::RevivalGF.UI.Properties.Resources.nextbutton;
             this.pbNext.Location = new System.Drawing.Point(697, 380);
             this.pbNext.Name = "pbNext";
             this.pbNext.Size = new System.Drawing.Size(85, 83);
@@ -103,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::RevivalGF.UI.Properties.Resources.medicationform;
             this.ClientSize = new System.Drawing.Size(821, 504);
             this.Controls.Add(this.tbMedicationTime);
             this.Controls.Add(this.tbMedicationName);

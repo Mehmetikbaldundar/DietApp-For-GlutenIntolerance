@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             this.pbNext = new System.Windows.Forms.PictureBox();
             this.lblDeleteAccount = new System.Windows.Forms.Label();
             this.lblResetAccount = new System.Windows.Forms.Label();
@@ -77,7 +76,7 @@
             // 
             // pbNext
             // 
-            this.pbNext.Image = ((System.Drawing.Image)(resources.GetObject("pbNext.Image")));
+            this.pbNext.Image = global::RevivalGF.UI.Properties.Resources.nextbutton;
             this.pbNext.Location = new System.Drawing.Point(218, 619);
             this.pbNext.Name = "pbNext";
             this.pbNext.Size = new System.Drawing.Size(76, 78);
@@ -468,7 +467,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::RevivalGF.UI.Properties.Resources.settings;
             this.pictureBox1.Location = new System.Drawing.Point(235, 1);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox1.Name = "pictureBox1";
