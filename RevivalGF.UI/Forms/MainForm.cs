@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Common.CommandTrees;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -55,8 +56,15 @@ namespace RevivalGF.UI.Forms
             lblWeight.Text = userdetails.Weight.ToString() + " " + "kg";
             lblIdealWeight.Text = Math.Round(IdealWeight(userdetails)).ToString() + " " + "kg";
             lblDisease.Text = userdetails.GlutenIntolerance.ToString();
-            // pbAvatar.Image=Image.FromFile   -->Bu kısım için resources kısmına en azından kadın erkek avatarlarını atmalıyız.
-
+            if ((int)userdetails.Gender==1)
+            {
+                pbAvatar.Image = Properties.Resources.avatar_men;
+            }
+            else
+            {
+                pbAvatar.Image = Properties.Resources.avatar_women;
+            }
+              
         }
         #region PlummySection
         private void pbPlummy1Next_DoubleClick(object sender, EventArgs e)
