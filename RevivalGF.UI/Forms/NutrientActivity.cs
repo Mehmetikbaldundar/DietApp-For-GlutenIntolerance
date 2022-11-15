@@ -19,9 +19,9 @@ namespace RevivalGF.UI.Forms
 
         private void pbNext_DoubleClick(object sender, EventArgs e)
         {
-            MainForm main = new MainForm();
+            /*MainForm main = new MainForm();
             main.Show();
-            this.Close();
+            this.Close();**/
         }
     }
 }

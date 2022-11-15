@@ -30,6 +30,6 @@ namespace RevivalGF.Entites.Concrete
         public string ModifiedBy { get; set; }
         public Status Status { get; set; } = Status.Active;
         public UserDetails UserDetails { get; set; }
-        public bool Tutorial { get; set; }
+        public bool Tutorial { get; set; } = true;
     }
 }
