@@ -14,7 +14,7 @@ namespace RevivalGF.DataAccess.Mapping
         public PhysicallyGoalMapping()
         {
             this.HasKey(x => x.GoalID);
-            this.Property(x => x.GoalID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+            this.Property(x => x.GoalID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
 
             this.Property(x => x.TargetedDiet).IsRequired();
             this.Property(x => x.ActivityStatus).IsRequired();
@@ -26,10 +26,7 @@ namespace RevivalGF.DataAccess.Mapping
             this.Property(x => x.CreatedDate).IsRequired();
             this.Property(x => x.DeletedDate).IsOptional();
             this.Property(x => x.ModifiedDate).IsOptional();
-
-            this.HasMany(g => g.Users)
-                .WithRequired(s => s.PhysicallyGoal)
-                .HasForeignKey(s => s.GoalID);
+   
         }
     }
 }

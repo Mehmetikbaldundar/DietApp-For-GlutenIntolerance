@@ -86,8 +86,7 @@ namespace RevivalGF.UI.Forms
                                     ActivityStatus = (ActivityStatus)cbActivityLevel.SelectedIndex + 1,
                                     TargetedDiet = (TargetedDiet)cbGoal.SelectedIndex + 1,
                                 };
-                                _goalsRepository.Add(physicallyGoal);
-                                db.SaveChanges();
+                                _goalsRepository.Add(physicallyGoal);                                
 
                                 MessageBox.Show("Registation Successful");
                             }

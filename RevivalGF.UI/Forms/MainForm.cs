@@ -25,10 +25,7 @@ namespace RevivalGF.UI.Forms
             db = new RevivalGfDbContext();
             InitializeComponent();
         }
-
-        User user;
-        UserDetails userDetails;
-        //Water water;
+               
         private void MainForm_Load(object sender, EventArgs e)
         {
             var user=GetUser();

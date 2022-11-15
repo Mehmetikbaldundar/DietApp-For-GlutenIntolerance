@@ -29,8 +29,8 @@ namespace RevivalGF.DataAccess.Mapping
 
 
 
-            this.HasRequired(s => s.BodyAnalysis)
-                .WithRequiredPrincipal(x => x.User);
+            this.HasOptional(s => s.BodyAnalysis)
+                .WithRequired(x => x.User);
 
             this.HasMany(g => g.MealReports)
                 .WithRequired(s => s.User)
@@ -43,10 +43,12 @@ namespace RevivalGF.DataAccess.Mapping
                      
              this.HasOptional(s => s.UserDetails)
                 .WithRequired(x => x.User);
-             
 
-            this.HasRequired(s => s.Water)
-                .WithRequiredPrincipal(x => x.User);
+            this.HasOptional(s => s.PhysicallyGoal)
+                .WithRequired(x => x.User);
+
+            this.HasOptional(s => s.Water)
+                .WithRequired(x => x.User);
         }
     }
 }

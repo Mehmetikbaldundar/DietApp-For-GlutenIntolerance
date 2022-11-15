@@ -13,13 +13,13 @@ namespace RevivalGF.Business.Concrete
 {
     public class BaseRepository<T> : IRepository<T> where T : class, IBaseEntity
     {
-        private readonly RevivalGfDbContext _revivalDbContext;
+        private readonly RevivalGfDbContext _revivalGfDbContext;
         private DbSet<T> _table;
 
         public BaseRepository(RevivalGfDbContext revivalGfDbContext)
         {
-            _revivalDbContext = revivalGfDbContext;
-            _table = _revivalDbContext.Set<T>();
+            _revivalGfDbContext = revivalGfDbContext;
+            _table = _revivalGfDbContext.Set<T>();
         }
         public bool Add(T entity)
         {
@@ -51,12 +51,12 @@ namespace RevivalGF.Business.Concrete
 
         public int Save()
         {
-            return _revivalDbContext.SaveChanges();
+            return _revivalGfDbContext.SaveChanges();
         }
 
         public bool Update(T entity)
         {
-            _revivalDbContext.Entry<T>(entity).State = EntityState.Modified;
+            _revivalGfDbContext.Entry<T>(entity).State = EntityState.Modified;
             return Save() > 0;
         }
     }

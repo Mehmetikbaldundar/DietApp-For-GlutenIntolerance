@@ -15,7 +15,7 @@ namespace RevivalGF.Entites.Concrete
         public int GoalID { get; set; }
         public TargetedDiet TargetedDiet { get; set; }
         public ActivityStatus ActivityStatus { get; set; }        
-        public List<User> Users { get; set; }
+        public User User { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public DateTime? ModifiedDate { get; set; }
         public DateTime? DeletedDate { get; set; }

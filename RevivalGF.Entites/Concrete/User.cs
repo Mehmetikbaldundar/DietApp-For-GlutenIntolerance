@@ -18,8 +18,7 @@ namespace RevivalGF.Entites.Concrete
         public List<Activity> Activities { get; set; }
         public BodyAnalysis BodyAnalysis { get; set; }
         public List<MealReport> MealReports { get; set; }
-        public List<Medicament> Medicaments { get; set; }
-        public int GoalID { get; set; }
+        public List<Medicament> Medicaments { get; set; }        
         public PhysicallyGoal PhysicallyGoal { get; set; }
         public Water Water { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;

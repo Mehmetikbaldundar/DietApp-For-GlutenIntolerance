@@ -85,16 +85,12 @@ namespace RevivalGF.Entites.Concrete
             {
                 case ActivityStatus.LightlyActive:
                     return 1.2M;
-                    break;
                 case ActivityStatus.ModeratelyActive:
-                    return 1.375M;
-                    break;
+                    return 1.375M;                  
                 case ActivityStatus.Active:
-                    return 1.55M;
-                    break;
+                    return 1.55M;                   
                 case ActivityStatus.VeryActive:
-                    return 1.9M;
-                    break;
+                    return 1.9M;                    
             }
             return 1;
         }
@@ -103,14 +99,11 @@ namespace RevivalGF.Entites.Concrete
             switch (User.PhysicallyGoal.TargetedDiet)
             {
                 case TargetedDiet.LoseWeight:
-                    return -200;
-                    break;
+                    return -200;                   
                 case TargetedDiet.MaintainWeight:
-                    return 0;
-                    break;
+                    return 0;                    
                 case TargetedDiet.GainWeight:
-                    return 200;
-                    break;
+                    return 200;                    
             }
             return 0;
         }
