@@ -14,8 +14,7 @@ namespace RevivalGF.Entites.Concrete
         [Key]
         public int GoalID { get; set; }
         public TargetedDiet TargetedDiet { get; set; }
-        public ActivityStatus ActivityStatus { get; set; }
-        public decimal DietCalorieControl { get; set; } = 0; // TEST
+        public ActivityStatus ActivityStatus { get; set; }        
         public List<User> Users { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public DateTime? ModifiedDate { get; set; }

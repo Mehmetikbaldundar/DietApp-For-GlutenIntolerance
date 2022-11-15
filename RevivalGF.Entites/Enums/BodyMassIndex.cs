@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace RevivalGF.Entites.Enums
 {
-    public enum Gender
+
+    public enum BodyMassIndex
     {
-        Man = 1,
-        Woman,
+        Thin = 1,
+        Normal,
+        OverWeight,
+        FirstDegreeObesity,
+        SecondDegreeObesity,
+        ThirdDegreeObesity,
     }
 }

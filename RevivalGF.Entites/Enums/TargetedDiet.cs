@@ -8,7 +8,7 @@ namespace RevivalGF.Entites.Enums
 {
     public enum TargetedDiet
     {
-        LoseWeight=1,
+        LoseWeight = 1,
         MaintainWeight,
         GainWeight,
     }

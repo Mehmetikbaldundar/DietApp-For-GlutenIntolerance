@@ -63,6 +63,7 @@
     <Compile Include="Concrete\Water.cs" />
     <Compile Include="Enums\Activities.cs" />
     <Compile Include="Enums\ActivityStatus.cs" />
+    <Compile Include="Enums\BodyMassIndex.cs" />
     <Compile Include="Enums\Gender.cs" />
     <Compile Include="Enums\GlutenIntolerance.cs" />
     <Compile Include="Enums\GlutenRisk.cs" />
