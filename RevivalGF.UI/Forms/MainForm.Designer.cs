@@ -582,6 +582,7 @@
             this.pbAddWater.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbAddWater.TabIndex = 48;
             this.pbAddWater.TabStop = false;
+            this.pbAddWater.Click += new System.EventHandler(this.pbAddWater_Click_1);
             // 
             // pbMinusWater
             // 
@@ -593,6 +594,7 @@
             this.pbMinusWater.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbMinusWater.TabIndex = 47;
             this.pbMinusWater.TabStop = false;
+            this.pbMinusWater.Click += new System.EventHandler(this.pbMinusWater_Click_1);
             // 
             // pbWater
             // 

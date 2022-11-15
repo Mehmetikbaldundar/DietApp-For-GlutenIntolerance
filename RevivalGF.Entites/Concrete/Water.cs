@@ -14,7 +14,7 @@ namespace RevivalGF.Entites.Concrete
     {
         [ForeignKey("User")]
         public int WaterID { get; set; }
-        public decimal WaterCount { get; set; }
+        public decimal WaterCount { get; set; } = 0;
         public DateTime ReportDate { get; set; }
         public int UserID { get; set; }
         public User User { get; set; }

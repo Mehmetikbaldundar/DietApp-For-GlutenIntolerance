@@ -106,6 +106,10 @@ namespace RevivalGF.UI.Forms
             }
             return builder.ToString();
         }
-       
+
+        private void pbNext_Click(object sender, EventArgs e)
+        {
+            pbNext.Cursor= Cursors.WaitCursor;
+        }
     }
 }
