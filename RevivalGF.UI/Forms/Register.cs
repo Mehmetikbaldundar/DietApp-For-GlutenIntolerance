@@ -13,14 +13,24 @@ using System.Windows.Forms;
 using System.Net.Mail;
 using System.Net;
 using Microsoft.VisualBasic;
+using RevivalGF.Business.Concrete;
 
 namespace RevivalGF.UI.Forms
 {
     public partial class Register : Form
     {
+        private readonly RevivalGfDbContext db;
+        private readonly UserRepository _userRepository;
+        private readonly UserDetailsRepository _detailsRepository;
+        private readonly PhysicallyGoalRepository _goalsRepository;
+
         public Register()
         {
             db = new RevivalGfDbContext();
+            _userRepository = new UserRepository(db);
+            _detailsRepository = new UserDetailsRepository(db);
+            _goalsRepository = new PhysicallyGoalRepository(db);
+         
             InitializeComponent();
         }
         private void Register_Load(object sender, EventArgs e)
@@ -29,12 +39,10 @@ namespace RevivalGF.UI.Forms
             cbActivityLevel.DataSource = Enum.GetValues(typeof(ActivityStatus));
             cbGoal.DataSource = Enum.GetValues(typeof(TargetedDiet));
             cbDisease.DataSource = Enum.GetValues(typeof(GlutenIntolerance));
-
         }
-
-        RevivalGfDbContext db;
+        
         private void pbNext_DoubleClick(object sender, EventArgs e)
-        {            
+        {
             RegisterCheck();
         }
 
@@ -49,7 +57,7 @@ namespace RevivalGF.UI.Forms
                     {
                         if (UserNameExist(tbUsername.Text) == false && MailExist(tbEmail.Text) == false)
                         {
-                            if(VerificationCodeSend(tbEmail.Text) == false)
+                            if (VerificationCodeSend(tbEmail.Text) == false)
                                 MessageBox.Show("Verification Code is not Correct !!");
                             else
                             {
@@ -58,7 +66,7 @@ namespace RevivalGF.UI.Forms
                                     UserName = tbUsername.Text,
                                     Password = login.PasswordWithSha256(tbPassword.Text),
                                 };
-                                db.Users.Add(NewUser);
+                                _userRepository.Add(NewUser);
 
                                 UserDetails NewUserDetails = new UserDetails()
                                 {
@@ -71,14 +79,14 @@ namespace RevivalGF.UI.Forms
                                     BirthDate = Convert.ToDateTime(dtpBirthDate.Value),
                                     GlutenIntolerance = (GlutenIntolerance)cbDisease.SelectedIndex + 1
                                 };
-                                db.UserDetails.Add(NewUserDetails);
+                                _detailsRepository.Add(NewUserDetails);
 
                                 PhysicallyGoal physicallyGoal = new PhysicallyGoal()
                                 {
                                     ActivityStatus = (ActivityStatus)cbActivityLevel.SelectedIndex + 1,
                                     TargetedDiet = (TargetedDiet)cbGoal.SelectedIndex + 1,
                                 };
-                                db.PhysicallyGoals.Add(physicallyGoal);
+                                _goalsRepository.Add(physicallyGoal);
                                 db.SaveChanges();
 
                                 MessageBox.Show("Registation Successful");
@@ -226,8 +234,8 @@ namespace RevivalGF.UI.Forms
                     result = true;
                 else
                 {
-                    result = false;                    
-                }              
+                    result = false;
+                }
             }
             catch
             {
