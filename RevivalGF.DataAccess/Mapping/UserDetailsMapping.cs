@@ -14,7 +14,7 @@ namespace RevivalGF.DataAccess.Mapping
         public UserDetailsMapping()
         {
             this.HasKey(x => x.DetailsID);
-            this.Property(x => x.DetailsID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
+            this.Property(x => x.DetailsID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
 
             this.Property(x => x.Email).IsRequired().HasMaxLength(50);
             this.Property(x => x.Name).IsRequired().HasMaxLength(25);
@@ -32,6 +32,8 @@ namespace RevivalGF.DataAccess.Mapping
             this.Property(x => x.CreatedDate).IsRequired();
             this.Property(x => x.DeletedDate).IsOptional();
             this.Property(x => x.ModifiedDate).IsOptional();
+
+            
         }
     }
 }

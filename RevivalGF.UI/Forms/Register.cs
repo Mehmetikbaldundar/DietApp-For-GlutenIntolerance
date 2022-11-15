@@ -53,7 +53,8 @@ namespace RevivalGF.UI.Forms
                                 Password = login.PasswordWithSha256(tbPassword.Text),
                             };
                             db.Users.Add(NewUser);
-                            
+                            //db.SaveChanges();
+
                             UserDetails NewUserDetails = new UserDetails()
                             {
                                 Email = tbEmail.Text,
@@ -67,6 +68,7 @@ namespace RevivalGF.UI.Forms
                             };
                             db.UserDetails.Add(NewUserDetails);
                             //db.SaveChanges();
+
                             PhysicallyGoal physicallyGoal = new PhysicallyGoal()
                             {
                                 ActivityStatus = (ActivityStatus)cbActivityLevel.SelectedIndex + 1,
@@ -74,6 +76,7 @@ namespace RevivalGF.UI.Forms
                             };
                             db.PhysicallyGoals.Add(physicallyGoal);
                             db.SaveChanges();
+
 
                             MessageBox.Show("Registation Successful");
                         }

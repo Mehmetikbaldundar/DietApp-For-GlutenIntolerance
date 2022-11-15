@@ -14,7 +14,7 @@ namespace RevivalGF.DataAccess.Mapping
         public BodyAnalysisMapping()
         {
             this.HasKey(x => x.AnalysisID);
-            this.Property(x => x.AnalysisID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
+            this.Property(x => x.AnalysisID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
 
             this.Property(x => x.CreatedBy).HasMaxLength(50);
             this.Property(x => x.ModifiedBy).HasMaxLength(50);
