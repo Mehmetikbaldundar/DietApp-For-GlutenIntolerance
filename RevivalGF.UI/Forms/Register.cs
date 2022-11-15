@@ -23,6 +23,7 @@ namespace RevivalGF.UI.Forms
         private readonly UserRepository _userRepository;
         private readonly UserDetailsRepository _detailsRepository;
         private readonly PhysicallyGoalRepository _goalsRepository;
+        private readonly BodyAnalysisRepository _bodyAnalysisRepository;
 
         public Register()
         {
@@ -30,7 +31,8 @@ namespace RevivalGF.UI.Forms
             _userRepository = new UserRepository(db);
             _detailsRepository = new UserDetailsRepository(db);
             _goalsRepository = new PhysicallyGoalRepository(db);
-         
+            _bodyAnalysisRepository = new BodyAnalysisRepository(db);
+
             InitializeComponent();
         }
         private void Register_Load(object sender, EventArgs e)
@@ -40,12 +42,12 @@ namespace RevivalGF.UI.Forms
             cbGoal.DataSource = Enum.GetValues(typeof(TargetedDiet));
             cbDisease.DataSource = Enum.GetValues(typeof(GlutenIntolerance));
         }
-        
+
         private void pbNext_DoubleClick(object sender, EventArgs e)
         {
             RegisterCheck();
         }
-
+        
         private void RegisterCheck()
         {
             Login login = new Login();
@@ -66,10 +68,10 @@ namespace RevivalGF.UI.Forms
                                     UserName = tbUsername.Text,
                                     Password = login.PasswordWithSha256(tbPassword.Text),
                                 };
-                                _userRepository.Add(NewUser);
-
+                                _userRepository.Add(NewUser);                                
                                 UserDetails NewUserDetails = new UserDetails()
                                 {
+                                    DetailsID = _userRepository.GetById(NewUser.UserID).UserID,
                                     Email = tbEmail.Text,
                                     Name = tbFirstName.Text.Trim(),
                                     Surname = tbLastName.Text.Trim(),
@@ -83,17 +85,26 @@ namespace RevivalGF.UI.Forms
 
                                 PhysicallyGoal physicallyGoal = new PhysicallyGoal()
                                 {
+                                    GoalID = _userRepository.GetById(NewUser.UserID).UserID,
                                     ActivityStatus = (ActivityStatus)cbActivityLevel.SelectedIndex + 1,
                                     TargetedDiet = (TargetedDiet)cbGoal.SelectedIndex + 1,
                                 };
-                                _goalsRepository.Add(physicallyGoal);                                
+                                _goalsRepository.Add(physicallyGoal);
+                                
+                                BodyAnalysis bodyAnalysis = new BodyAnalysis()
+                                {
+                                    AnalysisID = _userRepository.GetById(NewUser.UserID).UserID,
+                                    BodyMassIndex = (BodyMassIndex)BodyMassIndexResult(),
+                                    DietCalorieControl= DailyCalorieCalculator(),
+                                };
+                                _bodyAnalysisRepository.Add(bodyAnalysis);
 
                                 MessageBox.Show("Registation Successful");
                             }
 
                         }
                         else
-                            MessageBox.Show("Username or Email already exists. Please enter a different Username");
+                            MessageBox.Show("Username or Email already exists. Please enter a different Username or Email !! ");
                     }
                     else
                     {
@@ -128,6 +139,7 @@ namespace RevivalGF.UI.Forms
             }
 
         }
+        
         private bool UserNameCheck(string username)
         {
             if (username == null || username == "")
@@ -241,6 +253,79 @@ namespace RevivalGF.UI.Forms
                 MessageBox.Show("Mail Address is not correct");
             }
             return result;
+        }
+
+        private int BodyMassIndexCalculator()
+        {
+            double height = Convert.ToDouble(tbHeight.Text);
+            double weight = Convert.ToDouble(tbWeight.Text);
+            double heightForMeter = (double)(height / 100);
+            return (int)(weight / (heightForMeter * heightForMeter));
+        }
+        private double BasalMetabolicRate()
+        {
+            double height = Convert.ToDouble(tbHeight.Text);
+            double weight = Convert.ToDouble(tbWeight.Text);
+            double age = DateTime.Now.Year - dtpBirthDate.Value.Year;
+            if (rdbMen.Checked == true)
+                return 66 + (13.7 * weight) + (5 * height) - (6.8 * age);
+            else
+                return 665 + (9.6 * weight) + (1.8 * height) - (4.7 * age);
+        }
+        private double RestingMetabolicRate()
+        {
+            return 1.1 * BasalMetabolicRate();
+        }
+        private decimal ActiveBurn()
+        {
+            return (decimal)(1.1 * RestingMetabolicRate());
+        }
+        private decimal ActivityCalculator()
+        {
+            switch (cbActivityLevel.SelectedIndex)
+            {
+                case 1:
+                    return 1.2M;
+                case 2:
+                    return 1.375M;
+                case 3:
+                    return 1.55M;
+                case 4:
+                    return 1.9M;
+            }
+            return 1;
+        }
+        private decimal TargetedCalorieBurn()
+        {
+            switch (cbGoal.SelectedIndex)
+            {
+                case 1:
+                    return -200;
+                case 2:
+                    return 0;
+                case 3:
+                    return 200;
+            }
+            return 0;
+        }
+        private decimal DailyCalorieCalculator()
+        {
+            return (ActiveBurn() * ActivityCalculator()) + TargetedCalorieBurn();
+        }
+        private int BodyMassIndexResult()
+        {
+            if (BodyMassIndexCalculator() <= 18)
+                return (int)BodyMassIndex.Thin;
+            else if (BodyMassIndexCalculator() > 18 && BodyMassIndexCalculator() <= 24)
+                return (int)BodyMassIndex.Normal;
+            else if (BodyMassIndexCalculator() > 24 && BodyMassIndexCalculator() <= 29)
+                return (int)BodyMassIndex.OverWeight;
+            else if (BodyMassIndexCalculator() > 29 && BodyMassIndexCalculator() <= 35)
+                return (int)BodyMassIndex.FirstDegreeObesity;
+            else if (BodyMassIndexCalculator() > 35 && BodyMassIndexCalculator() <= 45)
+                return (int)BodyMassIndex.SecondDegreeObesity;
+            else
+                return (int)BodyMassIndex.ThirdDegreeObesity;
         }
 
 

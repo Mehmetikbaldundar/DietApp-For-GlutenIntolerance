@@ -27,11 +27,6 @@ namespace RevivalGF.DataAccess.Mapping
             this.Property(x => x.DeletedDate).IsOptional();
             this.Property(x => x.ModifiedDate).IsOptional();
 
-
-
-            this.HasOptional(s => s.BodyAnalysis)
-                .WithRequired(x => x.User);
-
             this.HasMany(g => g.MealReports)
                 .WithRequired(s => s.User)
                 .HasForeignKey(s => s.UserID);
@@ -40,12 +35,14 @@ namespace RevivalGF.DataAccess.Mapping
                 .WithRequired(s => s.User)
                 .HasForeignKey(s => s.UserID);
 
+            this.HasOptional(s => s.BodyAnalysis)
+                .WithRequired(x => x.User);                
                      
-             this.HasOptional(s => s.UserDetails)
-                .WithRequired(x => x.User);
+             this.HasRequired(s => s.UserDetails)
+                .WithRequiredPrincipal(x => x.User);
 
-            this.HasOptional(s => s.PhysicallyGoal)
-                .WithRequired(x => x.User);
+            this.HasRequired(s => s.PhysicallyGoal)
+                .WithRequiredPrincipal(x => x.User);
 
             this.HasOptional(s => s.Water)
                 .WithRequired(x => x.User);
