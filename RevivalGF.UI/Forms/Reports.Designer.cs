@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reports));
             this.pbNext = new System.Windows.Forms.PictureBox();
             this.cbReport = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,7 +38,7 @@
             // pbNext
             // 
             this.pbNext.BackColor = System.Drawing.Color.Transparent;
-            this.pbNext.Image = ((System.Drawing.Image)(resources.GetObject("pbNext.Image")));
+            this.pbNext.Image = global::RevivalGF.UI.Properties.Resources.nextbutton;
             this.pbNext.Location = new System.Drawing.Point(788, 485);
             this.pbNext.Name = "pbNext";
             this.pbNext.Size = new System.Drawing.Size(95, 87);
@@ -82,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::RevivalGF.UI.Properties.Resources.register_background;
             this.ClientSize = new System.Drawing.Size(996, 595);
             this.Controls.Add(this.pbNext);
             this.Controls.Add(this.cbReport);

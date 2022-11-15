@@ -70,6 +70,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackgroundImage = global::RevivalGF.UI.Properties.Resources.sustenium;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(253, 27);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -104,7 +105,7 @@
             // pbNext
             // 
             this.pbNext.BackColor = System.Drawing.Color.Transparent;
-            this.pbNext.Image = ((System.Drawing.Image)(resources.GetObject("pbNext.Image")));
+            this.pbNext.Image = global::RevivalGF.UI.Properties.Resources.nextbutton;
             this.pbNext.Location = new System.Drawing.Point(83, 181);
             this.pbNext.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbNext.Name = "pbNext";
@@ -178,7 +179,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::RevivalGF.UI.Properties.Resources.Backgroundimageforlogin;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gbLogin);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

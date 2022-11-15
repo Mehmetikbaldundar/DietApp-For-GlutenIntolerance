@@ -147,7 +147,7 @@
             // pbNext
             // 
             this.pbNext.BackColor = System.Drawing.Color.Transparent;
-            this.pbNext.Image = ((System.Drawing.Image)(resources.GetObject("pbNext.Image")));
+            this.pbNext.Image = global::RevivalGF.UI.Properties.Resources.nextbutton;
             this.pbNext.Location = new System.Drawing.Point(869, 320);
             this.pbNext.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbNext.Name = "pbNext";
@@ -612,7 +612,7 @@
             // dtpBirthDate
             // 
             this.dtpBirthDate.Location = new System.Drawing.Point(780, 188);
-            this.dtpBirthDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpBirthDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtpBirthDate.Name = "dtpBirthDate";
             this.dtpBirthDate.Size = new System.Drawing.Size(151, 22);
             this.dtpBirthDate.TabIndex = 57;
@@ -622,7 +622,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::RevivalGF.UI.Properties.Resources.register_background;
             this.ClientSize = new System.Drawing.Size(999, 559);
             this.Controls.Add(this.dtpBirthDate);
             this.Controls.Add(this.rtbTermsandConditions);
