@@ -26,10 +26,6 @@ namespace RevivalGF.DataAccess.Mapping
             this.Property(x => x.CreatedDate).IsRequired();
             this.Property(x => x.DeletedDate).IsOptional();
             this.Property(x => x.ModifiedDate).IsOptional();
-
-            this.HasMany(g => g.Users)
-                .WithRequired(s => s.PhysicallyGoal)
-                .HasForeignKey(s => s.GoalID);
         }
     }
 }

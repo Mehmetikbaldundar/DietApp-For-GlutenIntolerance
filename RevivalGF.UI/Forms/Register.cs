@@ -14,6 +14,7 @@ using System.Net.Mail;
 using System.Net;
 using Microsoft.VisualBasic;
 using RevivalGF.Business.Concrete;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 
 namespace RevivalGF.UI.Forms
 {
@@ -70,6 +71,7 @@ namespace RevivalGF.UI.Forms
 
                                 UserDetails NewUserDetails = new UserDetails()
                                 {
+                                    DetailsID = NewUser.UserID,
                                     Email = tbEmail.Text,
                                     Name = tbFirstName.Text.Trim(),
                                     Surname = tbLastName.Text.Trim(),
@@ -83,11 +85,12 @@ namespace RevivalGF.UI.Forms
 
                                 PhysicallyGoal physicallyGoal = new PhysicallyGoal()
                                 {
+                                    GoalID = NewUser.UserID,
                                     ActivityStatus = (ActivityStatus)cbActivityLevel.SelectedIndex + 1,
                                     TargetedDiet = (TargetedDiet)cbGoal.SelectedIndex + 1,
                                 };
                                 _goalsRepository.Add(physicallyGoal);
-                                db.SaveChanges();
+                                //db.SaveChanges();
 
                                 MessageBox.Show("Registation Successful");
                             }

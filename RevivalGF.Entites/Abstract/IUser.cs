@@ -18,7 +18,6 @@ namespace RevivalGF.Entites.Abstract
         BodyAnalysis BodyAnalysis { get; set; }
         List<MealReport> MealReports { get; set; }
         List<Medicament> Medicaments { get; set; }
-        int GoalID { get; set; }
         PhysicallyGoal PhysicallyGoal { get; set; }
         Water Water { get; set; }
         UserDetails UserDetails { get; set; }

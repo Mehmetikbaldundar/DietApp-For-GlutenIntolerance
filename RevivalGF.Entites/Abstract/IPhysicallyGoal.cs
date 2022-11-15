@@ -13,6 +13,6 @@ namespace RevivalGF.Entites.Abstract
         int GoalID { get; set; }
         TargetedDiet TargetedDiet { get; set; }
         ActivityStatus ActivityStatus { get; set; }        
-        List<User> Users { get; set; }
+        User User { get; set; }
     }
 }

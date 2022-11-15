@@ -23,5 +23,6 @@ namespace RevivalGF.Entites.Concrete
         public string DeletedBy { get; set; }
         public string ModifiedBy { get; set; }
         public Status Status { get; set; } = Status.Active;
+        public User User { get; set; }
     }
 }
