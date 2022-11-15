@@ -10,6 +10,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Mail;
+using System.Net;
+using Microsoft.VisualBasic;
 
 namespace RevivalGF.UI.Forms
 {
@@ -31,9 +34,8 @@ namespace RevivalGF.UI.Forms
 
         RevivalGfDbContext db;
         private void pbNext_DoubleClick(object sender, EventArgs e)
-        {
+        {            
             RegisterCheck();
-         
         }
 
         private void RegisterCheck()
@@ -45,48 +47,54 @@ namespace RevivalGF.UI.Forms
                 {
                     if (GenaralControl() == true)
                     {
-                        if (UserNameExist(tbUsername.Text) == false)
+                        if (UserNameExist(tbUsername.Text) == false && MailExist(tbEmail.Text) == false)
                         {
-                            User NewUser = new User()
+                            if(VerificationCodeSend(tbEmail.Text) == false)
+                                MessageBox.Show("Verification Code is not Correct !!");
+                            else
                             {
-                                UserName = tbUsername.Text,
-                                Password = login.PasswordWithSha256(tbPassword.Text),
-                            };
-                            db.Users.Add(NewUser);
-                            //db.SaveChanges();
+                                User NewUser = new User()
+                                {
+                                    UserName = tbUsername.Text,
+                                    Password = login.PasswordWithSha256(tbPassword.Text),
+                                };
+                                db.Users.Add(NewUser);
 
-                            UserDetails NewUserDetails = new UserDetails()
-                            {
-                                Email = tbEmail.Text,
-                                Name = tbFirstName.Text.Trim(),
-                                Surname = tbLastName.Text.Trim(),
-                                Gender = rdbWomen.Checked ? Gender.Woman : Gender.Man,
-                                Height = Convert.ToDouble(tbHeight.Text),
-                                Weight = Convert.ToDouble(tbWeight.Text),
-                                BirthDate = Convert.ToDateTime(dtpBirthDate.Value),   //hata olabilir
-                                GlutenIntolerance = (GlutenIntolerance)cbDisease.SelectedIndex + 1
-                            };
-                            db.UserDetails.Add(NewUserDetails);
-                            //db.SaveChanges();
+                                UserDetails NewUserDetails = new UserDetails()
+                                {
+                                    Email = tbEmail.Text,
+                                    Name = tbFirstName.Text.Trim(),
+                                    Surname = tbLastName.Text.Trim(),
+                                    Gender = rdbWomen.Checked ? Gender.Woman : Gender.Man,
+                                    Height = Convert.ToDouble(tbHeight.Text),
+                                    Weight = Convert.ToDouble(tbWeight.Text),
+                                    BirthDate = Convert.ToDateTime(dtpBirthDate.Value),
+                                    GlutenIntolerance = (GlutenIntolerance)cbDisease.SelectedIndex + 1
+                                };
+                                db.UserDetails.Add(NewUserDetails);
 
-                            PhysicallyGoal physicallyGoal = new PhysicallyGoal()
-                            {
-                                ActivityStatus = (ActivityStatus)cbActivityLevel.SelectedIndex + 1,
-                                TargetedDiet = (TargetedDiet)cbGoal.SelectedIndex + 1,
-                            };
-                            db.PhysicallyGoals.Add(physicallyGoal);
-                            db.SaveChanges();
+                                PhysicallyGoal physicallyGoal = new PhysicallyGoal()
+                                {
+                                    ActivityStatus = (ActivityStatus)cbActivityLevel.SelectedIndex + 1,
+                                    TargetedDiet = (TargetedDiet)cbGoal.SelectedIndex + 1,
+                                };
+                                db.PhysicallyGoals.Add(physicallyGoal);
+                                db.SaveChanges();
 
+                                MessageBox.Show("Registation Successful");
+                            }
 
-                            MessageBox.Show("Registation Successful");
                         }
                         else
-                            MessageBox.Show("Username already exists. Please enter a different Username");
+                            MessageBox.Show("Username or Email already exists. Please enter a different Username");
                     }
                     else
                     {
                         if (UserNameCheck(tbUsername.Text) == false)
                             MessageBox.Show("Username cannot be empty !! ");
+
+                        if (MailCheck(tbEmail.Text) == false)
+                            MessageBox.Show("Email Address is not correct");
 
                         if (PasswordRules(tbPassword.Text) == false)
                             MessageBox.Show("Incorrect Password .. \n Please check to Password Rules");
@@ -95,10 +103,13 @@ namespace RevivalGF.UI.Forms
                             MessageBox.Show("Passwords do not match");
                     }
                 }
-                else if (tbUsername.Text == "" && tbPassword.Text == "" && tbRepeatPassword.Text == "")
+                else if (tbUsername.Text == "" && tbPassword.Text == "" && tbRepeatPassword.Text == "" && tbEmail.Text == "")
                 {
                     if (UserNameCheck(tbUsername.Text) == false)
                         MessageBox.Show("Username cannot be empty !! ");
+
+                    if (MailCheck(tbEmail.Text) == false)
+                        MessageBox.Show("Email Address cannot be empty !! ");
 
                     if (PasswordCheck(tbPassword.Text, tbRepeatPassword.Text) == false)
                         MessageBox.Show("Password cannot be empty !! ");
@@ -106,13 +117,13 @@ namespace RevivalGF.UI.Forms
             }
             else
             {
-                MessageBox.Show("Please accept the KVK terms.\r\n");
+                MessageBox.Show("Please accept the terms and conditions.\r\n");
             }
-            
+
         }
         private bool UserNameCheck(string username)
         {
-            if(username == null || username == "")
+            if (username == null || username == "")
                 return false;
             else
                 return true;
@@ -149,7 +160,7 @@ namespace RevivalGF.UI.Forms
         }
         public bool GenaralControl()
         {
-            if (PasswordRules(tbPassword.Text) && PasswordCheck(tbPassword.Text, tbRepeatPassword.Text) && UserNameCheck(tbUsername.Text))
+            if (PasswordRules(tbPassword.Text) && PasswordCheck(tbPassword.Text, tbRepeatPassword.Text) && UserNameCheck(tbUsername.Text) && MailCheck(tbEmail.Text))
                 return true;
 
             else
@@ -164,6 +175,68 @@ namespace RevivalGF.UI.Forms
             }
             else return false;
         }
+        public bool MailExist(string email)
+        {
+            var emailControl = db.UserDetails.Where(x => x.Email == email).FirstOrDefault();
+            if (emailControl != null)
+            {
+                return true;
+            }
+            else return false;
+        }
+        public bool MailCheck(string email)
+        {
+            try
+            {
+                MailAddress mailAddress = new MailAddress(email);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+
+        public static string verificationCode = "";
+        public bool VerificationCodeSend(string mail)
+        {
+            bool result = false;
+
+            string appMail = "revivalgfapp@outlook.com";
+            string sifre = "Revivalgf4*";
+
+            Random rnd = new Random();
+            string Keys = "0123456789";
+            verificationCode = "";
+            for (int i = 0; i < 6; i++)
+            {
+                verificationCode += Keys[rnd.Next(Keys.Length)];
+            }
+            try
+            {
+                MailMessage message = new MailMessage(appMail, mail, "Verification Code", "REVIVAL GF Application Registiration Code: '" + verificationCode + "'\n\nRevivalGF Team");
+                SmtpClient smtp = new SmtpClient("smtp-mail.outlook.com", 587);
+                smtp.EnableSsl = true;
+                smtp.UseDefaultCredentials = true;
+                smtp.Credentials = new NetworkCredential(appMail, sifre);
+                smtp.Send(message);
+                string verificationControl = Interaction.InputBox("Please Write Verification Code.", "Verification", "", 0, 0);
+                if (verificationControl == verificationCode)
+                    result = true;
+                else
+                {
+                    result = false;                    
+                }              
+            }
+            catch
+            {
+                MessageBox.Show("Mail Address is not correct");
+            }
+            return result;
+        }
+
+
         #region *remove/add
         private void tbUsername_TextChanged(object sender, EventArgs e)
         {
