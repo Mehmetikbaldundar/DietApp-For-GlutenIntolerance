@@ -22,12 +22,9 @@ namespace RevivalGF.Business.Services
         private readonly UserRepository _userRepository;
         private readonly UserDetailsRepository _detailsRepository;
         private readonly PhysicallyGoalRepository _goalsRepository;
-<<<<<<< HEAD
         private readonly BodyAnalysisRepository _bodyAnalysisRepository;
         private readonly WaterRepository _waterRepository;
-=======
-        private readonly BodyAnalysisRepository _bodyAnalysisRepository;        
->>>>>>> master
+
 
         public UserService()
         {
@@ -271,7 +268,6 @@ namespace RevivalGF.Business.Services
             }
             return builder.ToString();
         }
-<<<<<<< HEAD
 
         //Main Form Methods
         public void PlummyOffline(User user)
@@ -311,44 +307,6 @@ namespace RevivalGF.Business.Services
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> master
         public bool LoginCheck(string username, string password)
         {
             var userNameControl = db.Users.Where(x => x.UserName == username.Trim()).FirstOrDefault();
