@@ -16,7 +16,6 @@ namespace RevivalGF.Entites.Concrete
         public Activities Activities { get; set; }
 
         private decimal _ActivityFaktor;
-
         public decimal ActivityFaktor
         {
             get { return _ActivityFaktor; }

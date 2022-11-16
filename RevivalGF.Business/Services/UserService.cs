@@ -31,98 +31,42 @@ namespace RevivalGF.Business.Services
             _bodyAnalysisRepository = new BodyAnalysisRepository(db);
         }
 
-        private void RegisterCheck()
+        public bool RegisterCheck(User user, string retrypassword, UserDetails userDetails, PhysicallyGoal physicallyGoal, BodyAnalysis bodyAnalysis)
         {
-            Login login = new Login();
-            if (cbAccepted.Checked)
+            if (user.UserName == "" && user.Password == "" && retrypassword == "" && userDetails.Email == "")
             {
-                if (tbPassword.Text != "" && tbRepeatPassword.Text != "")
-                {
-                    if (GenaralControl() == true)
-                    {
-                        if (UserNameExist(tbUsername.Text) == false && MailExist(tbEmail.Text) == false)
-                        {
-                            if (VerificationCodeSend(tbEmail.Text) == false)
-                                MessageBox.Show("Verification Code is not Correct !!");
-                            else
-                            {
-                                User NewUser = new User()
-                                {
-                                    UserName = tbUsername.Text,
-                                    Password = login.PasswordWithSha256(tbPassword.Text),
-                                };
-                                _userRepository.Add(NewUser);
-                                UserDetails NewUserDetails = new UserDetails()
-                                {
-                                    DetailsID = _userRepository.GetById(NewUser.UserID).UserID,
-                                    Email = tbEmail.Text,
-                                    Name = tbFirstName.Text.Trim(),
-                                    Surname = tbLastName.Text.Trim(),
-                                    Gender = rdbWomen.Checked ? Gender.Woman : Gender.Man,
-                                    Height = Convert.ToDouble(tbHeight.Text),
-                                    Weight = Convert.ToDouble(tbWeight.Text),
-                                    BirthDate = Convert.ToDateTime(dtpBirthDate.Value),
-                                    GlutenIntolerance = (GlutenIntolerance)cbDisease.SelectedIndex + 1
-                                };
-                                _detailsRepository.Add(NewUserDetails);
+                if (UserNameCheck(user.UserName) == false)
+                    throw new Exception("Username cannot be empty !! ");
 
-                                PhysicallyGoal physicallyGoal = new PhysicallyGoal()
-                                {
-                                    GoalID = _userRepository.GetById(NewUser.UserID).UserID,
-                                    ActivityStatus = (ActivityStatus)cbActivityLevel.SelectedIndex + 1,
-                                    TargetedDiet = (TargetedDiet)cbGoal.SelectedIndex + 1,
-                                };
-                                _goalsRepository.Add(physicallyGoal);
+                if (MailCheck(userDetails.Email) == false)
+                    throw new Exception("Email Address cannot be empty !! ");
 
-                                BodyAnalysis bodyAnalysis = new BodyAnalysis()
-                                {
-                                    AnalysisID = _userRepository.GetById(NewUser.UserID).UserID,
-                                    BodyMassIndex = (BodyMassIndex)BodyMassIndexResult(),
-                                    DietCalorieControl = DailyCalorieCalculator(),
-                                };
-                                _bodyAnalysisRepository.Add(bodyAnalysis);
-
-                                MessageBox.Show("Registation Successful");
-                            }
-
-                        }
-                        else
-                            MessageBox.Show("Username or Email already exists. Please enter a different Username or Email !! ");
-                    }
-                    else
-                    {
-                        if (UserNameCheck(tbUsername.Text) == false)
-                            MessageBox.Show("Username cannot be empty !! ");
-
-                        if (MailCheck(tbEmail.Text) == false)
-                            MessageBox.Show("Email Address is not correct");
-
-                        if (PasswordRules(tbPassword.Text) == false)
-                            MessageBox.Show("Incorrect Password .. \n Please check to Password Rules");
-
-                        if (PasswordCheck(tbPassword.Text, tbRepeatPassword.Text) == false)
-                            MessageBox.Show("Passwords do not match");
-                    }
-                }
-                else if (tbUsername.Text == "" && tbPassword.Text == "" && tbRepeatPassword.Text == "" && tbEmail.Text == "")
-                {
-                    if (UserNameCheck(tbUsername.Text) == false)
-                        MessageBox.Show("Username cannot be empty !! ");
-
-                    if (MailCheck(tbEmail.Text) == false)
-                        MessageBox.Show("Email Address cannot be empty !! ");
-
-                    if (PasswordCheck(tbPassword.Text, tbRepeatPassword.Text) == false)
-                        MessageBox.Show("Password cannot be empty !! ");
-                }
+                if (PasswordCheck(user.Password, retrypassword) == false)
+                    throw new Exception("Password cannot be empty !! ");
             }
-            else
-            {
-                MessageBox.Show("Please accept the terms and conditions.\r\n");
-            }
+            if (userDetails.BirthDate >= DateTime.Now.Date)            
+                throw new Exception("Birth Date is not correct !!");            
 
+            if (MailCheck(userDetails.Email) == false)
+                throw new Exception("Email Address is not correct !!");
+
+            if (PasswordRules(user.Password) == false)
+                throw new Exception("Incorrect Password .. \n Please check to Password Rules");
+
+            if (PasswordCheck(user.Password, retrypassword) == false)
+                throw new Exception("Passwords do not match");
+
+            if (UserNameExist(user.UserName) == true)
+                throw new Exception("Username already exists. Please enter a different Username !! ");
+
+            if (MailExist(userDetails.Email) == true)
+                throw new Exception("Email already exists. Please enter a different Email !! ");
+
+            if (VerificationCodeSend(userDetails.Email) == false)
+                throw new Exception("Verification Code is not Correct !!");
+
+            return UserRegistation(user, userDetails, physicallyGoal, bodyAnalysis);
         }
-
         private bool UserNameCheck(string username)
         {
             if (username == null || username == "")
@@ -138,7 +82,7 @@ namespace RevivalGF.Business.Services
             else
                 return true;
         }
-        public bool PasswordRules(string password)
+        private bool PasswordRules(string password)
         {
             int totalCharacter = 0, totalNumberChar = 0, totalUpperChar = 0, totalSpecialChar = 0;
             foreach (var item in password.ToCharArray())
@@ -160,15 +104,7 @@ namespace RevivalGF.Business.Services
                 return true;
             }
         }
-        public bool GenaralControl()
-        {
-            if (PasswordRules(tbPassword.Text) && PasswordCheck(tbPassword.Text, tbRepeatPassword.Text) && UserNameCheck(tbUsername.Text) && MailCheck(tbEmail.Text))
-                return true;
-
-            else
-                return false;
-        }
-        public bool UserNameExist(string userName)
+        private bool UserNameExist(string userName)
         {
             var userNameControl = db.Users.Where(x => x.UserName == userName).FirstOrDefault();
             if (userNameControl != null)
@@ -177,7 +113,7 @@ namespace RevivalGF.Business.Services
             }
             else return false;
         }
-        public bool MailExist(string email)
+        private bool MailExist(string email)
         {
             var emailControl = db.UserDetails.Where(x => x.Email == email).FirstOrDefault();
             if (emailControl != null)
@@ -186,7 +122,7 @@ namespace RevivalGF.Business.Services
             }
             else return false;
         }
-        public bool MailCheck(string email)
+        private bool MailCheck(string email)
         {
             try
             {
@@ -199,9 +135,8 @@ namespace RevivalGF.Business.Services
             }
         }
 
-
         public static string verificationCode = "";
-        public bool VerificationCodeSend(string mail)
+        private bool VerificationCodeSend(string mail)
         {
             bool result = false;
 
@@ -233,82 +168,94 @@ namespace RevivalGF.Business.Services
             }
             catch
             {
-                MessageBox.Show("Mail Address is not correct");
+                MessageBox.Show("Mail Service Problems. !! ");
             }
             return result;
         }
-
-        private int BodyMassIndexCalculator()
+        private bool UserRegistation(User user, UserDetails userDetails, PhysicallyGoal physicallyGoal, BodyAnalysis bodyAnalysis)
         {
-            double height = Convert.ToDouble(tbHeight.Text);
-            double weight = Convert.ToDouble(tbWeight.Text);
+            _userRepository.Add(user);
+            int MainID = user.UserID;            
+            userDetails.DetailsID = MainID;
+            _detailsRepository.Add(userDetails);
+            physicallyGoal.GoalID = MainID;
+            _goalsRepository.Add(physicallyGoal);
+            bodyAnalysis.AnalysisID = MainID;
+            _bodyAnalysisRepository.Add(bodyAnalysis);
+            MessageBox.Show("Registation Successful");
+            return true;
+        }
+        private int BodyMassIndexCalculator(UserDetails userDetails)
+        {
+            double height = Convert.ToDouble(userDetails.Height);
+            double weight = Convert.ToDouble(userDetails.Weight);
             double heightForMeter = (double)(height / 100);
             return (int)(weight / (heightForMeter * heightForMeter));
         }
-        private double BasalMetabolicRate()
+        private double BasalMetabolicRate(UserDetails userDetails)
         {
-            double height = Convert.ToDouble(tbHeight.Text);
-            double weight = Convert.ToDouble(tbWeight.Text);
-            double age = DateTime.Now.Year - dtpBirthDate.Value.Year;
-            if (rdbMen.Checked == true)
+            double height = Convert.ToDouble(userDetails.Height);
+            double weight = Convert.ToDouble(userDetails.Weight);
+            double age = DateTime.Now.Year - userDetails.BirthDate.Year;
+            if (userDetails.Gender == Gender.Man)
                 return 66 + (13.7 * weight) + (5 * height) - (6.8 * age);
             else
                 return 665 + (9.6 * weight) + (1.8 * height) - (4.7 * age);
         }
-        private double RestingMetabolicRate()
+        private double RestingMetabolicRate(UserDetails userDetails)
         {
-            return 1.1 * BasalMetabolicRate();
+            return 1.1 * BasalMetabolicRate(userDetails);
         }
-        private decimal ActiveBurn()
+        private decimal ActiveBurn(UserDetails userDetails)
         {
-            return (decimal)(1.1 * RestingMetabolicRate());
+            return (decimal)(1.1 * RestingMetabolicRate(userDetails));
         }
-        private decimal ActivityCalculator()
+        private decimal ActivityCalculator(PhysicallyGoal physicallyGoal)
         {
-            switch (cbActivityLevel.SelectedIndex)
+            switch (physicallyGoal.ActivityStatus)
             {
-                case 1:
+                case ActivityStatus.Active:
                     return 1.2M;
-                case 2:
+                case ActivityStatus.LightlyActive:
                     return 1.375M;
-                case 3:
+                case ActivityStatus.ModeratelyActive:
                     return 1.55M;
-                case 4:
+                case ActivityStatus.VeryActive:
                     return 1.9M;
             }
             return 1;
         }
-        private decimal TargetedCalorieBurn()
+        private decimal TargetedCalorieBurn(PhysicallyGoal physicallyGoal)
         {
-            switch (cbGoal.SelectedIndex)
+            switch (physicallyGoal.TargetedDiet)
             {
-                case 1:
+                case TargetedDiet.LoseWeight:
                     return -200;
-                case 2:
+                case TargetedDiet.MaintainWeight:
                     return 0;
-                case 3:
+                case TargetedDiet.GainWeight:
                     return 200;
             }
             return 0;
         }
-        private decimal DailyCalorieCalculator()
+        public decimal DailyCalorieCalculator(UserDetails userDetails, PhysicallyGoal physicallyGoal)
         {
-            return (ActiveBurn() * ActivityCalculator()) + TargetedCalorieBurn();
+            return (ActiveBurn(userDetails) * ActivityCalculator(physicallyGoal)) + TargetedCalorieBurn(physicallyGoal);
         }
-        private int BodyMassIndexResult()
+        public BodyMassIndex BodyMassIndexResult(UserDetails userDetails)
         {
-            if (BodyMassIndexCalculator() <= 18)
-                return (int)BodyMassIndex.Thin;
-            else if (BodyMassIndexCalculator() > 18 && BodyMassIndexCalculator() <= 24)
-                return (int)BodyMassIndex.Normal;
-            else if (BodyMassIndexCalculator() > 24 && BodyMassIndexCalculator() <= 29)
-                return (int)BodyMassIndex.OverWeight;
-            else if (BodyMassIndexCalculator() > 29 && BodyMassIndexCalculator() <= 35)
-                return (int)BodyMassIndex.FirstDegreeObesity;
-            else if (BodyMassIndexCalculator() > 35 && BodyMassIndexCalculator() <= 45)
-                return (int)BodyMassIndex.SecondDegreeObesity;
+            if (BodyMassIndexCalculator(userDetails) <= 18)
+                return BodyMassIndex.Thin;
+            else if (BodyMassIndexCalculator(userDetails) > 18 && BodyMassIndexCalculator(userDetails) <= 24)
+                return BodyMassIndex.Normal;
+            else if (BodyMassIndexCalculator(userDetails) > 24 && BodyMassIndexCalculator(userDetails) <= 29)
+                return BodyMassIndex.OverWeight;
+            else if (BodyMassIndexCalculator(userDetails) > 29 && BodyMassIndexCalculator(userDetails) <= 35)
+                return BodyMassIndex.FirstDegreeObesity;
+            else if (BodyMassIndexCalculator(userDetails) > 35 && BodyMassIndexCalculator(userDetails) <= 45)
+                return BodyMassIndex.SecondDegreeObesity;
             else
-                return (int)BodyMassIndex.ThirdDegreeObesity;
+                return BodyMassIndex.ThirdDegreeObesity;
         }
 
 
