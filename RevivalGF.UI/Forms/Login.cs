@@ -38,7 +38,10 @@ namespace RevivalGF.UI.Forms
             userNameControl = userService.UsernameControl(tbUsername.Text);
 
             if (tbUsername.Text == "" || tbPassword.Text == "")
-                throw new Exception("Email and password fields cannot be empty. !!");
+            {
+                MessageBox.Show("Email and password fields cannot be empty. !!");
+                return;
+            }              
 
             bool check = userService.LoginCheck(tbUsername.Text, tbPassword.Text);
             if (check)

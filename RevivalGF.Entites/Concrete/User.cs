@@ -20,7 +20,7 @@ namespace RevivalGF.Entites.Concrete
         public List<MealReport> MealReports { get; set; }
         public List<Medicament> Medicaments { get; set; }
         public PhysicallyGoal PhysicallyGoal { get; set; }
-        public Water Water { get; set; }
+        public List<Water> Water { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public DateTime? ModifiedDate { get; set; }
         public DateTime? DeletedDate { get; set; }

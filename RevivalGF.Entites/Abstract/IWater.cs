@@ -11,9 +11,8 @@ namespace RevivalGF.Entites.Abstract
     {
         int WaterID { get; set; }
         decimal WaterCount { get; set; }
-        DateTime ReportDate { get; set; }
-        int UserID { get; set; }
+        DateTime ReportDate { get; set; }        
         User User { get; set; }
-
+        int UserID { get; set; }
     }
 }
