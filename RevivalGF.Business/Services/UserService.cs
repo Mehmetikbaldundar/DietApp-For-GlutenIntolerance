@@ -34,7 +34,7 @@ namespace RevivalGF.Business.Services
             _bodyAnalysisRepository = new BodyAnalysisRepository(db);
         }
 
-        public bool RegisterCheck(User user, UserDetails userDetails, PhysicallyGoal physicallyGoal, BodyAnalysis bodyAnalysis,Water water)
+        public bool RegisterCheck(User user, UserDetails userDetails, PhysicallyGoal physicallyGoal, BodyAnalysis bodyAnalysis)
         {
             if (user.UserName == "" && user.Password == "" && userDetails.Email == "")
             {
@@ -65,7 +65,7 @@ namespace RevivalGF.Business.Services
             if (VerificationCodeSend(userDetails.Email) == false)
                 throw new Exception("Verification Code is not Correct !!");
 
-            return UserRegistation(user, userDetails, physicallyGoal, bodyAnalysis,water);
+            return UserRegistation(user, userDetails, physicallyGoal, bodyAnalysis);
         }
         private bool UserNameCheck(string username)
         {
@@ -181,7 +181,7 @@ namespace RevivalGF.Business.Services
             }
             return result;
         }
-        private bool UserRegistation(User user, UserDetails userDetails, PhysicallyGoal physicallyGoal, BodyAnalysis bodyAnalysis,Water water)
+        private bool UserRegistation(User user, UserDetails userDetails, PhysicallyGoal physicallyGoal, BodyAnalysis bodyAnalysis)
         {
             user.Password = PasswordWithSha256(user.Password);
             _userRepository.Add(user);
@@ -192,9 +192,6 @@ namespace RevivalGF.Business.Services
             _goalsRepository.Add(physicallyGoal);
             bodyAnalysis.AnalysisID = MainID;
             _bodyAnalysisRepository.Add(bodyAnalysis);
-            //
-            water.WaterID= MainID;
-            _waterRepository.Add(water);
             MessageBox.Show("Registation Successful");
             return true;
         }
