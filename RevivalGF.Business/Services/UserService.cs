@@ -35,16 +35,15 @@ namespace RevivalGF.Business.Services
 
         public bool RegisterCheck(User user, UserDetails userDetails, PhysicallyGoal physicallyGoal, BodyAnalysis bodyAnalysis)
         {
-            if (user.UserName == "" && user.Password == "" && userDetails.Email == "")
+            if (string.IsNullOrEmpty(user.UserName) || string.IsNullOrEmpty(user.Password) || string.IsNullOrEmpty(userDetails.Email))
             {
                 if (UserNameCheck(user.UserName) == false)
-                    throw new Exception("Username cannot be empty !! ");
-
-                if (MailCheck(userDetails.Email) == false)
-                    throw new Exception("Email Address cannot be empty !! ");
+                    throw new Exception("Username cannot be empty !! ");                
 
                 if (PasswordCheck(user.Password) == false)
                     throw new Exception("Password cannot be empty !! ");
+
+                EmptyControl(userDetails.Name, userDetails.Surname);
             }
             if (userDetails.BirthDate >= DateTime.Now.Date)
                 throw new Exception("Birth Date is not correct !!");
@@ -53,7 +52,7 @@ namespace RevivalGF.Business.Services
                 throw new Exception("Email Address is not correct !!");
 
             if (PasswordRules(user.Password) == false)
-                throw new Exception("Incorrect Password .. \n Please check to Password Rules");
+                throw new Exception("Incorrect Password .. \n At least 8 character \n 1 upparcase letter \n 1 lowercase letter \n 1 number \n 1 symbol");
 
             if (UserNameExist(user.UserName) == true)
                 throw new Exception("Username already exists. Please enter a different Username !! ");
@@ -79,16 +78,6 @@ namespace RevivalGF.Business.Services
                 return false;
             else
                 return true;
-        }
-        public bool PasswordMatch(string password, string retryPassword)
-        {
-            {
-                if (password != retryPassword)
-                    return false;
-
-                else
-                    return true;
-            }
         }
         private bool PasswordRules(string password)
         {
@@ -277,47 +266,6 @@ namespace RevivalGF.Business.Services
             }
             return builder.ToString();
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         public bool LoginCheck(string username, string password)
         {
             var userNameControl = db.Users.Where(x => x.UserName == username.Trim()).FirstOrDefault();
@@ -326,9 +274,9 @@ namespace RevivalGF.Business.Services
 
             if (userNameControl.Password != PasswordWithSha256(password))
                 throw new Exception("Password Incorrect! \n Please check and try again");
+
             return true;
         }
-
         public User UsernameControl(string username)
         {
             var userNameControl = db.Users.Where(x => x.UserName == username.Trim()).FirstOrDefault();
@@ -336,7 +284,12 @@ namespace RevivalGF.Business.Services
                 throw new Exception("Please enter a valid Username or Password. !!");
             return userNameControl;
         }
-        
+        private void EmptyControl(string name, string surname)
+        {
+            if (name == ""|| surname == "")
+                throw new Exception("Name,Surname and Email cannot be empty !!");
+        }
+
     }
 }
 
