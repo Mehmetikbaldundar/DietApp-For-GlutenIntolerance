@@ -22,7 +22,12 @@ namespace RevivalGF.Business.Services
         private readonly UserRepository _userRepository;
         private readonly UserDetailsRepository _detailsRepository;
         private readonly PhysicallyGoalRepository _goalsRepository;
+<<<<<<< HEAD
+        private readonly BodyAnalysisRepository _bodyAnalysisRepository;
+        private readonly WaterRepository _waterRepository;
+=======
         private readonly BodyAnalysisRepository _bodyAnalysisRepository;        
+>>>>>>> master
 
         public UserService()
         {
@@ -266,6 +271,84 @@ namespace RevivalGF.Business.Services
             }
             return builder.ToString();
         }
+<<<<<<< HEAD
+
+        //Main Form Methods
+        public void PlummyOffline(User user)
+        {
+            user.Tutorial = false;
+            _userRepository.Update(user);
+        }
+        public UserDetails GetUserDetails(User user)
+        {
+            UserDetails userDetails = _detailsRepository.GetById(user.UserID);
+            return userDetails;
+        }
+
+
+        public Water GetWater(User user)
+        {
+            Water water = _waterRepository.GetById(user.UserID);
+            return water;
+        }
+        public Water DecreaseWater(User user)
+        {
+            Water water = _waterRepository.GetById(user.UserID);
+            if (water.WaterCount > 0)
+            {
+                water.WaterCount--;
+            }   
+            _waterRepository.Update(water);
+            return water;
+        }
+        public Water IncreaseWater(User user)
+        {
+            Water water = _waterRepository.GetById(user.UserID);            
+            
+            water.WaterCount++;
+            _waterRepository.Update(water);
+            return water;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
+>>>>>>> master
         public bool LoginCheck(string username, string password)
         {
             var userNameControl = db.Users.Where(x => x.UserName == username.Trim()).FirstOrDefault();

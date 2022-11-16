@@ -1,4 +1,5 @@
-﻿using RevivalGF.DataAccess.Context;
+﻿using RevivalGF.Business.Services;
+using RevivalGF.DataAccess.Context;
 using RevivalGF.Entites.Abstract;
 using RevivalGF.Entites.Concrete;
 using System;
@@ -21,21 +22,21 @@ namespace RevivalGF.UI.Forms
         
         public MainForm()
         {
-            
-            db = new RevivalGfDbContext();
+
+            userService = new UserService();
             InitializeComponent();
         }
-               
+        UserService userService;
+       
         private void MainForm_Load(object sender, EventArgs e)
         {
-            var user=GetUser();
-            var userdetails=GetUserDetails();
+            var userNameControl = Login.userNameControl;
+            var userdetails = userService.GetUserDetails(userNameControl);           
 
-            if (user.Tutorial==true)
+            if (userNameControl.Tutorial==true)
             {
                 gbPlummy1.Visible = true;
-                user.Tutorial= false;
-                db.SaveChanges();
+                userService.PlummyOffline(userNameControl);
             }
             else
             {
@@ -47,12 +48,14 @@ namespace RevivalGF.UI.Forms
             gbPlummy4.Visible = false;
             gbPlummy5v2.Visible = false;
             gbPlummy6.Visible = false;
-            lblUsername.Text = user.UserName;
+
+            lblUsername.Text = userNameControl.UserName;          
             lblAge.Text = (DateTime.Now.Year - userdetails.BirthDate.Year).ToString();        
             lblHeight.Text = userdetails.Height.ToString() + " " + "cm";
             lblWeight.Text = userdetails.Weight.ToString() + " " + "kg";
             lblIdealWeight.Text = Math.Round(IdealWeight(userdetails)).ToString() + " " + "kg";
             lblDisease.Text = userdetails.GlutenIntolerance.ToString();
+
             if ((int)userdetails.Gender==1)
             {
                 pbAvatar.Image = Properties.Resources.avatar_men;
@@ -60,8 +63,7 @@ namespace RevivalGF.UI.Forms
             else
             {
                 pbAvatar.Image = Properties.Resources.avatar_women;
-            }
-              
+            }    
         }
         #region PlummySection
         private void pbPlummy1Next_DoubleClick(object sender, EventArgs e)
@@ -164,40 +166,15 @@ namespace RevivalGF.UI.Forms
             }
         }
         #endregion
-
-      
-
-        private User GetUser()
-        {
-            var user = db.Users.FirstOrDefault(x => x.UserID == Login.userNameControl.UserID);
-            return user;
-            
-
-        }
-        private UserDetails GetUserDetails()
-        {          
-            var userdetails = db.UserDetails.FirstOrDefault(x => x.DetailsID == Login.userNameControl.UserID);
-            return userdetails;
-        }
-       
-    
         private void pbMinusWater_Click_1(object sender, EventArgs e)
         {
-           /* var water = db.Waters.FirstOrDefault(x => x.UserID == Login.id);
-            if (water.WaterCount > 0)
-            {
-                water.WaterCount--;
-                db.SaveChanges();
-                lblWaterInfo.Text = water.WaterCount.ToString();
-            } */
+            var water = userService.DecreaseWater(Login.userNameControl);
+            lblWaterInfo.Text = water.WaterCount.ToString();            
         }
-
         private void pbAddWater_Click_1(object sender, EventArgs e)
         {
-           /* var water = db.Waters.FirstOrDefault(x => x.UserID == Login.id);
-            water.WaterCount++;
-            db.SaveChanges();
-            lblWaterInfo.Text = water.WaterCount.ToString(); */
+            var water = userService.IncreaseWater(Login.userNameControl);
+            lblWaterInfo.Text = water.WaterCount.ToString(); 
         }
     }
 }
