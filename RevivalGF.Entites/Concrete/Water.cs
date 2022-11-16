@@ -12,7 +12,7 @@ namespace RevivalGF.Entites.Concrete
 {
     public class Water : IWater, IBaseEntity
     {
-        [ForeignKey("User")]
+        [Key]
         public int WaterID { get; set; }
         public decimal WaterCount { get; set; } = 0;
         public DateTime ReportDate { get; set; }

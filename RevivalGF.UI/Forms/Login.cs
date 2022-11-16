@@ -24,8 +24,8 @@ namespace RevivalGF.UI.Forms
             InitializeComponent();
             userService = new UserService();
         }
-        UserService userService;        
-
+        UserService userService;                
+        
         private void Login_Load(object sender, EventArgs e)
         {            
             tbPassword.UseSystemPasswordChar = true;  // for **** appearance
@@ -38,7 +38,10 @@ namespace RevivalGF.UI.Forms
             userNameControl = userService.UsernameControl(tbUsername.Text);
 
             if (tbUsername.Text == "" || tbPassword.Text == "")
-                throw new Exception("Email and password fields cannot be empty. !!");
+            {
+                MessageBox.Show("Email and password fields cannot be empty. !!");
+                return;
+            }              
 
             bool check = userService.LoginCheck(tbUsername.Text, tbPassword.Text);
             if (check)
@@ -47,7 +50,7 @@ namespace RevivalGF.UI.Forms
                 MainForm main = new MainForm();
                 main.Show();
                 Hide();
-            }
+            }            
         }
 
         private void lblRegister_DoubleClick(object sender, EventArgs e)
@@ -65,6 +68,6 @@ namespace RevivalGF.UI.Forms
         private void pbNext_Click(object sender, EventArgs e)
         {
             pbNext.Cursor = Cursors.WaitCursor;
-        }
+        }             
     }
 }

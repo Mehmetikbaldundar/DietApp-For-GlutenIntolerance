@@ -43,9 +43,13 @@ namespace RevivalGF.UI.Forms
                 MessageBox.Show("Please accept the terms and conditions.\r\n");
                 return;
             }
-            if (userService.PasswordMatch(tbPassword.Text, tbRepeatPassword.Text) == false)            
-                throw new Exception("Passwords do not match");                      
-            
+
+            if (tbPassword.Text != tbRepeatPassword.Text)
+            {
+                MessageBox.Show("Passwords do not match");
+                return;
+            }
+
             try
             {
                 User NewUser = new User()
@@ -62,7 +66,7 @@ namespace RevivalGF.UI.Forms
                     Height = Convert.ToDouble(tbHeight.Text),
                     Weight = Convert.ToDouble(tbWeight.Text),
                     BirthDate = Convert.ToDateTime(dtpBirthDate.Value),
-                    GlutenIntolerance = (GlutenIntolerance)cbDisease.SelectedIndex + 1
+                    GlutenIntolerance = (GlutenIntolerance)cbDisease.SelectedIndex
                 };
                 PhysicallyGoal physicallyGoal = new PhysicallyGoal()
                 {
@@ -73,8 +77,12 @@ namespace RevivalGF.UI.Forms
                 {
                     BodyMassIndex = userService.BodyMassIndexResult(NewUserDetails),
                     DietCalorieControl = userService.DailyCalorieCalculator(NewUserDetails, physicallyGoal),
+<<<<<<< HEAD
                 };
             
+=======
+                };                
+>>>>>>> master
                 bool check = userService.RegisterCheck(NewUser, NewUserDetails, physicallyGoal, bodyAnalysis);
                 if (check)
                 {
@@ -199,5 +207,15 @@ namespace RevivalGF.UI.Forms
         }
 
         #endregion
+
+        private void tbHeight_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void tbWeight_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }

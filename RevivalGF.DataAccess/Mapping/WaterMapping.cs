@@ -14,7 +14,7 @@ namespace RevivalGF.DataAccess.Mapping
         public WaterMapping()
         {
             this.HasKey(x => x.WaterID);
-            this.Property(x => x.WaterID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+            this.Property(x => x.WaterID).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).IsRequired();
 
             this.Property(x => x.WaterCount).IsRequired().HasColumnType("decimal").HasPrecision(18, 2);
             this.Property(x => x.ReportDate).IsRequired();
