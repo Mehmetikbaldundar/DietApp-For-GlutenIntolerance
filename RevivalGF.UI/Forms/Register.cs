@@ -71,7 +71,7 @@ namespace RevivalGF.UI.Forms
                                 _userRepository.Add(NewUser);                                
                                 UserDetails NewUserDetails = new UserDetails()
                                 {
-                                    DetailsID = _userRepository.GetById(NewUser.UserID).UserID,
+                                    DetailsID = NewUser.UserID,
                                     Email = tbEmail.Text,
                                     Name = tbFirstName.Text.Trim(),
                                     Surname = tbLastName.Text.Trim(),
@@ -85,12 +85,12 @@ namespace RevivalGF.UI.Forms
 
                                 PhysicallyGoal physicallyGoal = new PhysicallyGoal()
                                 {
-                                    GoalID = _userRepository.GetById(NewUser.UserID).UserID,
+                                    GoalID = NewUser.UserID,
                                     ActivityStatus = (ActivityStatus)cbActivityLevel.SelectedIndex + 1,
                                     TargetedDiet = (TargetedDiet)cbGoal.SelectedIndex + 1,
                                 };
                                 _goalsRepository.Add(physicallyGoal);
-                                
+      
                                 BodyAnalysis bodyAnalysis = new BodyAnalysis()
                                 {
                                     AnalysisID = _userRepository.GetById(NewUser.UserID).UserID,

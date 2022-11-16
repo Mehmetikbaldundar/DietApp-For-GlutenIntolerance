@@ -26,7 +26,6 @@ namespace RevivalGF.DataAccess.Mapping
             this.Property(x => x.CreatedDate).IsRequired();
             this.Property(x => x.DeletedDate).IsOptional();
             this.Property(x => x.ModifiedDate).IsOptional();
-   
         }
     }
 }
