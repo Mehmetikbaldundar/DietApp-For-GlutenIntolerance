@@ -35,17 +35,11 @@ namespace RevivalGF.DataAccess.Mapping
                 .WithRequired(s => s.User)
                 .HasForeignKey(s => s.UserID);
 
-            this.HasOptional(s => s.BodyAnalysis)
-                .WithRequired(x => x.User);                
-                     
-             this.HasRequired(s => s.UserDetails)
-                .WithRequiredPrincipal(x => x.User);
-
-            this.HasRequired(s => s.PhysicallyGoal)
-                .WithRequiredPrincipal(x => x.User);
-
-            this.HasOptional(s => s.Water)
-                .WithRequired(x => x.User);
+            this.HasRequired(s => s.BodyAnalysis);
+            this.HasRequired(s => s.UserDetails);
+            this.HasRequired(s => s.PhysicallyGoal);
+            this.HasRequired(s => s.Water);
+                
         }
     }
 }
