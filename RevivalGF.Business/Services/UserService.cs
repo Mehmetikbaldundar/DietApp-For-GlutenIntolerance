@@ -11,6 +11,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualBasic;
 using System.Windows.Forms;
+using System.Security.Cryptography;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace RevivalGF.Business.Services
 {
@@ -31,9 +33,9 @@ namespace RevivalGF.Business.Services
             _bodyAnalysisRepository = new BodyAnalysisRepository(db);
         }
 
-        public bool RegisterCheck(User user, string retrypassword, UserDetails userDetails, PhysicallyGoal physicallyGoal, BodyAnalysis bodyAnalysis)
+        public bool RegisterCheck(User user, UserDetails userDetails, PhysicallyGoal physicallyGoal, BodyAnalysis bodyAnalysis)
         {
-            if (user.UserName == "" && user.Password == "" && retrypassword == "" && userDetails.Email == "")
+            if (user.UserName == "" && user.Password == "" && userDetails.Email == "")
             {
                 if (UserNameCheck(user.UserName) == false)
                     throw new Exception("Username cannot be empty !! ");
@@ -41,20 +43,17 @@ namespace RevivalGF.Business.Services
                 if (MailCheck(userDetails.Email) == false)
                     throw new Exception("Email Address cannot be empty !! ");
 
-                if (PasswordCheck(user.Password, retrypassword) == false)
+                if (PasswordCheck(user.Password) == false)
                     throw new Exception("Password cannot be empty !! ");
             }
-            if (userDetails.BirthDate >= DateTime.Now.Date)            
-                throw new Exception("Birth Date is not correct !!");            
+            if (userDetails.BirthDate >= DateTime.Now.Date)
+                throw new Exception("Birth Date is not correct !!");
 
             if (MailCheck(userDetails.Email) == false)
                 throw new Exception("Email Address is not correct !!");
 
             if (PasswordRules(user.Password) == false)
                 throw new Exception("Incorrect Password .. \n Please check to Password Rules");
-
-            if (PasswordCheck(user.Password, retrypassword) == false)
-                throw new Exception("Passwords do not match");
 
             if (UserNameExist(user.UserName) == true)
                 throw new Exception("Username already exists. Please enter a different Username !! ");
@@ -74,13 +73,22 @@ namespace RevivalGF.Business.Services
             else
                 return true;
         }
-        private bool PasswordCheck(string password, string retryPassword)
+        private bool PasswordCheck(string password)
         {
-            if (password != retryPassword)
+            if (password == null || password == "")
                 return false;
-
             else
                 return true;
+        }
+        public bool PasswordMatch(string password, string retryPassword)
+        {
+            {
+                if (password != retryPassword)
+                    return false;
+
+                else
+                    return true;
+            }
         }
         private bool PasswordRules(string password)
         {
@@ -174,8 +182,9 @@ namespace RevivalGF.Business.Services
         }
         private bool UserRegistation(User user, UserDetails userDetails, PhysicallyGoal physicallyGoal, BodyAnalysis bodyAnalysis)
         {
+            user.Password = PasswordWithSha256(user.Password);
             _userRepository.Add(user);
-            int MainID = user.UserID;            
+            int MainID = user.UserID;
             userDetails.DetailsID = MainID;
             _detailsRepository.Add(userDetails);
             physicallyGoal.GoalID = MainID;
@@ -257,7 +266,77 @@ namespace RevivalGF.Business.Services
             else
                 return BodyMassIndex.ThirdDegreeObesity;
         }
+        public string PasswordWithSha256(string text)
+        {
+            SHA256 sha256Encrypting = new SHA256CryptoServiceProvider();
+            byte[] bytes = sha256Encrypting.ComputeHash(Encoding.UTF8.GetBytes(text));
+            StringBuilder builder = new StringBuilder();
+            foreach (var item in bytes)
+            {
+                builder.Append(item.ToString("x2"));
+            }
+            return builder.ToString();
+        }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public bool LoginCheck(string username, string password)
+        {
+            var userNameControl = db.Users.Where(x => x.UserName == username.Trim()).FirstOrDefault();
+            if (userNameControl == null)
+                throw new Exception("User Not Found !!");
+
+            if (userNameControl.Password != PasswordWithSha256(password))
+                throw new Exception("Password Incorrect! \n Please check and try again");
+            return true;
+        }
+
+        public User UsernameControl(string username)
+        {
+            var userNameControl = db.Users.Where(x => x.UserName == username.Trim()).FirstOrDefault();
+            if (userNameControl == null)
+                throw new Exception("Please enter a valid Username or Password. !!");
+            return userNameControl;
+        }
+        
     }
 }
+

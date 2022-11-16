@@ -1,4 +1,6 @@
-﻿using RevivalGF.DataAccess.Context;
+﻿using RevivalGF.Business.Services;
+using RevivalGF.DataAccess.Context;
+using RevivalGF.Entites.Concrete;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +11,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 
 namespace RevivalGF.UI.Forms
@@ -19,33 +22,32 @@ namespace RevivalGF.UI.Forms
         public Login()
         {
             InitializeComponent();
+            userService = new UserService();
         }
-
-        RevivalGfDbContext db;
+        UserService userService;        
 
         private void Login_Load(object sender, EventArgs e)
-        {
-            db = new RevivalGfDbContext(); // Db connected
+        {            
             tbPassword.UseSystemPasswordChar = true;  // for **** appearance
         }
 
-        public static int id;
-        public static string userName;
+        public static User userNameControl;
 
         private void pbNext_DoubleClick(object sender, EventArgs e)
         {
-            var userNameControl = db.Users.Where(x => x.UserName == tbUsername.Text.Trim()).FirstOrDefault();
-            if (userNameControl != null)
+            userNameControl = userService.UsernameControl(tbUsername.Text);
+
+            if (tbUsername.Text == "" || tbPassword.Text == "")
+                throw new Exception("Email and password fields cannot be empty. !!");
+
+            bool check = userService.LoginCheck(tbUsername.Text, tbPassword.Text);
+            if (check)
             {
-                userName = userNameControl.UserName;
-                id = userNameControl.UserID;
-                LoginCheck();
+                MessageBox.Show("Login Succesful");
+                MainForm main = new MainForm();
+                main.Show();
+                Hide();
             }
-            else
-            {
-                MessageBox.Show("Please enter a valid Username or Password.");
-            }
-            LoginCannotbeBlank();
         }
 
         private void lblRegister_DoubleClick(object sender, EventArgs e)
@@ -53,63 +55,16 @@ namespace RevivalGF.UI.Forms
             Forms.Register register = new Register();
             register.Show();
             this.Hide();
-
         }
 
-
-        #region LoginMethods
-        private void LoginCheck()
-        {
-            var userNameControl = db.Users.Where(x => x.UserName == tbUsername.Text.Trim()).FirstOrDefault();
-            if (userNameControl != null)
-            {
-                if (userNameControl.Password == PasswordWithSha256(tbPassword.Text))
-                {
-                    MessageBox.Show("Login Succesful");
-                    MainForm main = new MainForm();
-                    main.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Password or Username Incorrect! \n Please check and try again");
-                }
-            }
-            else
-                MessageBox.Show("User Not Found !!");
-        }
-        private void LoginCannotbeBlank()
-        {
-            string username = tbUsername.Text.Trim();
-            string password = tbPassword.Text.Trim();
-            if (username == "" || password == "")
-            {
-                MessageBox.Show("Email and password fields cannot be empty.", "WARNING");
-            }
-        }
-        #endregion
         private void Login_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
 
-       
-
-        public string PasswordWithSha256(string text)
-        {
-            SHA256 sha256Encrypting = new SHA256CryptoServiceProvider();
-            byte[] bytes = sha256Encrypting.ComputeHash(Encoding.UTF8.GetBytes(text));
-            StringBuilder builder = new StringBuilder();
-            foreach (var item in bytes)
-            {
-                builder.Append(item.ToString("x2"));
-            }
-            return builder.ToString();
-        }
-
         private void pbNext_Click(object sender, EventArgs e)
         {
-            pbNext.Cursor= Cursors.WaitCursor;
+            pbNext.Cursor = Cursors.WaitCursor;
         }
     }
 }

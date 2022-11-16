@@ -19,10 +19,10 @@ using RevivalGF.Business.Services;
 namespace RevivalGF.UI.Forms
 {
     public partial class Register : Form
-    {    
+    {
 
         public Register()
-        {          
+        {
 
             InitializeComponent();
             userService = new UserService();
@@ -43,15 +43,18 @@ namespace RevivalGF.UI.Forms
                 MessageBox.Show("Please accept the terms and conditions.\r\n");
                 return;
             }
+            if (userService.PasswordMatch(tbPassword.Text, tbRepeatPassword.Text) == false)            
+                throw new Exception("Passwords do not match");                      
+            
             try
             {
                 User NewUser = new User()
                 {
                     UserName = tbUsername.Text,
                     Password = tbPassword.Text,
-                };                
+                };
                 UserDetails NewUserDetails = new UserDetails()
-                {                    
+                {
                     Email = tbEmail.Text,
                     Name = tbFirstName.Text.Trim(),
                     Surname = tbLastName.Text.Trim(),
@@ -62,20 +65,20 @@ namespace RevivalGF.UI.Forms
                     GlutenIntolerance = (GlutenIntolerance)cbDisease.SelectedIndex + 1
                 };
                 PhysicallyGoal physicallyGoal = new PhysicallyGoal()
-                {                    
+                {
                     ActivityStatus = (ActivityStatus)cbActivityLevel.SelectedIndex + 1,
                     TargetedDiet = (TargetedDiet)cbGoal.SelectedIndex + 1,
                 };
                 BodyAnalysis bodyAnalysis = new BodyAnalysis()
-                {                   
+                {
                     BodyMassIndex = userService.BodyMassIndexResult(NewUserDetails),
-                    DietCalorieControl = userService.DailyCalorieCalculator(NewUserDetails,physicallyGoal),
+                    DietCalorieControl = userService.DailyCalorieCalculator(NewUserDetails, physicallyGoal),
                 };
-                bool check = userService.RegisterCheck(NewUser,tbRepeatPassword.Text,NewUserDetails,physicallyGoal,bodyAnalysis);
+                bool check = userService.RegisterCheck(NewUser, NewUserDetails, physicallyGoal, bodyAnalysis);
                 if (check)
                 {
                     Login login = new Login();
-                    this.Hide();                   
+                    this.Hide();
                     login.ShowDialog();
                 }
             }
@@ -84,7 +87,7 @@ namespace RevivalGF.UI.Forms
                 MessageBox.Show(ex.Message);
             }
         }
-            
+
 
         #region *remove/add
         private void tbUsername_TextChanged(object sender, EventArgs e)

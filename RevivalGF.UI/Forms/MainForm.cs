@@ -169,14 +169,14 @@ namespace RevivalGF.UI.Forms
 
         private User GetUser()
         {
-            var user = db.Users.FirstOrDefault(x => x.UserID == Login.id);
+            var user = db.Users.FirstOrDefault(x => x.UserID == Login.userNameControl.UserID);
             return user;
             
 
         }
         private UserDetails GetUserDetails()
         {          
-            var userdetails = db.UserDetails.FirstOrDefault(x => x.DetailsID == Login.id);
+            var userdetails = db.UserDetails.FirstOrDefault(x => x.DetailsID == Login.userNameControl.UserID);
             return userdetails;
         }
        
