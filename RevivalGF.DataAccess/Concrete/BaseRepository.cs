@@ -1,4 +1,4 @@
-﻿using RevivalGF.Business.Abstract;
+﻿using RevivalGF.DataAccess.Abstract;
 using RevivalGF.DataAccess.Context;
 using RevivalGF.Entites.Abstract;
 using RevivalGF.Entites.Enums;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RevivalGF.Business.Concrete
+namespace RevivalGF.DataAccess.Concrete
 {
     public class BaseRepository<T> : IRepository<T> where T : class, IBaseEntity
     {

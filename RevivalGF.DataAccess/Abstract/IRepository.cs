@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RevivalGF.Business.Abstract
+namespace RevivalGF.DataAccess.Abstract
 {
     public interface IRepository<T> where T : class
     {

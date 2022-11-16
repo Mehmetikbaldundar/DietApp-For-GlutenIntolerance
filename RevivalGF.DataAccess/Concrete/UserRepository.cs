@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RevivalGF.Business.Concrete
+namespace RevivalGF.DataAccess.Concrete
 {
-    public class BodyAnalysisRepository : BaseRepository<BodyAnalysis>
+    public class UserRepository : BaseRepository<User>
     {
-        public BodyAnalysisRepository(RevivalGfDbContext revivalGfDbContext) : base(revivalGfDbContext)
+        public UserRepository(RevivalGfDbContext revivalGfDbContext) : base(revivalGfDbContext)
         {
         }
     }

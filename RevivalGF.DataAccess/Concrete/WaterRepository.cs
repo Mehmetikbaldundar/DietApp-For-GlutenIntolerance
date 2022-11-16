@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RevivalGF.Business.Concrete
+namespace RevivalGF.DataAccess.Concrete
 {
-    public class ActivityRepository : BaseRepository<Activity>
+    public class WaterRepository : BaseRepository<Water>
     {
-        public ActivityRepository(RevivalGfDbContext revivalGfDbContext) : base(revivalGfDbContext)
+        public WaterRepository(RevivalGfDbContext revivalGfDbContext) : base(revivalGfDbContext)
         {
         }
     }

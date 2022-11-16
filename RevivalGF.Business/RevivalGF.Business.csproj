@@ -51,20 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstract\IRepository.cs" />
-    <Compile Include="Concrete\ActivityRepository.cs" />
-    <Compile Include="Concrete\BaseRepository.cs" />
-    <Compile Include="Concrete\BodyAnalysisRepository.cs" />
-    <Compile Include="Concrete\MealReportsRepository.cs" />
-    <Compile Include="Concrete\MealRepository.cs" />
-    <Compile Include="Concrete\MedicamentRepository.cs" />
-    <Compile Include="Concrete\PhysicallyGoalRepository.cs" />
-    <Compile Include="Concrete\UserDetailsRepository.cs" />
-    <Compile Include="Concrete\UserRepository.cs" />
-    <Compile Include="Concrete\WaterRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RevivalGF.DataAccess\RevivalGF.DataAccess.csproj">
       <Project>{83223325-fc03-433e-b29f-b6fa8ee14a48}</Project>

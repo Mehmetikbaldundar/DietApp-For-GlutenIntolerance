@@ -1,23 +1,20 @@
-﻿using RevivalGF.DataAccess.Context;
+﻿using RevivalGF.DataAccess.Concrete;
+using RevivalGF.DataAccess.Context;
 using RevivalGF.Entites.Concrete;
 using RevivalGF.Entites.Enums;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Net.Mail;
 using System.Net;
+using System.Text;
+using System.Threading.Tasks;
 using Microsoft.VisualBasic;
-using RevivalGF.DataAccess.Concrete;
+using System.Windows.Forms;
 
-namespace RevivalGF.UI.Forms
+namespace RevivalGF.Business.Services
 {
-    public partial class Register : Form
+    public class UserService
     {
         private readonly RevivalGfDbContext db;
         private readonly UserRepository _userRepository;
@@ -25,29 +22,15 @@ namespace RevivalGF.UI.Forms
         private readonly PhysicallyGoalRepository _goalsRepository;
         private readonly BodyAnalysisRepository _bodyAnalysisRepository;
 
-        public Register()
+        public UserService()
         {
             db = new RevivalGfDbContext();
             _userRepository = new UserRepository(db);
             _detailsRepository = new UserDetailsRepository(db);
             _goalsRepository = new PhysicallyGoalRepository(db);
             _bodyAnalysisRepository = new BodyAnalysisRepository(db);
-
-            InitializeComponent();
-        }
-        private void Register_Load(object sender, EventArgs e)
-        {
-            rdbMen.Checked = true;
-            cbActivityLevel.DataSource = Enum.GetValues(typeof(ActivityStatus));
-            cbGoal.DataSource = Enum.GetValues(typeof(TargetedDiet));
-            cbDisease.DataSource = Enum.GetValues(typeof(GlutenIntolerance));
         }
 
-        private void pbNext_DoubleClick(object sender, EventArgs e)
-        {
-            RegisterCheck();
-        }
-        
         private void RegisterCheck()
         {
             Login login = new Login();
@@ -68,7 +51,7 @@ namespace RevivalGF.UI.Forms
                                     UserName = tbUsername.Text,
                                     Password = login.PasswordWithSha256(tbPassword.Text),
                                 };
-                                _userRepository.Add(NewUser);                                
+                                _userRepository.Add(NewUser);
                                 UserDetails NewUserDetails = new UserDetails()
                                 {
                                     DetailsID = _userRepository.GetById(NewUser.UserID).UserID,
@@ -90,12 +73,12 @@ namespace RevivalGF.UI.Forms
                                     TargetedDiet = (TargetedDiet)cbGoal.SelectedIndex + 1,
                                 };
                                 _goalsRepository.Add(physicallyGoal);
-                                
+
                                 BodyAnalysis bodyAnalysis = new BodyAnalysis()
                                 {
                                     AnalysisID = _userRepository.GetById(NewUser.UserID).UserID,
                                     BodyMassIndex = (BodyMassIndex)BodyMassIndexResult(),
-                                    DietCalorieControl= DailyCalorieCalculator(),
+                                    DietCalorieControl = DailyCalorieCalculator(),
                                 };
                                 _bodyAnalysisRepository.Add(bodyAnalysis);
 
@@ -139,7 +122,7 @@ namespace RevivalGF.UI.Forms
             }
 
         }
-        
+
         private bool UserNameCheck(string username)
         {
             if (username == null || username == "")
@@ -329,119 +312,5 @@ namespace RevivalGF.UI.Forms
         }
 
 
-        #region *remove/add
-        private void tbUsername_TextChanged(object sender, EventArgs e)
-        {
-            if (tbUsername.Text != "")
-            {
-                label15.Visible = false;
-            }
-            else
-            {
-                label15.Visible = true;
-            }
-        }
-
-        private void tbEmail_TextChanged(object sender, EventArgs e)
-        {
-            if (tbEmail.Text != "")
-            {
-                label17.Visible = false;
-            }
-            else
-            {
-                label17.Visible = true;
-            }
-        }
-        private void tbPassword_TextChanged(object sender, EventArgs e)
-        {
-
-            if (tbPassword.Text != "")
-            {
-                label16.Visible = false;
-            }
-            else
-            {
-                label16.Visible = true;
-            }
-        }
-        private void tbRepeatPassword_TextChanged(object sender, EventArgs e)
-        {
-
-            if (tbRepeatPassword.Text != "")
-            {
-                label18.Visible = false;
-            }
-            else
-            {
-                label18.Visible = true;
-            }
-        }
-        private void tbFirstName_TextChanged(object sender, EventArgs e)
-        {
-            if (tbFirstName.Text != "")
-            {
-                label10.Visible = false;
-            }
-            else
-            {
-                label10.Visible = true;
-            }
-        }
-
-        private void tbLastName_TextChanged(object sender, EventArgs e)
-        {
-            if (tbFirstName.Text != "")
-            {
-                label7.Visible = false;
-            }
-            else
-            {
-                label7.Visible = true;
-            }
-        }
-        private void tbHeight_TextChanged(object sender, EventArgs e)
-        {
-            if (tbHeight.Text != "")
-            {
-                label20.Visible = false;
-            }
-            else
-            {
-                label20.Visible = true;
-            }
-        }
-        private void tbWeight_TextChanged(object sender, EventArgs e)
-        {
-            if (tbHeight.Text != "")
-            {
-                label22.Visible = false;
-            }
-            else
-            {
-                label22.Visible = true;
-            }
-        }
-        private void dtpBirthDate_ValueChanged(object sender, EventArgs e)
-        {
-            label28.Visible = false;
-        }
-
-        private void cbActivityLevel_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            label19.Visible = false;
-        }
-
-        private void cbGoal_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            label21.Visible = false;
-        }
-
-        private void cbDisease_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            label30.Visible = false;
-        }
-
-        #endregion
     }
 }
