@@ -43,8 +43,12 @@ namespace RevivalGF.UI.Forms
                 MessageBox.Show("Please accept the terms and conditions.\r\n");
                 return;
             }
-            if (userService.PasswordMatch(tbPassword.Text, tbRepeatPassword.Text) == false)            
-                throw new Exception("Passwords do not match");                      
+
+            if (tbPassword.Text != tbRepeatPassword.Text)
+            {
+                MessageBox.Show("Passwords do not match");
+                return;
+            }                
             
             try
             {
@@ -198,5 +202,15 @@ namespace RevivalGF.UI.Forms
         }
 
         #endregion
+
+        private void tbHeight_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void tbWeight_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }

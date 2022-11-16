@@ -24,8 +24,8 @@ namespace RevivalGF.UI.Forms
             InitializeComponent();
             userService = new UserService();
         }
-        UserService userService;        
-
+        UserService userService;                
+        
         private void Login_Load(object sender, EventArgs e)
         {            
             tbPassword.UseSystemPasswordChar = true;  // for **** appearance
@@ -47,7 +47,7 @@ namespace RevivalGF.UI.Forms
                 MainForm main = new MainForm();
                 main.Show();
                 Hide();
-            }
+            }            
         }
 
         private void lblRegister_DoubleClick(object sender, EventArgs e)
@@ -65,6 +65,6 @@ namespace RevivalGF.UI.Forms
         private void pbNext_Click(object sender, EventArgs e)
         {
             pbNext.Cursor = Cursors.WaitCursor;
-        }
+        }             
     }
 }
