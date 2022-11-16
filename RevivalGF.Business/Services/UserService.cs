@@ -22,7 +22,7 @@ namespace RevivalGF.Business.Services
         private readonly UserRepository _userRepository;
         private readonly UserDetailsRepository _detailsRepository;
         private readonly PhysicallyGoalRepository _goalsRepository;
-        private readonly BodyAnalysisRepository _bodyAnalysisRepository;
+        private readonly BodyAnalysisRepository _bodyAnalysisRepository;        
 
         public UserService()
         {
@@ -30,7 +30,7 @@ namespace RevivalGF.Business.Services
             _userRepository = new UserRepository(db);
             _detailsRepository = new UserDetailsRepository(db);
             _goalsRepository = new PhysicallyGoalRepository(db);
-            _bodyAnalysisRepository = new BodyAnalysisRepository(db);
+            _bodyAnalysisRepository = new BodyAnalysisRepository(db);            
         }
 
         public bool RegisterCheck(User user, UserDetails userDetails, PhysicallyGoal physicallyGoal, BodyAnalysis bodyAnalysis)
@@ -38,7 +38,7 @@ namespace RevivalGF.Business.Services
             if (string.IsNullOrEmpty(user.UserName) || string.IsNullOrEmpty(user.Password) || string.IsNullOrEmpty(userDetails.Email))
             {
                 if (UserNameCheck(user.UserName) == false)
-                    throw new Exception("Username cannot be empty !! ");                
+                    throw new Exception("Username cannot be empty !! ");
 
                 if (PasswordCheck(user.Password) == false)
                     throw new Exception("Password cannot be empty !! ");
@@ -155,7 +155,7 @@ namespace RevivalGF.Business.Services
                 smtp.UseDefaultCredentials = true;
                 smtp.Credentials = new NetworkCredential(appMail, sifre);
                 smtp.Send(message);
-                string verificationControl = Interaction.InputBox("Please Write Verification Code.", "Verification", "", 0, 0);
+                string verificationControl = Interaction.InputBox("Please Write Verification Code.", "Verification", "", 900, 400);
                 if (verificationControl == verificationCode)
                     result = true;
                 else
@@ -270,10 +270,16 @@ namespace RevivalGF.Business.Services
         {
             var userNameControl = db.Users.Where(x => x.UserName == username.Trim()).FirstOrDefault();
             if (userNameControl == null)
-                throw new Exception("User Not Found !!");
+            {
+                MessageBox.Show("User Not Found !!");
+                return false;
+            }            
 
             if (userNameControl.Password != PasswordWithSha256(password))
-                throw new Exception("Password Incorrect! \n Please check and try again");
+            {
+                MessageBox.Show("Password Incorrect! \n Please check and try again");
+                return false;
+            }               
 
             return true;
         }
@@ -281,12 +287,12 @@ namespace RevivalGF.Business.Services
         {
             var userNameControl = db.Users.Where(x => x.UserName == username.Trim()).FirstOrDefault();
             if (userNameControl == null)
-                throw new Exception("Please enter a valid Username or Password. !!");
+                MessageBox.Show("Please enter a valid Username or Password. !!");
             return userNameControl;
         }
         private void EmptyControl(string name, string surname)
         {
-            if (name == ""|| surname == "")
+            if (name == "" || surname == "")
                 throw new Exception("Name,Surname and Email cannot be empty !!");
         }
 

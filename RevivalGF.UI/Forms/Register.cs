@@ -48,8 +48,8 @@ namespace RevivalGF.UI.Forms
             {
                 MessageBox.Show("Passwords do not match");
                 return;
-            }                
-            
+            }
+
             try
             {
                 User NewUser = new User()
@@ -66,7 +66,7 @@ namespace RevivalGF.UI.Forms
                     Height = Convert.ToDouble(tbHeight.Text),
                     Weight = Convert.ToDouble(tbWeight.Text),
                     BirthDate = Convert.ToDateTime(dtpBirthDate.Value),
-                    GlutenIntolerance = (GlutenIntolerance)cbDisease.SelectedIndex + 1
+                    GlutenIntolerance = (GlutenIntolerance)cbDisease.SelectedIndex
                 };
                 PhysicallyGoal physicallyGoal = new PhysicallyGoal()
                 {
@@ -77,7 +77,7 @@ namespace RevivalGF.UI.Forms
                 {
                     BodyMassIndex = userService.BodyMassIndexResult(NewUserDetails),
                     DietCalorieControl = userService.DailyCalorieCalculator(NewUserDetails, physicallyGoal),
-                };
+                };                
                 bool check = userService.RegisterCheck(NewUser, NewUserDetails, physicallyGoal, bodyAnalysis);
                 if (check)
                 {
