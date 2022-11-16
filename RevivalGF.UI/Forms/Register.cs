@@ -74,7 +74,8 @@ namespace RevivalGF.UI.Forms
                     BodyMassIndex = userService.BodyMassIndexResult(NewUserDetails),
                     DietCalorieControl = userService.DailyCalorieCalculator(NewUserDetails, physicallyGoal),
                 };
-                bool check = userService.RegisterCheck(NewUser, NewUserDetails, physicallyGoal, bodyAnalysis);
+                Water water = new Water();
+                bool check = userService.RegisterCheck(NewUser, NewUserDetails, physicallyGoal, bodyAnalysis,water);
                 if (check)
                 {
                     Login login = new Login();

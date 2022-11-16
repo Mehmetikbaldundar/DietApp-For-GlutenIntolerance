@@ -44,8 +44,8 @@ namespace RevivalGF.DataAccess.Mapping
             this.HasRequired(s => s.PhysicallyGoal)
                 .WithRequiredPrincipal(s => s.User);
 
-            this.HasOptional(s => s.Water)
-                .WithRequired(s => s.User);
+            this.HasRequired(s => s.Water)
+                .WithRequiredPrincipal(s => s.User);
 
         }
     }

@@ -23,6 +23,7 @@ namespace RevivalGF.Business.Services
         private readonly UserDetailsRepository _detailsRepository;
         private readonly PhysicallyGoalRepository _goalsRepository;
         private readonly BodyAnalysisRepository _bodyAnalysisRepository;
+        private readonly WaterRepository _waterRepository;
 
         public UserService()
         {
@@ -33,7 +34,7 @@ namespace RevivalGF.Business.Services
             _bodyAnalysisRepository = new BodyAnalysisRepository(db);
         }
 
-        public bool RegisterCheck(User user, UserDetails userDetails, PhysicallyGoal physicallyGoal, BodyAnalysis bodyAnalysis)
+        public bool RegisterCheck(User user, UserDetails userDetails, PhysicallyGoal physicallyGoal, BodyAnalysis bodyAnalysis,Water water)
         {
             if (user.UserName == "" && user.Password == "" && userDetails.Email == "")
             {
@@ -64,7 +65,7 @@ namespace RevivalGF.Business.Services
             if (VerificationCodeSend(userDetails.Email) == false)
                 throw new Exception("Verification Code is not Correct !!");
 
-            return UserRegistation(user, userDetails, physicallyGoal, bodyAnalysis);
+            return UserRegistation(user, userDetails, physicallyGoal, bodyAnalysis,water);
         }
         private bool UserNameCheck(string username)
         {
@@ -180,7 +181,7 @@ namespace RevivalGF.Business.Services
             }
             return result;
         }
-        private bool UserRegistation(User user, UserDetails userDetails, PhysicallyGoal physicallyGoal, BodyAnalysis bodyAnalysis)
+        private bool UserRegistation(User user, UserDetails userDetails, PhysicallyGoal physicallyGoal, BodyAnalysis bodyAnalysis,Water water)
         {
             user.Password = PasswordWithSha256(user.Password);
             _userRepository.Add(user);
@@ -191,6 +192,9 @@ namespace RevivalGF.Business.Services
             _goalsRepository.Add(physicallyGoal);
             bodyAnalysis.AnalysisID = MainID;
             _bodyAnalysisRepository.Add(bodyAnalysis);
+            //
+            water.WaterID= MainID;
+            _waterRepository.Add(water);
             MessageBox.Show("Registation Successful");
             return true;
         }
@@ -278,8 +282,42 @@ namespace RevivalGF.Business.Services
             return builder.ToString();
         }
 
+        //Main Form Methods
+        public void PlummyOffline(User user)
+        {
+            user.Tutorial = false;
+            _userRepository.Update(user);
+        }
+        public UserDetails GetUserDetails(User user)
+        {
+            UserDetails userDetails = _detailsRepository.GetById(user.UserID);
+            return userDetails;
+        }
 
 
+        public Water GetWater(User user)
+        {
+            Water water = _waterRepository.GetById(user.UserID);
+            return water;
+        }
+        public Water DecreaseWater(User user)
+        {
+            Water water = _waterRepository.GetById(user.UserID);
+            if (water.WaterCount > 0)
+            {
+                water.WaterCount--;
+            }   
+            _waterRepository.Update(water);
+            return water;
+        }
+        public Water IncreaseWater(User user)
+        {
+            Water water = _waterRepository.GetById(user.UserID);            
+            
+            water.WaterCount++;
+            _waterRepository.Update(water);
+            return water;
+        }
 
 
 
