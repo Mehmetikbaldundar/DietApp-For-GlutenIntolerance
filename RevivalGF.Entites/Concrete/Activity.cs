@@ -21,10 +21,10 @@ namespace RevivalGF.Entites.Concrete
         {
             get { return _ActivityFaktor; }
             set { _ActivityFaktor = value; }
-        }      
+        }
 
-        private decimal _Calorie;
-        public decimal Calorie
+        /*private decimal _Calorie;
+         public decimal Calorie
         {
             get { return _Calorie; }
             set 
@@ -90,8 +90,8 @@ namespace RevivalGF.Entites.Concrete
                         break;
                 }
             }
-        }
-        
+        }*/
+
         public List<User> Users { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public DateTime? ModifiedDate { get; set; }
@@ -100,6 +100,6 @@ namespace RevivalGF.Entites.Concrete
         public string DeletedBy { get; set; }
         public string ModifiedBy { get; set; }
         public Status Status { get; set; } = Status.Active;
-
+        public decimal Calorie { get; set; }
     }
 }

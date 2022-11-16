@@ -12,7 +12,7 @@ namespace RevivalGF.Entites.Concrete
 {
     public class PhysicallyGoal : IPhysicallyGoal, IBaseEntity
     {
-        [ForeignKey("User")]
+        //[ForeignKey("User")]
         public int GoalID { get; set; }
         public TargetedDiet TargetedDiet { get; set; }
         public ActivityStatus ActivityStatus { get; set; }
