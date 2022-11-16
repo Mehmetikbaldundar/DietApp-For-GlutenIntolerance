@@ -44,14 +44,11 @@ namespace RevivalGF.DataAccess.Mapping
             this.HasRequired(s => s.PhysicallyGoal)
                 .WithRequiredPrincipal(s => s.User);
 
-<<<<<<< HEAD
-            this.HasRequired(s => s.Water)
-                .WithRequiredPrincipal(s => s.User);
-=======
+
             this.HasMany(s => s.Water)
                 .WithRequired(s => s.User)
                 .HasForeignKey(s => s.UserID);
->>>>>>> master
+
 
         }
     }
