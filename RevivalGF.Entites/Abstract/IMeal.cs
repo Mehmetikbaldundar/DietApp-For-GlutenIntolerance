@@ -19,9 +19,8 @@ namespace RevivalGF.Entites.Abstract
         decimal Protein { get; set; }
         decimal Gram { get; set; }
         GlutenRisk GlutenRisk { get; set; }
-        int? AlternativeFoodID { get; set; }        
-        int MealReportID { get; set; }
-        MealReport MealReport { get; set; }   
+        int? AlternativeFoodID { get; set; }
+        List<MealReport> MealReports { get; set; }
         MealCategories MealCategories { get; set; }
     }
 }

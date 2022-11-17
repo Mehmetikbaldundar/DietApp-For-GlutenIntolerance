@@ -8,5 +8,6 @@ namespace RevivalGF.Entites.Enums
 {
     public enum MealCategories
     {
+        None = 0,
     }
 }

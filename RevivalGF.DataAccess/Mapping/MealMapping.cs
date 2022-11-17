@@ -23,6 +23,7 @@ namespace RevivalGF.DataAccess.Mapping
             this.Property(x => x.Fat).IsRequired().HasColumnType("decimal").HasPrecision(18, 2);
             this.Property(x => x.Protein).IsRequired().HasColumnType("decimal").HasPrecision(18, 2);
             this.Property(x => x.Gram).IsRequired().HasColumnType("decimal").HasPrecision(18, 2);
+            this.Property(x => x.AlternativeFoodID).IsOptional();
 
             this.Property(x => x.CreatedBy).HasMaxLength(50);
             this.Property(x => x.ModifiedBy).HasMaxLength(50);
@@ -36,7 +37,16 @@ namespace RevivalGF.DataAccess.Mapping
                 .WithRequired(p => p.RiskyFoods)
                 .HasForeignKey(p => p.AlternativeFoodID)
                 .WillCascadeOnDelete(false);
-            
+
+            this.HasMany(s => s.MealReports)
+                .WithMany(c => c.Meals)
+                .Map(cs =>
+                {
+                    cs.MapLeftKey("MealRefID");
+                    cs.MapRightKey("MealReportRefID");
+                    cs.ToTable("Reports");
+                });
+
         }
     }
 }

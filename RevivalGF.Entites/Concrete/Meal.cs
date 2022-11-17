@@ -22,9 +22,8 @@ namespace RevivalGF.Entites.Concrete
         public decimal Protein { get; set; }
         public decimal Gram { get; set; }
         public GlutenRisk GlutenRisk { get; set; }        
-        public int? AlternativeFoodID { get; set; }
-        public int MealReportID { get; set; }
-        public MealReport MealReport { get; set; }
+        public int? AlternativeFoodID { get; set; }        
+        public List<MealReport> MealReports { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public DateTime? ModifiedDate { get; set; }
         public DateTime? DeletedDate { get; set; }

@@ -62,6 +62,7 @@
     <Compile Include="Concrete\UserDetailsRepository.cs" />
     <Compile Include="Concrete\UserRepository.cs" />
     <Compile Include="Concrete\WaterRepository.cs" />
+    <Compile Include="Context\MealDbInitializer.cs" />
     <Compile Include="Context\RevivalGfDbContext.cs" />
     <Compile Include="Mapping\ActivityMapping.cs" />
     <Compile Include="Mapping\BodyAnalysisMapping.cs" />
