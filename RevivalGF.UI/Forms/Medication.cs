@@ -47,14 +47,40 @@ namespace RevivalGF.UI.Forms
         }
 
         private void ListMedicines()
-        {          
-
-            dgwMedicines.DataSource = _medicamentRepository.GetAll();
+        {   
+            dgwMedicines.DataSource = db.Medicaments.Select(x => new
+            {
+                Medicamentname= x.MedicamentName,
+                HowManyTimesaDay =x.HourOfUsage,
+                ForHowManyDays=x.TotalUsage,
+                UserID=x.UserID,
+                MedicamentID=x.MedicamentID,
+            }).Where(m => m.UserID == Login.userNameControl.UserID).ToList();
         }
 
         private void Medication_Load(object sender, EventArgs e)
         {
             ListMedicines();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            var deleteMedicine = _medicamentRepository.GetById(selectionMedicine);
+            deleteMedicine.DeletedDate=DateTime.Now;
+            _medicamentRepository.Delete(deleteMedicine);
+            dgwMedicines.DataSource = db.Medicaments.Select(x => new
+            {
+                Medicamentname = x.MedicamentName,
+                HowManyTimesaDay = x.HourOfUsage,
+                ForHowManyDays = x.TotalUsage,
+                UserID = x.UserID,
+                MedicamentID = x.MedicamentID,
+            }).Where(m => m.UserID == Login.userNameControl.UserID).ToList();
+        }
+        int selectionMedicine;
+        private void dgwMedicines_SelectionChanged(object sender, EventArgs e)
+        {
+            selectionMedicine = Convert.ToInt32(dgwMedicines.CurrentRow.Cells["MedicamentID"].Value);
         }
     }
 }

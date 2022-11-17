@@ -38,6 +38,9 @@
             this.nudDays = new System.Windows.Forms.NumericUpDown();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgwMedicines = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudOneDay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDays)).BeginInit();
@@ -69,7 +72,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(37, 280);
+            this.label3.Location = new System.Drawing.Point(37, 427);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(121, 36);
             this.label3.TabIndex = 23;
@@ -128,7 +131,7 @@
             // 
             this.btnAdd.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAdd.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAdd.Location = new System.Drawing.Point(43, 328);
+            this.btnAdd.Location = new System.Drawing.Point(144, 236);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(84, 40);
             this.btnAdd.TabIndex = 30;
@@ -142,12 +145,47 @@
             this.dgwMedicines.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgwMedicines.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.dgwMedicines.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwMedicines.Location = new System.Drawing.Point(399, 157);
+            this.dgwMedicines.Location = new System.Drawing.Point(399, 178);
             this.dgwMedicines.Name = "dgwMedicines";
             this.dgwMedicines.RowHeadersWidth = 51;
             this.dgwMedicines.RowTemplate.Height = 24;
-            this.dgwMedicines.Size = new System.Drawing.Size(333, 197);
+            this.dgwMedicines.Size = new System.Drawing.Size(383, 176);
             this.dgwMedicines.TabIndex = 31;
+            this.dgwMedicines.SelectionChanged += new System.EventHandler(this.dgwMedicines_SelectionChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Bahnschrift Condensed", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(38, 279);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(342, 27);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "If in any case you need to stop using the drug,";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Bahnschrift Condensed", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(38, 308);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(139, 27);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "please remove it:";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDelete.Font = new System.Drawing.Font("Bahnschrift Condensed", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDelete.Location = new System.Drawing.Point(43, 357);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(101, 47);
+            this.btnDelete.TabIndex = 32;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // Medication
             // 
@@ -155,6 +193,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::RevivalGF.UI.Properties.Resources.medicationform;
             this.ClientSize = new System.Drawing.Size(821, 504);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dgwMedicines);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.nudDays);
@@ -163,6 +202,8 @@
             this.Controls.Add(this.pbNext);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.MaximumSize = new System.Drawing.Size(839, 551);
@@ -190,5 +231,8 @@
         private System.Windows.Forms.NumericUpDown nudDays;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView dgwMedicines;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
