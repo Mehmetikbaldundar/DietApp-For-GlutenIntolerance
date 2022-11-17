@@ -47,15 +47,16 @@ namespace RevivalGF.UI.Forms
         }
 
         private void ListMedicines()
-        {   
+        {
             dgwMedicines.DataSource = db.Medicaments.Select(x => new
             {
-                Medicamentname= x.MedicamentName,
-                HowManyTimesaDay =x.HourOfUsage,
-                ForHowManyDays=x.TotalUsage,
-                UserID=x.UserID,
-                MedicamentID=x.MedicamentID,
-            }).Where(m => m.UserID == Login.userNameControl.UserID).ToList();
+                Medicamentname = x.MedicamentName,
+                HowManyTimesaDay = x.HourOfUsage,
+                ForHowManyDays = x.TotalUsage,
+                x.UserID,
+                x.MedicamentID,
+                x.Status
+            }).Where(m => m.UserID == Login.userNameControl.UserID && m.Status == Entites.Enums.Status.Active).ToList();
         }
 
         private void Medication_Load(object sender, EventArgs e)
@@ -69,13 +70,14 @@ namespace RevivalGF.UI.Forms
             deleteMedicine.DeletedDate=DateTime.Now;
             _medicamentRepository.Delete(deleteMedicine);
             dgwMedicines.DataSource = db.Medicaments.Select(x => new
-            {
+            {    
                 Medicamentname = x.MedicamentName,
                 HowManyTimesaDay = x.HourOfUsage,
                 ForHowManyDays = x.TotalUsage,
-                UserID = x.UserID,
-                MedicamentID = x.MedicamentID,
-            }).Where(m => m.UserID == Login.userNameControl.UserID).ToList();
+                x.UserID,
+                x.MedicamentID,
+                x.Status
+            }).Where(m => m.UserID == Login.userNameControl.UserID && m.Status == Entites.Enums.Status.Active).ToList();
         }
         int selectionMedicine;
         private void dgwMedicines_SelectionChanged(object sender, EventArgs e)
