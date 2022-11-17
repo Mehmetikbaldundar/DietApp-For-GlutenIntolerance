@@ -44,11 +44,13 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbCategories = new System.Windows.Forms.ComboBox();
             this.numericUpDownPortion = new System.Windows.Forms.NumericUpDown();
             this.cbGluten = new System.Windows.Forms.CheckBox();
             this.dgwFoods = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.lbFoods = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.lblDeleteFood = new System.Windows.Forms.Label();
             this.lblAddFood = new System.Windows.Forms.Label();
@@ -72,8 +74,6 @@
             this.lblCarbohydrate = new System.Windows.Forms.Label();
             this.lblDailyCalorie = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbCategories = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -88,10 +88,10 @@
             // pbNext
             // 
             this.pbNext.BackColor = System.Drawing.Color.Transparent;
-            this.pbNext.Image = global::RevivalGF.UI.Properties.Resources.nextbutton;
-            this.pbNext.Location = new System.Drawing.Point(847, 467);
+            this.pbNext.Image = global::RevivalGF.UI.Properties.Resources.sustenium;
+            this.pbNext.Location = new System.Drawing.Point(807, 455);
             this.pbNext.Name = "pbNext";
-            this.pbNext.Size = new System.Drawing.Size(102, 96);
+            this.pbNext.Size = new System.Drawing.Size(142, 108);
             this.pbNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbNext.TabIndex = 10;
             this.pbNext.TabStop = false;
@@ -270,6 +270,15 @@
             this.groupBox1.Text = "Add Nutrient:";
             this.groupBox1.UseCompatibleTextRendering = true;
             // 
+            // cbCategories
+            // 
+            this.cbCategories.Font = new System.Drawing.Font("Bahnschrift Condensed", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbCategories.FormattingEnabled = true;
+            this.cbCategories.Location = new System.Drawing.Point(143, 98);
+            this.cbCategories.Name = "cbCategories";
+            this.cbCategories.Size = new System.Drawing.Size(161, 35);
+            this.cbCategories.TabIndex = 11;
+            // 
             // numericUpDownPortion
             // 
             this.numericUpDownPortion.DecimalPlaces = 2;
@@ -322,6 +331,15 @@
             this.lbFoods.Name = "lbFoods";
             this.lbFoods.Size = new System.Drawing.Size(158, 124);
             this.lbFoods.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(14, 96);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 34);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Categories:";
             // 
             // label16
             // 
@@ -556,24 +574,6 @@
             this.label7.Size = new System.Drawing.Size(178, 30);
             this.label7.TabIndex = 19;
             this.label7.Text = "Daily Calorie Intake:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 96);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 34);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Categories:";
-            // 
-            // cbCategories
-            // 
-            this.cbCategories.Font = new System.Drawing.Font("Bahnschrift Condensed", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbCategories.FormattingEnabled = true;
-            this.cbCategories.Location = new System.Drawing.Point(143, 98);
-            this.cbCategories.Name = "cbCategories";
-            this.cbCategories.Size = new System.Drawing.Size(161, 35);
-            this.cbCategories.TabIndex = 11;
             // 
             // NutrientActivity
             // 

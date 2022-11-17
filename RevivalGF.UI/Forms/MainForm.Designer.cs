@@ -103,6 +103,9 @@
             this.lblWaterAttention = new System.Windows.Forms.Label();
             this.lblMedicationAttention = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.ProgressBarWater = new System.Windows.Forms.ProgressBar();
+            this.circularProgressBar1 = new CircularProgressBar.CircularProgressBar();
+            this.pbTick = new System.Windows.Forms.PictureBox();
             this.gbPlummy6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlummyNext6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -143,6 +146,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTick)).BeginInit();
             this.SuspendLayout();
             // 
             // gbPlummy6
@@ -960,12 +964,70 @@
             this.pictureBox12.TabIndex = 53;
             this.pictureBox12.TabStop = false;
             // 
+            // ProgressBarWater
+            // 
+            this.ProgressBarWater.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ProgressBarWater.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ProgressBarWater.Location = new System.Drawing.Point(30, 583);
+            this.ProgressBarWater.Name = "ProgressBarWater";
+            this.ProgressBarWater.Size = new System.Drawing.Size(221, 23);
+            this.ProgressBarWater.TabIndex = 60;
+            // 
+            // circularProgressBar1
+            // 
+            this.circularProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.circularProgressBar1.AnimationSpeed = 500;
+            this.circularProgressBar1.BackColor = System.Drawing.Color.Transparent;
+            this.circularProgressBar1.Font = new System.Drawing.Font("Bahnschrift Condensed", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.circularProgressBar1.ForeColor = System.Drawing.Color.White;
+            this.circularProgressBar1.InnerColor = System.Drawing.Color.Transparent;
+            this.circularProgressBar1.InnerMargin = 2;
+            this.circularProgressBar1.InnerWidth = -1;
+            this.circularProgressBar1.Location = new System.Drawing.Point(681, 330);
+            this.circularProgressBar1.MarqueeAnimationSpeed = 2000;
+            this.circularProgressBar1.Name = "circularProgressBar1";
+            this.circularProgressBar1.OuterColor = System.Drawing.Color.Gray;
+            this.circularProgressBar1.OuterMargin = -25;
+            this.circularProgressBar1.OuterWidth = 26;
+            this.circularProgressBar1.ProgressColor = System.Drawing.Color.Purple;
+            this.circularProgressBar1.ProgressWidth = 25;
+            this.circularProgressBar1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold);
+            this.circularProgressBar1.Size = new System.Drawing.Size(262, 251);
+            this.circularProgressBar1.StartAngle = 270;
+            this.circularProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.circularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.circularProgressBar1.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.circularProgressBar1.SubscriptText = "";
+            this.circularProgressBar1.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.circularProgressBar1.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.circularProgressBar1.SuperscriptText = "";
+            this.circularProgressBar1.TabIndex = 61;
+            this.circularProgressBar1.Text = "%75";
+            this.circularProgressBar1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.circularProgressBar1.UseWaitCursor = true;
+            this.circularProgressBar1.Value = 75;
+            // 
+            // pbTick
+            // 
+            this.pbTick.BackColor = System.Drawing.Color.Transparent;
+            this.pbTick.Image = global::RevivalGF.UI.Properties.Resources.verrification;
+            this.pbTick.Location = new System.Drawing.Point(272, 575);
+            this.pbTick.Name = "pbTick";
+            this.pbTick.Size = new System.Drawing.Size(29, 31);
+            this.pbTick.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTick.TabIndex = 62;
+            this.pbTick.TabStop = false;
+            this.pbTick.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::RevivalGF.UI.Properties.Resources.main;
             this.ClientSize = new System.Drawing.Size(994, 610);
+            this.Controls.Add(this.pbTick);
+            this.Controls.Add(this.circularProgressBar1);
+            this.Controls.Add(this.ProgressBarWater);
             this.Controls.Add(this.gbPlummy6);
             this.Controls.Add(this.gbPlummy5v2);
             this.Controls.Add(this.gbPlummy4);
@@ -1011,6 +1073,7 @@
             this.MinimumSize = new System.Drawing.Size(1012, 657);
             this.Name = "MainForm";
             this.Text = "MainForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.gbPlummy6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbPlummyNext6)).EndInit();
@@ -1053,6 +1116,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTick)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1134,5 +1198,8 @@
         private System.Windows.Forms.Label lblWaterAttention;
         private System.Windows.Forms.Label lblMedicationAttention;
         private System.Windows.Forms.PictureBox pictureBox12;
+        public System.Windows.Forms.ProgressBar ProgressBarWater;
+        private CircularProgressBar.CircularProgressBar circularProgressBar1;
+        private System.Windows.Forms.PictureBox pbTick;
     }
 }

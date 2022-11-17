@@ -32,10 +32,14 @@ namespace RevivalGF.Business.Services
             UserDetails userDetails = _detailsRepository.GetById(user.UserID);
             return userDetails;
         }
+        public int WaterCount(User user)
+        {
+            return db.Waters.Where(x => x.UserID == user.UserID && x.Status == Entites.Enums.Status.Active).ToList().Count();
+        }
         public int DecreaseWater(User user)
         {
             Water water = db.Waters.Where(x => x.UserID == user.UserID && x.Status == Entites.Enums.Status.Active).OrderByDescending(x=>x.WaterID).FirstOrDefault();
-           //if (water.WaterCount > 0)
+           if (WaterCount(user) > 0)
            {
                 _waterRepository.Delete(water);
            }   
@@ -50,9 +54,13 @@ namespace RevivalGF.Business.Services
                UserID= user.UserID,
             };
             _waterRepository.Add(water);
-
-            return db.Waters.Where(x=>x.UserID==user.UserID && x.Status == Entites.Enums.Status.Active).ToList().Count();
-            
+            return WaterCount(user);
         }
+
+
+        #region ProgressBar
+
+     
+        #endregion
     }
 }
