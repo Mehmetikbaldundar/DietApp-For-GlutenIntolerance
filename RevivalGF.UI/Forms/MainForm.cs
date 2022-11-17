@@ -1,4 +1,6 @@
-﻿using RevivalGF.Business.Services;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using RevivalGF.Business.Services;
+using RevivalGF.DataAccess.Concrete;
 using RevivalGF.DataAccess.Context;
 using RevivalGF.Entites.Abstract;
 using RevivalGF.Entites.Concrete;
@@ -18,25 +20,25 @@ namespace RevivalGF.UI.Forms
 {
     public partial class MainForm : Form
     {
-        RevivalGfDbContext db;
-        
+
         public MainForm()
         {
-
             userService = new UserService();
+            waterService=new WaterService();
             InitializeComponent();
         }
         UserService userService;
+        WaterService waterService;
        
         private void MainForm_Load(object sender, EventArgs e)
         {
             var userNameControl = Login.userNameControl;
-            var userdetails = userService.GetUserDetails(userNameControl);           
+            var userdetails = waterService.GetUserDetails(userNameControl);           
 
             if (userNameControl.Tutorial==true)
             {
                 gbPlummy1.Visible = true;
-                userService.PlummyOffline(userNameControl);
+                waterService.PlummyOffline(userNameControl);
             }
             else
             {
@@ -168,13 +170,18 @@ namespace RevivalGF.UI.Forms
         #endregion
         private void pbMinusWater_Click_1(object sender, EventArgs e)
         {
-            var water = userService.DecreaseWater(Login.userNameControl);
-            lblWaterInfo.Text = water.WaterCount.ToString();            
+            int glasscount;
+            glasscount = waterService.DecreaseWater(Login.userNameControl);
+            int waterml = glasscount * 250;
+            lblWaterInfo.Text = glasscount.ToString() + " glass = " + waterml + " mL";
         }
         private void pbAddWater_Click_1(object sender, EventArgs e)
         {
-            var water = userService.IncreaseWater(Login.userNameControl);
-            lblWaterInfo.Text = water.WaterCount.ToString(); 
+           
+            int glasscount;
+            glasscount = waterService.IncreaseWater(Login.userNameControl);
+            int waterml = glasscount * 250;
+            lblWaterInfo.Text = glasscount.ToString() +" glass = " + waterml + " mL";
         }
     }
 }
