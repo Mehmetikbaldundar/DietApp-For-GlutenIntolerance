@@ -23,7 +23,6 @@ namespace RevivalGF.Business.Services
         private readonly UserDetailsRepository _detailsRepository;
         private readonly PhysicallyGoalRepository _goalsRepository;
         private readonly BodyAnalysisRepository _bodyAnalysisRepository;
-        private readonly WaterRepository _waterRepository;
 
 
         public UserService()
@@ -32,8 +31,13 @@ namespace RevivalGF.Business.Services
             _userRepository = new UserRepository(db);
             _detailsRepository = new UserDetailsRepository(db);
             _goalsRepository = new PhysicallyGoalRepository(db);
+<<<<<<< HEAD
             _bodyAnalysisRepository = new BodyAnalysisRepository(db);     
             _waterRepository= new WaterRepository(db);
+=======
+            _bodyAnalysisRepository = new BodyAnalysisRepository(db);
+            
+>>>>>>> master
         }
 
         public bool RegisterCheck(User user, UserDetails userDetails, PhysicallyGoal physicallyGoal, BodyAnalysis bodyAnalysis)
@@ -268,43 +272,6 @@ namespace RevivalGF.Business.Services
                 builder.Append(item.ToString("x2"));
             }
             return builder.ToString();
-        }
-
-        //Main Form Methods
-        public void PlummyOffline(User user)
-        {
-            user.Tutorial = false;
-            _userRepository.Update(user);
-        }
-        public UserDetails GetUserDetails(User user)
-        {
-            UserDetails userDetails = _detailsRepository.GetById(user.UserID);
-            return userDetails;
-        }
-
-
-        public Water GetWater(User user)
-        {
-            Water water = _waterRepository.GetById(user.UserID);
-            return water;
-        }
-        public Water DecreaseWater(User user)
-        {
-            Water water = _waterRepository.GetById(user.UserID);
-            if (water.WaterCount > 0)
-            {
-                water.WaterCount--;
-            }   
-            _waterRepository.Update(water);
-            return water;
-        }
-        public Water IncreaseWater(User user)
-        {
-            Water water = _waterRepository.GetById(user.UserID);            
-            
-            water.WaterCount++;
-            _waterRepository.Update(water);
-            return water;
         }
 
 

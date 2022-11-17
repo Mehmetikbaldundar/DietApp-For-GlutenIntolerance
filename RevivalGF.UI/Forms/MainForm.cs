@@ -1,4 +1,6 @@
-﻿using RevivalGF.Business.Services;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using RevivalGF.Business.Services;
+using RevivalGF.DataAccess.Concrete;
 using RevivalGF.DataAccess.Context;
 using RevivalGF.Entites.Abstract;
 using RevivalGF.Entites.Concrete;
@@ -12,30 +14,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace RevivalGF.UI.Forms
 {
     public partial class MainForm : Form
+<<<<<<< HEAD
     {      
         
+=======
+    {
+
+>>>>>>> master
         public MainForm()
         {
-
             userService = new UserService();
+            waterService=new WaterService();
             InitializeComponent();
         }
         UserService userService;
+        WaterService waterService;
        
         private void MainForm_Load(object sender, EventArgs e)
         {
             var userNameControl = Login.userNameControl;
-            var userdetails = userService.GetUserDetails(userNameControl);           
-
+            var userdetails = waterService.GetUserDetails(userNameControl);
+            
             if (userNameControl.Tutorial==true)
             {
                 gbPlummy1.Visible = true;
-                userService.PlummyOffline(userNameControl);
+                waterService.PlummyOffline(userNameControl);
             }
             else
             {
@@ -62,7 +71,12 @@ namespace RevivalGF.UI.Forms
             else
             {
                 pbAvatar.Image = Properties.Resources.avatar_women;
-            }    
+            }
+
+            int glasscount = waterService.WaterCount(userNameControl);
+            int waterml = glasscount * 250;
+            lblWaterInfo.Text = glasscount.ToString() + " glass = " + waterml + " mL";
+            ProgressBar(glasscount);
         }
         #region PlummySection
         private void pbPlummy1Next_DoubleClick(object sender, EventArgs e)
@@ -167,13 +181,42 @@ namespace RevivalGF.UI.Forms
         #endregion
         private void pbMinusWater_Click_1(object sender, EventArgs e)
         {
-            var water = userService.DecreaseWater(Login.userNameControl);
-            lblWaterInfo.Text = water.WaterCount.ToString();            
+            int glasscount;
+            glasscount = waterService.DecreaseWater(Login.userNameControl);
+            int waterml = glasscount * 250;
+            lblWaterInfo.Text = glasscount.ToString() + " glass = " + waterml + " mL";
+            ProgressBar(glasscount);
         }
         private void pbAddWater_Click_1(object sender, EventArgs e)
         {
-            var water = userService.IncreaseWater(Login.userNameControl);
-            lblWaterInfo.Text = water.WaterCount.ToString(); 
+           
+            int glasscount;
+            glasscount = waterService.IncreaseWater(Login.userNameControl);
+            int waterml = glasscount * 250;
+            lblWaterInfo.Text = glasscount.ToString() +" glass = " + waterml + " mL";
+            ProgressBar(glasscount);
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        public void ProgressBar(int glasscount)
+        {
+            ProgressBarWater.Minimum = 0;
+            ProgressBarWater.Maximum = 10;
+            ProgressBarWater.Step = 1;
+            if (glasscount<10)
+            {
+                ProgressBarWater.Value = glasscount;
+                pbTick.Visible = false;
+            }
+            else
+            {
+                ProgressBarWater.Value = 10;
+                pbTick.Visible = true;
+            }
         }
     }
 }
