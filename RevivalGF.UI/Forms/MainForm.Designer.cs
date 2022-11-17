@@ -546,7 +546,7 @@
             // 
             // calender
             // 
-            this.calender.Location = new System.Drawing.Point(324, 401);
+            this.calender.Location = new System.Drawing.Point(354, 399);
             this.calender.Name = "calender";
             this.calender.TabIndex = 52;
             // 
@@ -566,7 +566,7 @@
             this.lblWaterInfo.AutoSize = true;
             this.lblWaterInfo.BackColor = System.Drawing.Color.Transparent;
             this.lblWaterInfo.Font = new System.Drawing.Font("Bahnschrift Condensed", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblWaterInfo.Location = new System.Drawing.Point(36, 521);
+            this.lblWaterInfo.Location = new System.Drawing.Point(13, 521);
             this.lblWaterInfo.Name = "lblWaterInfo";
             this.lblWaterInfo.Size = new System.Drawing.Size(258, 60);
             this.lblWaterInfo.TabIndex = 49;
