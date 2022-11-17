@@ -32,7 +32,8 @@ namespace RevivalGF.Business.Services
             _userRepository = new UserRepository(db);
             _detailsRepository = new UserDetailsRepository(db);
             _goalsRepository = new PhysicallyGoalRepository(db);
-            _bodyAnalysisRepository = new BodyAnalysisRepository(db);            
+            _bodyAnalysisRepository = new BodyAnalysisRepository(db);     
+            _waterRepository= new WaterRepository(db);
         }
 
         public bool RegisterCheck(User user, UserDetails userDetails, PhysicallyGoal physicallyGoal, BodyAnalysis bodyAnalysis)

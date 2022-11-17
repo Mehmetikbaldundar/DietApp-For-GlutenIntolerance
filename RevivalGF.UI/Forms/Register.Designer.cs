@@ -85,7 +85,7 @@
             // 
             this.rtbTermsandConditions.BackColor = System.Drawing.Color.SeaShell;
             this.rtbTermsandConditions.Location = new System.Drawing.Point(68, 271);
-            this.rtbTermsandConditions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rtbTermsandConditions.Margin = new System.Windows.Forms.Padding(2);
             this.rtbTermsandConditions.Name = "rtbTermsandConditions";
             this.rtbTermsandConditions.Size = new System.Drawing.Size(468, 166);
             this.rtbTermsandConditions.TabIndex = 56;
@@ -120,10 +120,10 @@
             this.cbAccepted.AutoSize = true;
             this.cbAccepted.BackColor = System.Drawing.Color.Transparent;
             this.cbAccepted.Location = new System.Drawing.Point(37, 205);
-            this.cbAccepted.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbAccepted.Margin = new System.Windows.Forms.Padding(2);
             this.cbAccepted.Name = "cbAccepted";
             this.cbAccepted.Size = new System.Drawing.Size(15, 14);
-            this.cbAccepted.TabIndex = 53;
+            this.cbAccepted.TabIndex = 5;
             this.cbAccepted.UseVisualStyleBackColor = false;
             // 
             // label26
@@ -153,7 +153,7 @@
             this.pbNext.BackColor = System.Drawing.Color.Transparent;
             this.pbNext.Image = global::RevivalGF.UI.Properties.Resources.nextbutton;
             this.pbNext.Location = new System.Drawing.Point(652, 260);
-            this.pbNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbNext.Margin = new System.Windows.Forms.Padding(2);
             this.pbNext.Name = "pbNext";
             this.pbNext.Size = new System.Drawing.Size(60, 61);
             this.pbNext.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -165,30 +165,30 @@
             // 
             this.cbDisease.FormattingEnabled = true;
             this.cbDisease.Location = new System.Drawing.Point(585, 230);
-            this.cbDisease.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbDisease.Margin = new System.Windows.Forms.Padding(2);
             this.cbDisease.Name = "cbDisease";
             this.cbDisease.Size = new System.Drawing.Size(114, 21);
-            this.cbDisease.TabIndex = 48;
+            this.cbDisease.TabIndex = 13;
             this.cbDisease.SelectedIndexChanged += new System.EventHandler(this.cbDisease_SelectedIndexChanged);
             // 
             // cbGoal
             // 
             this.cbGoal.FormattingEnabled = true;
             this.cbGoal.Location = new System.Drawing.Point(585, 202);
-            this.cbGoal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbGoal.Margin = new System.Windows.Forms.Padding(2);
             this.cbGoal.Name = "cbGoal";
             this.cbGoal.Size = new System.Drawing.Size(114, 21);
-            this.cbGoal.TabIndex = 47;
+            this.cbGoal.TabIndex = 12;
             this.cbGoal.SelectedIndexChanged += new System.EventHandler(this.cbGoal_SelectedIndexChanged);
             // 
             // cbActivityLevel
             // 
             this.cbActivityLevel.FormattingEnabled = true;
             this.cbActivityLevel.Location = new System.Drawing.Point(585, 176);
-            this.cbActivityLevel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbActivityLevel.Margin = new System.Windows.Forms.Padding(2);
             this.cbActivityLevel.Name = "cbActivityLevel";
             this.cbActivityLevel.Size = new System.Drawing.Size(114, 21);
-            this.cbActivityLevel.TabIndex = 49;
+            this.cbActivityLevel.TabIndex = 11;
             this.cbActivityLevel.SelectedIndexChanged += new System.EventHandler(this.cbActivityLevel_SelectedIndexChanged);
             // 
             // rdbMen
@@ -197,7 +197,7 @@
             this.rdbMen.BackColor = System.Drawing.Color.Transparent;
             this.rdbMen.Font = new System.Drawing.Font("Bahnschrift Condensed", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rdbMen.Location = new System.Drawing.Point(646, 84);
-            this.rdbMen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdbMen.Margin = new System.Windows.Forms.Padding(2);
             this.rdbMen.Name = "rdbMen";
             this.rdbMen.Size = new System.Drawing.Size(40, 17);
             this.rdbMen.TabIndex = 46;
@@ -211,7 +211,7 @@
             this.rdbWomen.BackColor = System.Drawing.Color.Transparent;
             this.rdbWomen.Font = new System.Drawing.Font("Bahnschrift Condensed", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.rdbWomen.Location = new System.Drawing.Point(585, 84);
-            this.rdbWomen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdbWomen.Margin = new System.Windows.Forms.Padding(2);
             this.rdbWomen.Name = "rdbWomen";
             this.rdbWomen.Size = new System.Drawing.Size(51, 17);
             this.rdbWomen.TabIndex = 45;
@@ -222,76 +222,76 @@
             // tbWeight
             // 
             this.tbWeight.Location = new System.Drawing.Point(585, 130);
-            this.tbWeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbWeight.Margin = new System.Windows.Forms.Padding(2);
             this.tbWeight.Name = "tbWeight";
             this.tbWeight.Size = new System.Drawing.Size(114, 20);
-            this.tbWeight.TabIndex = 43;
+            this.tbWeight.TabIndex = 9;
             this.tbWeight.TextChanged += new System.EventHandler(this.tbWeight_TextChanged);
             this.tbWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbWeight_KeyPress);
             // 
             // tbRepeatPassword
             // 
             this.tbRepeatPassword.Location = new System.Drawing.Point(182, 126);
-            this.tbRepeatPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbRepeatPassword.Margin = new System.Windows.Forms.Padding(2);
             this.tbRepeatPassword.Name = "tbRepeatPassword";
             this.tbRepeatPassword.Size = new System.Drawing.Size(114, 20);
-            this.tbRepeatPassword.TabIndex = 42;
+            this.tbRepeatPassword.TabIndex = 4;
             this.tbRepeatPassword.TextChanged += new System.EventHandler(this.tbRepeatPassword_TextChanged);
             // 
             // tbLastName
             // 
             this.tbLastName.AcceptsReturn = true;
             this.tbLastName.Location = new System.Drawing.Point(585, 58);
-            this.tbLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLastName.Margin = new System.Windows.Forms.Padding(2);
             this.tbLastName.Name = "tbLastName";
             this.tbLastName.Size = new System.Drawing.Size(114, 20);
-            this.tbLastName.TabIndex = 41;
+            this.tbLastName.TabIndex = 7;
             this.tbLastName.TextChanged += new System.EventHandler(this.tbLastName_TextChanged);
             // 
             // tbEmail
             // 
             this.tbEmail.Location = new System.Drawing.Point(182, 74);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(114, 20);
-            this.tbEmail.TabIndex = 40;
+            this.tbEmail.TabIndex = 2;
             this.tbEmail.TextChanged += new System.EventHandler(this.tbEmail_TextChanged);
             // 
             // tbHeight
             // 
             this.tbHeight.Location = new System.Drawing.Point(585, 105);
-            this.tbHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbHeight.Margin = new System.Windows.Forms.Padding(2);
             this.tbHeight.Name = "tbHeight";
             this.tbHeight.Size = new System.Drawing.Size(114, 20);
-            this.tbHeight.TabIndex = 39;
+            this.tbHeight.TabIndex = 8;
             this.tbHeight.TextChanged += new System.EventHandler(this.tbHeight_TextChanged);
             this.tbHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbHeight_KeyPress);
             // 
             // tbPassword
             // 
             this.tbPassword.Location = new System.Drawing.Point(182, 101);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(2);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(114, 20);
-            this.tbPassword.TabIndex = 38;
+            this.tbPassword.TabIndex = 3;
             this.tbPassword.TextChanged += new System.EventHandler(this.tbPassword_TextChanged);
             // 
             // tbFirstName
             // 
             this.tbFirstName.Location = new System.Drawing.Point(585, 34);
-            this.tbFirstName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.tbFirstName.Name = "tbFirstName";
             this.tbFirstName.Size = new System.Drawing.Size(114, 20);
-            this.tbFirstName.TabIndex = 37;
+            this.tbFirstName.TabIndex = 6;
             this.tbFirstName.TextChanged += new System.EventHandler(this.tbFirstName_TextChanged);
             // 
             // tbUsername
             // 
             this.tbUsername.Location = new System.Drawing.Point(182, 50);
-            this.tbUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbUsername.Margin = new System.Windows.Forms.Padding(2);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(114, 20);
-            this.tbUsername.TabIndex = 36;
+            this.tbUsername.TabIndex = 1;
             this.tbUsername.TextChanged += new System.EventHandler(this.tbUsername_TextChanged);
             // 
             // label28
@@ -648,7 +648,7 @@
             this.dtpBirthDate.Location = new System.Drawing.Point(585, 153);
             this.dtpBirthDate.Name = "dtpBirthDate";
             this.dtpBirthDate.Size = new System.Drawing.Size(114, 20);
-            this.dtpBirthDate.TabIndex = 57;
+            this.dtpBirthDate.TabIndex = 10;
             this.dtpBirthDate.ValueChanged += new System.EventHandler(this.dtpBirthDate_ValueChanged);
             // 
             // Register
@@ -706,7 +706,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(767, 500);
             this.MinimumSize = new System.Drawing.Size(767, 500);
             this.Name = "Register";

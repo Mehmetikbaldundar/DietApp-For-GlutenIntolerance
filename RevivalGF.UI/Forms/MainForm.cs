@@ -17,8 +17,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 namespace RevivalGF.UI.Forms
 {
     public partial class MainForm : Form
-    {
-        RevivalGfDbContext db;
+    {      
         
         public MainForm()
         {
