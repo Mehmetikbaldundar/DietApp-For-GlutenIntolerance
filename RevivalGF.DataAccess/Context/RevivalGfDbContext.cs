@@ -11,13 +11,13 @@ namespace RevivalGF.DataAccess.Context
 {
     public class RevivalGfDbContext : DbContext
     {
-        public RevivalGfDbContext() : base("Server=DESKTOP-ORUQO20;Database=NRM1_DIET;Trusted_Connection=True;") //- DB LOKASYON -
+        public RevivalGfDbContext() : base("Server=DESKTOP-IKBAL\\MSSQLSERVER2019;Database=NRM1-RevivalGfDb;Trusted_Connection=True;") //- DB LOKASYON -
         {
             // "Server=DESKTOP-IKBAL\\MSSQLSERVER2019;Database=NRM1-RevivalGfDb;Trusted_Connection=True;" --- İKBAL
             // "Server=DESKTOP-ORUQO20;Database=NRM1_DIET2;Trusted_Connection=True;" --- AYŞENUR
-            Database.SetInitializer(new CreateDatabaseIfNotExists<RevivalGfDbContext>()); // Default
+            // Database.SetInitializer(new CreateDatabaseIfNotExists<RevivalGfDbContext>()); // Default            
+            Database.SetInitializer<RevivalGfDbContext>(new MealDbInitializer<RevivalGfDbContext>());
             
-                    
         }
         public DbSet<Activity> Activities { get; set; }
         public DbSet<BodyAnalysis> BodyAnalyses { get; set; }

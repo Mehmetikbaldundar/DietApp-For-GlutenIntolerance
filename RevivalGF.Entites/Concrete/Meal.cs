@@ -15,16 +15,17 @@ namespace RevivalGF.Entites.Concrete
         [Key]
         public int MealID { get; set; }
         public string MealName { get; set; }
-        public string Recipe { get; set; }
         public decimal Calorie { get; set; }
         public decimal Carbonhydrade { get; set; }
         public decimal Fat { get; set; }
         public decimal Protein { get; set; }
         public decimal Gram { get; set; }
-        public GlutenRisk GlutenRisk { get; set; }        
+        public GlutenRisk GlutenRisk { get; set; }
         public int? AlternativeFoodID { get; set; }
-        public int MealReportID { get; set; }
-        public MealReport MealReport { get; set; }
+        public MealCategories MealCategories { get; set; }
+        public ServiceType ServiceType { get; set; }
+        public string Recipe { get; set; }       
+        public List<MealReport> MealReports { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public DateTime? ModifiedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
@@ -33,7 +34,6 @@ namespace RevivalGF.Entites.Concrete
         public string ModifiedBy { get; set; }
         public Status Status { get; set; } = Status.Active;
         public virtual Meal RiskyFoods { get; set; }
-        public virtual ICollection<Meal> AlternativeFoods { get; } = new HashSet<Meal>();
-        public MealCategories MealCategories { get; set; }
+        public virtual ICollection<Meal> AlternativeFoods { get; } = new HashSet<Meal>();        
     }
 }

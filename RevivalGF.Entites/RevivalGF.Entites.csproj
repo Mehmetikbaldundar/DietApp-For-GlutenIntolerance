@@ -78,6 +78,7 @@
     <Compile Include="Enums\GlutenRisk.cs" />
     <Compile Include="Enums\MealCategories.cs" />
     <Compile Include="Enums\Repast.cs" />
+    <Compile Include="Enums\ServiceType.cs" />
     <Compile Include="Enums\Status.cs" />
     <Compile Include="Enums\TargetedDiet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
