@@ -68,15 +68,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.gboxAdmin = new System.Windows.Forms.GroupBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.rdbOn = new System.Windows.Forms.RadioButton();
-            this.rdbOff = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.gboxAdmin.SuspendLayout();
             this.SuspendLayout();
             // 
             // pbNext
@@ -522,56 +517,6 @@
             this.pictureBox1.TabIndex = 43;
             this.pictureBox1.TabStop = false;
             // 
-            // gboxAdmin
-            // 
-            this.gboxAdmin.Controls.Add(this.label16);
-            this.gboxAdmin.Controls.Add(this.rdbOn);
-            this.gboxAdmin.Controls.Add(this.rdbOff);
-            this.gboxAdmin.Font = new System.Drawing.Font("Bahnschrift Condensed", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.gboxAdmin.Location = new System.Drawing.Point(11, 100);
-            this.gboxAdmin.Margin = new System.Windows.Forms.Padding(2);
-            this.gboxAdmin.Name = "gboxAdmin";
-            this.gboxAdmin.Padding = new System.Windows.Forms.Padding(2);
-            this.gboxAdmin.Size = new System.Drawing.Size(161, 33);
-            this.gboxAdmin.TabIndex = 47;
-            this.gboxAdmin.TabStop = false;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Bahnschrift Condensed", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label16.Location = new System.Drawing.Point(7, 14);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(55, 13);
-            this.label16.TabIndex = 5;
-            this.label16.Text = "Admin Panel:";
-            // 
-            // rdbOn
-            // 
-            this.rdbOn.AutoSize = true;
-            this.rdbOn.Location = new System.Drawing.Point(66, 12);
-            this.rdbOn.Margin = new System.Windows.Forms.Padding(2);
-            this.rdbOn.Name = "rdbOn";
-            this.rdbOn.Size = new System.Drawing.Size(35, 17);
-            this.rdbOn.TabIndex = 6;
-            this.rdbOn.TabStop = true;
-            this.rdbOn.Text = "On";
-            this.rdbOn.UseVisualStyleBackColor = true;
-            this.rdbOn.CheckedChanged += new System.EventHandler(this.rdbOn_CheckedChanged);
-            // 
-            // rdbOff
-            // 
-            this.rdbOff.AutoSize = true;
-            this.rdbOff.Location = new System.Drawing.Point(105, 12);
-            this.rdbOff.Margin = new System.Windows.Forms.Padding(2);
-            this.rdbOff.Name = "rdbOff";
-            this.rdbOff.Size = new System.Drawing.Size(36, 17);
-            this.rdbOff.TabIndex = 7;
-            this.rdbOff.TabStop = true;
-            this.rdbOff.Text = "Off";
-            this.rdbOff.UseVisualStyleBackColor = true;
-            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -606,7 +551,6 @@
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.gboxAdmin);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
@@ -616,16 +560,13 @@
             this.MaximumSize = new System.Drawing.Size(261, 618);
             this.MinimumSize = new System.Drawing.Size(261, 618);
             this.Name = "Settings";
-            this.Text = "Settings";
-            this.Load += new System.EventHandler(this.Settings_Load);
+            this.Text = "Settings";           
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.gboxAdmin.ResumeLayout(false);
-            this.gboxAdmin.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -673,9 +614,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.GroupBox gboxAdmin;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.RadioButton rdbOn;
-        private System.Windows.Forms.RadioButton rdbOff;
     }
 }

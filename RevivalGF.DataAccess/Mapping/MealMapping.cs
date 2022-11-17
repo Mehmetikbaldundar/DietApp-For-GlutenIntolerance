@@ -34,7 +34,7 @@ namespace RevivalGF.DataAccess.Mapping
             this.Property(x => x.ModifiedDate).IsOptional();
 
             this.HasMany(p => p.AlternativeFoods)
-                .WithRequired(p => p.RiskyFoods)
+                .WithOptional(p => p.RiskyFoods)
                 .HasForeignKey(p => p.AlternativeFoodID)
                 .WillCascadeOnDelete(false);
 

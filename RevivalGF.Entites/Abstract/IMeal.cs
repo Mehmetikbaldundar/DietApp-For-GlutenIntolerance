@@ -22,5 +22,6 @@ namespace RevivalGF.Entites.Abstract
         int? AlternativeFoodID { get; set; }
         List<MealReport> MealReports { get; set; }
         MealCategories MealCategories { get; set; }
+        ServiceType ServiceType { get; set; }
     }
 }

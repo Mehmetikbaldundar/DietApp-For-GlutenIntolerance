@@ -8,6 +8,17 @@ namespace RevivalGF.Entites.Enums
 {
     public enum MealCategories
     {
-        None = 0,
+        VegatablesAndLegumes=1,
+        MilkAndDairyProducts,
+        Fruits,
+        FishProducts,
+        BakeryProducts,
+        Snacks,
+        DrinkAndBeverages,
+        BreakfastFoods,
+        Meals,
+        MeatAndMeatProducts,
+        CerealsAndBreadProducts,
+        Salads
     }
 }
