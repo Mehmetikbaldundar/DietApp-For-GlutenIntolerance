@@ -24,6 +24,19 @@ namespace RevivalGF.UI.Forms
              main.Show();
              this.Hide();*/
         }
-        
+
+        private void lblSaveChanges_Click(object sender, EventArgs e)
+        {
+            var changeLanguage = new ChangeLanguage();
+            changeLanguage.UpdateConfig("language", "tr-TR");
+            Application.Restart();
+
+            //var changeLanguage = new ChangeLanguage();
+            //changeLanguage.UpdateConfig("language", "en");
+            //Application.Restart();
+
+
+
+        }
     }
 }

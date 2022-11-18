@@ -118,135 +118,49 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pbNext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 87</value>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 36</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblReport.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>996, 595</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;pbNext.Name" xml:space="preserve">
-    <value>pbNext</value>
-  </data>
-  <data name="&gt;&gt;lblReport.Name" xml:space="preserve">
-    <value>lblReport</value>
-  </data>
-  <data name="&gt;&gt;lblReport.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="lblReport.Text" xml:space="preserve">
-    <value>Daily Report</value>
-  </data>
-  <data name="cbReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 24</value>
-  </data>
-  <data name="lblReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 34</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Reports</value>
-  </data>
-  <data name="&gt;&gt;cbReport.Name" xml:space="preserve">
-    <value>cbReport</value>
-  </data>
-  <data name="lblReport.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Reports</value>
-  </data>
-  <data name="lblReport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 23</value>
-  </data>
-  <data name="cbReport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>772, 28</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pbNext.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="&gt;&gt;cbReport.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbNext.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
-  </data>
-  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1014, 642</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Teşekkürler</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 29</value>
-  </data>
-  <data name="&gt;&gt;pbNext.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>522, 23</value>
-  </data>
-  <data name="&gt;&gt;lblReport.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="cbReport.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;pbNext.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>308, 29</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Please select report type:</value>
+    <value>Günde kaç defa bu ilacı alacaksınız?</value>
   </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1014, 642</value>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>305, 28</value>
   </data>
-  <data name="pbNext.Location" type="System.Drawing.Point, System.Drawing">
-    <value>788, 485</value>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Takibi sağlanacak ilacın ismini giriniz:</value>
   </data>
-  <data name="&gt;&gt;cbReport.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 27</value>
   </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift Condensed, 14pt</value>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Kaç gün ilaç alacaksınız?</value>
   </data>
-  <data name="pbNext.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="btnAdd.Text" xml:space="preserve">
+    <value>Ekle</value>
   </data>
-  <data name="lblReport.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift Condensed, 16.2pt</value>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>266, 24</value>
   </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="label5.Text" xml:space="preserve">
+    <value>İlacı kullanmayı bırakmanız gerekirse,</value>
   </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 24</value>
   </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Lütfen İlacı Siliniz:</value>
   </data>
-  <data name="&gt;&gt;lblReport.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnDelete.Text" xml:space="preserve">
+    <value>Sil</value>
   </data>
-  <data name="&gt;&gt;cbReport.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>İlaç Takibi</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
 </root>

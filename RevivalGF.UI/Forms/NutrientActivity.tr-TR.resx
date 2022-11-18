@@ -118,135 +118,103 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pbNext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 87</value>
+  <data name="lblDeleteActivity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 38</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lblReport.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="lblDeleteActivity.Text" xml:space="preserve">
+    <value>Sil</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>996, 595</value>
+  <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 34</value>
   </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Aktivite Seçiniz:</value>
   </data>
-  <data name="&gt;&gt;pbNext.Name" xml:space="preserve">
-    <value>pbNext</value>
+  <data name="lblAddActivity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 38</value>
   </data>
-  <data name="&gt;&gt;lblReport.Name" xml:space="preserve">
-    <value>lblReport</value>
+  <data name="lblAddActivity.Text" xml:space="preserve">
+    <value>Ekle</value>
   </data>
-  <data name="&gt;&gt;lblReport.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 30</value>
   </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
+  <data name="label20.Text" xml:space="preserve">
+    <value>Kalori:</value>
   </data>
-  <data name="lblReport.Text" xml:space="preserve">
-    <value>Daily Report</value>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 34</value>
   </data>
-  <data name="cbReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 24</value>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Ativite Süreniz Giriniz:</value>
   </data>
-  <data name="lblReport.Size" type="System.Drawing.Size, System.Drawing">
-    <value>128, 34</value>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Aktivite Ekle:</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 34</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Kategoriler:</value>
+  </data>
+  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 34</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Ara:</value>
+  </data>
+  <data name="lblDeleteFood.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 38</value>
+  </data>
+  <data name="lblDeleteFood.Text" xml:space="preserve">
+    <value>Sil</value>
+  </data>
+  <data name="lblAddFood.Size" type="System.Drawing.Size, System.Drawing">
+    <value>59, 38</value>
+  </data>
+  <data name="lblAddFood.Text" xml:space="preserve">
+    <value>Ekle</value>
+  </data>
+  <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 24</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>Porsiyon Seçiniz:</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 24</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Kalori:</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Besin Ekle:</value>
+  </data>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 30</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Kalori:</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 30</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Yağ:</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 30</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Karbohidrat:</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 30</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Günlük Kalori Alımı:</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Reports</value>
+    <value>Besin Aktivitesi</value>
   </data>
-  <data name="&gt;&gt;cbReport.Name" xml:space="preserve">
-    <value>cbReport</value>
-  </data>
-  <data name="lblReport.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Reports</value>
-  </data>
-  <data name="lblReport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>87, 23</value>
-  </data>
-  <data name="cbReport.Location" type="System.Drawing.Point, System.Drawing">
-    <value>772, 28</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pbNext.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="&gt;&gt;cbReport.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbNext.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
-  </data>
-  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1014, 642</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>217, 29</value>
-  </data>
-  <data name="&gt;&gt;pbNext.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>522, 23</value>
-  </data>
-  <data name="&gt;&gt;lblReport.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="cbReport.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;pbNext.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Please select report type:</value>
-  </data>
-  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>1014, 642</value>
-  </data>
-  <data name="pbNext.Location" type="System.Drawing.Point, System.Drawing">
-    <value>788, 485</value>
-  </data>
-  <data name="&gt;&gt;cbReport.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift Condensed, 14pt</value>
-  </data>
-  <data name="pbNext.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="lblReport.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Bahnschrift Condensed, 16.2pt</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblReport.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbReport.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
 </root>
