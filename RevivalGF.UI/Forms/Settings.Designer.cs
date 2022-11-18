@@ -44,7 +44,6 @@
             this.cbActivityLevel = new System.Windows.Forms.ComboBox();
             this.rdbMen = new System.Windows.Forms.RadioButton();
             this.rdbWomen = new System.Windows.Forms.RadioButton();
-            this.tbAge = new System.Windows.Forms.TextBox();
             this.tbWeight = new System.Windows.Forms.TextBox();
             this.tbLastName = new System.Windows.Forms.TextBox();
             this.tbHeight = new System.Windows.Forms.TextBox();
@@ -69,6 +68,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pbNext = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
+            this.chkEnable = new System.Windows.Forms.CheckBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).BeginInit();
@@ -101,6 +102,7 @@
             // 
             resources.ApplyResources(this.tbRepeatPasswprd, "tbRepeatPasswprd");
             this.tbRepeatPasswprd.Name = "tbRepeatPasswprd";
+            this.tbRepeatPasswprd.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbRepeatPasswprd_MouseClick);
             // 
             // tbEmail
             // 
@@ -111,6 +113,7 @@
             // 
             resources.ApplyResources(this.tbPassword, "tbPassword");
             this.tbPassword.Name = "tbPassword";
+            this.tbPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbPassword_MouseClick);
             // 
             // tbUsername
             // 
@@ -169,15 +172,11 @@
             this.rdbWomen.TabStop = true;
             this.rdbWomen.UseVisualStyleBackColor = false;
             // 
-            // tbAge
-            // 
-            resources.ApplyResources(this.tbAge, "tbAge");
-            this.tbAge.Name = "tbAge";
-            // 
             // tbWeight
             // 
             resources.ApplyResources(this.tbWeight, "tbWeight");
             this.tbWeight.Name = "tbWeight";
+            this.tbWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbWeight_KeyPress);
             // 
             // tbLastName
             // 
@@ -188,6 +187,7 @@
             // 
             resources.ApplyResources(this.tbHeight, "tbHeight");
             this.tbHeight.Name = "tbHeight";
+            this.tbHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbHeight_KeyPress);
             // 
             // tbFirstName
             // 
@@ -269,6 +269,7 @@
             this.rdbDark.Name = "rdbDark";
             this.rdbDark.TabStop = true;
             this.rdbDark.UseVisualStyleBackColor = true;
+            this.rdbDark.CheckedChanged += new System.EventHandler(this.rdbDark_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -297,6 +298,7 @@
             this.rdbTr.Name = "rdbTr";
             this.rdbTr.TabStop = true;
             this.rdbTr.UseVisualStyleBackColor = true;
+            this.rdbTr.CheckedChanged += new System.EventHandler(this.rdbTr_CheckedChanged);
             // 
             // label4
             // 
@@ -323,10 +325,24 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
+            // dtpBirthDate
+            // 
+            resources.ApplyResources(this.dtpBirthDate, "dtpBirthDate");
+            this.dtpBirthDate.Name = "dtpBirthDate";
+            // 
+            // chkEnable
+            // 
+            resources.ApplyResources(this.chkEnable, "chkEnable");
+            this.chkEnable.Name = "chkEnable";
+            this.chkEnable.UseVisualStyleBackColor = true;
+            this.chkEnable.CheckedChanged += new System.EventHandler(this.chkEnable_CheckedChanged);
+            // 
             // Settings
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.chkEnable);
+            this.Controls.Add(this.dtpBirthDate);
             this.Controls.Add(this.pbNext);
             this.Controls.Add(this.lblDeleteAccount);
             this.Controls.Add(this.lblResetAccount);
@@ -343,7 +359,6 @@
             this.Controls.Add(this.cbActivityLevel);
             this.Controls.Add(this.rdbMen);
             this.Controls.Add(this.rdbWomen);
-            this.Controls.Add(this.tbAge);
             this.Controls.Add(this.tbWeight);
             this.Controls.Add(this.tbLastName);
             this.Controls.Add(this.tbHeight);
@@ -362,6 +377,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Settings";
+            this.Load += new System.EventHandler(this.Settings_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -391,7 +407,6 @@
         private System.Windows.Forms.ComboBox cbActivityLevel;
         private System.Windows.Forms.RadioButton rdbMen;
         private System.Windows.Forms.RadioButton rdbWomen;
-        private System.Windows.Forms.TextBox tbAge;
         private System.Windows.Forms.TextBox tbWeight;
         private System.Windows.Forms.TextBox tbLastName;
         private System.Windows.Forms.TextBox tbHeight;
@@ -415,5 +430,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DateTimePicker dtpBirthDate;
+        private System.Windows.Forms.CheckBox chkEnable;
     }
 }

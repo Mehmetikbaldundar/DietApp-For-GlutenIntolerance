@@ -91,7 +91,6 @@
     <Compile Include="Mapping\UserDetailsMapping.cs" />
     <Compile Include="Mapping\UserMapping.cs" />
     <Compile Include="Mapping\WaterMapping.cs" />
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
