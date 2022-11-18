@@ -172,7 +172,8 @@ namespace RevivalGF.Business.Services
         }
         private bool UserRegistation(User user, UserDetails userDetails, PhysicallyGoal physicallyGoal, BodyAnalysis bodyAnalysis)
         {
-            user.Password = PasswordWithSha256(user.Password);
+            SecurityService security = new SecurityService();
+            user.Password = PasswordWithSha256(security.TextEncrypt(user.Password));
             _userRepository.Add(user);
             int MainID = user.UserID;
             userDetails.DetailsID = MainID;
@@ -271,18 +272,19 @@ namespace RevivalGF.Business.Services
 
         public bool LoginCheck(string username, string password)
         {
+            SecurityService security = new SecurityService();
             var userNameControl = db.Users.Where(x => x.UserName == username.Trim()).FirstOrDefault();
             if (userNameControl == null)
             {
                 MessageBox.Show("User Not Found !!");
                 return false;
-            }            
+            }
 
-            if (userNameControl.Password != PasswordWithSha256(password))
+            if (userNameControl.Password != PasswordWithSha256(security.TextEncrypt(password)))
             {
                 MessageBox.Show("Password Incorrect! \n Please check and try again");
                 return false;
-            }               
+            }
 
             return true;
         }
