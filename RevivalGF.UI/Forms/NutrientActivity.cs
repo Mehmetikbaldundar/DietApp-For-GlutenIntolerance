@@ -24,5 +24,9 @@ namespace RevivalGF.UI.Forms
             this.Close();
         }
 
+        private void NutrientActivity_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
