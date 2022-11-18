@@ -51,6 +51,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -66,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangeLanguage.cs" />
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,28 +127,55 @@
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.tr-TR.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.tr-TR.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Medication.resx">
       <DependentUpon>Medication.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Medication.tr-TR.resx">
+      <DependentUpon>Medication.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\NutrientActivity.resx">
+      <DependentUpon>NutrientActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NutrientActivity.tr-TR.resx">
       <DependentUpon>NutrientActivity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Recipes.resx">
       <DependentUpon>Recipes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Recipes.tr-TR.resx">
+      <DependentUpon>Recipes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Register.tr-TR.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports.tr-TR.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings.tr-TR.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Suggestions.resx">
+      <DependentUpon>Suggestions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Suggestions.tr-TR.resx">
       <DependentUpon>Suggestions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
