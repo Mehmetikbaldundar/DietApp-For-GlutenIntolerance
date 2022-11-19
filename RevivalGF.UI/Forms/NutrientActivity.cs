@@ -22,10 +22,13 @@ namespace RevivalGF.UI.Forms
     {
         private readonly RevivalGfDbContext db;
         private readonly MealRepository _mealRepository;
+        private readonly MealReportsRepository _mealReportsRepository;
         public NutrientActivity()
         {
             db = new RevivalGfDbContext();
             _mealRepository= new MealRepository(db);
+            _mealReportsRepository = new MealReportsRepository(db);
+
             InitializeComponent();
         }
         private void pbNext_DoubleClick(object sender, EventArgs e)
@@ -37,7 +40,6 @@ namespace RevivalGF.UI.Forms
         private void NutrientActivity_Load(object sender, EventArgs e)
         {
             cbCategories.DataSource = Enum.GetValues(typeof(MealCategories));
-            cbActivity.DataSource = Enum.GetValues(typeof(Activities));
             var mealList = new List<Meal>();
         }
         int mealID;
@@ -143,39 +145,102 @@ namespace RevivalGF.UI.Forms
            Application.Exit();
         }
         int selectedmealID;
+        int selectedeatenmealID;
         private void dgwFoods_SelectionChanged(object sender, EventArgs e)
         {
             selectedmealID = Convert.ToInt32(dgwFoods.CurrentRow.Cells["MealID"].Value);
         }
-        decimal totalcalorie=0;
+        
+        Meal eatenMeal;
         private void btnShow_Click(object sender, EventArgs e)
         {
-            var eatenMeal = _mealRepository.GetById(selectedmealID);
-            mealList.Add(eatenMeal);
-            lbFoods.DataSource= mealList.Select(x=>x.MealName).ToList();
-           
-
-           decimal portion=Convert.ToDecimal(nudPortion.Value.ToString());
-
-            /*foreach (var item in mealList.Select(x => x.Calorie))
-            { 
-                totalcalorie =  (portion * item);
-            }*/
-            totalcalorie = (mealList.Select(x => x.Calorie)).Last() * portion + totalcalorie;
-          
-           lblFoodCalorie.Text = totalcalorie.ToString("N")+" kcal";
-          //lblFoodCalorie.Text=(eatenMeal.Calorie*portion).ToString("N")+" kcal";*/
-
-          
-        }
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            var deneme=lbFoods.SelectedItem;
-            lbFoods.Items.Remove(deneme);
-            lblFoodCalorie.Text = "0 kcal";    
+            eatenMeal = _mealRepository.GetById(selectedmealID);
+            decimal portion = Convert.ToDecimal(nudPortion.Value.ToString());
+            lblMealName.Text = eatenMeal.MealName.ToString();
+            lblFoodCalorie.Text = (eatenMeal.Calorie*portion).ToString("N");
+            lblFoodCarbonhydrate.Text = (eatenMeal.Carbonhydrade*portion).ToString("N");
+            lblFoodFat.Text = (eatenMeal.Fat*portion).ToString("N");
+            lblFoodProtein.Text = (eatenMeal.Protein*portion).ToString("N");
+            lblGluten.Text = (eatenMeal.GlutenRisk).ToString();
         }
 
         private static List<Meal> mealList=new List<Meal>();
-        
+        private static decimal totalCalorie;
+        private static decimal totalProtein;
+        private static decimal totalFat;
+        private static decimal totalCarbohydrate;
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+           mealList.Add(eatenMeal); 
+           MealReport mealReport= new MealReport()
+           { 
+               Portion= Convert.ToDecimal(nudPortion.Value.ToString()),
+               Meals=mealList,
+               TotalCalorie=Convert.ToDecimal(lblFoodCalorie.Text),
+               TotalCarbohydrate=Convert.ToDecimal(lblFoodCarbonhydrate.Text),
+               TotalFat=Convert.ToDecimal(lblFoodFat.Text), 
+               TotalProtein=Convert.ToDecimal(lblFoodProtein.Text),
+               UserID=Login.userNameControl.UserID,
+               ReportDate=DateTime.Now,
+           };
+            _mealReportsRepository.Add(mealReport);
+            dgwEatens.DataSource = db.MealReports.Where(x => x.UserID == Login.userNameControl.UserID && x.Status == Entites.Enums.Status.Active).Select(x => new
+            { x.Portion,
+                x.ReportDate,
+                Meal = x.Meals.FirstOrDefault().MealName,
+                x.MealReportID
+            }).ToList();
+            NutrientCalculator();
+
+        }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            var deletedmealrep = _mealReportsRepository.GetById(selectedeatenmealID);
+            deletedmealrep.DeletedDate = DateTime.Now;
+            _mealReportsRepository.Delete(deletedmealrep);
+            dgwEatens.DataSource = db.MealReports.Where(x => x.UserID == Login.userNameControl.UserID && x.Status == Entites.Enums.Status.Active).Select(x => new
+            {
+                x.Portion,
+                x.ReportDate,
+                Meal = x.Meals.FirstOrDefault().MealName,
+                x.MealReportID
+            }).ToList();
+            NutrientCalculator();
+        }
+
+        private void dgwEatens_SelectionChanged(object sender, EventArgs e)
+        {
+            selectedeatenmealID = Convert.ToInt32(dgwEatens.CurrentRow.Cells["MealReportID"].Value);
+        }
+
+        private void NutrientCalculator()
+        {
+            totalCalorie= 0;
+            totalCarbohydrate = 0;
+            totalFat = 0;
+            totalProtein= 0;
+            foreach (var item in db.MealReports.Where(x => x.UserID == Login.userNameControl.UserID && x.Status == Entites.Enums.Status.Active))
+            {
+                totalCalorie= totalCalorie + item.TotalCalorie;
+                totalCarbohydrate = totalCalorie + item.TotalCarbohydrate;
+                totalFat = totalCalorie + item.TotalFat;
+                totalProtein= totalCalorie + item.TotalProtein;
+            }
+            
+            lblTotalCalorie.Text= totalCalorie.ToString() +" kcal";
+            lblCarbohydrate.Text = totalCarbohydrate.ToString() + " gr";
+            lblFat.Text = totalFat.ToString() + " gr";
+            lblProtein.Text = totalProtein.ToString() + " gr";
+   
+        }
+
+
+        private void lblActivityInput_Click(object sender, EventArgs e)
+        {
+            Forms.Activity activityform = new Forms.Activity();
+            this.Hide();
+            activityform.Show();
+        }
     }
 }

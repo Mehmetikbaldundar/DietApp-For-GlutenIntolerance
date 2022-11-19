@@ -12,6 +12,11 @@ namespace RevivalGF.Entites.Abstract
         int MealReportID { get; set; }
         DateTime ReportDate { get; set; }
         decimal Portion { get; set; }
+        decimal TotalCalorie { get; set; }
+        decimal TotalProtein { get; set; }
+        decimal TotalFat { get; set; }
+        decimal TotalCarbohydrate { get; set; }
+
         List<Meal> Meals { get; set; }
         int UserID { get; set; }
         User User { get; set; }
