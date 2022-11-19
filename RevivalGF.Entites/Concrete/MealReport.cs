@@ -25,5 +25,9 @@ namespace RevivalGF.Entites.Concrete
         public string DeletedBy { get; set; }
         public string ModifiedBy { get; set; }
         public Status Status { get; set; } = Status.Active;
+        public decimal TotalCalorie { get; set; } = 0;
+        public decimal TotalProtein { get; set; } = 0;
+        public decimal TotalFat { get; set; } = 0;
+        public decimal TotalCarbohydrate { get; set; } = 0;
     }
 }

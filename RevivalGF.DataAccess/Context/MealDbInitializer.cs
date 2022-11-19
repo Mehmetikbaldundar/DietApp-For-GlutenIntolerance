@@ -10,7 +10,7 @@ using RevivalGF.Entites.Abstract;
 
 namespace RevivalGF.DataAccess.Context
 {
-    public class MealDbInitializer<T> : DropCreateDatabaseIfModelChanges<RevivalGfDbContext>
+    public class MealDbInitializer<T> : CreateDatabaseIfNotExists<RevivalGfDbContext>
     {
         protected override void Seed(RevivalGfDbContext context)
         {

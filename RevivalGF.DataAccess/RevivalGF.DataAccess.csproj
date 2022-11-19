@@ -93,7 +93,6 @@
     <Compile Include="Mapping\WaterMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\RevivalGF.Entites\RevivalGF.Entites.csproj">
       <Project>{f53f6141-84a1-489d-9656-996b5e248a38}</Project>
