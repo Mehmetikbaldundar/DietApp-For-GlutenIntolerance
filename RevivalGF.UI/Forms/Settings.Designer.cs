@@ -278,7 +278,7 @@
             this.groupBox1.Controls.Add(this.rdbTr);
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.TabStop = false;
+            this.groupBox1.TabStop = false;           
             // 
             // label2
             // 
@@ -290,15 +290,14 @@
             resources.ApplyResources(this.tdbEng, "tdbEng");
             this.tdbEng.Name = "tdbEng";
             this.tdbEng.TabStop = true;
-            this.tdbEng.UseVisualStyleBackColor = true;
+            this.tdbEng.UseVisualStyleBackColor = true;            
             // 
             // rdbTr
             // 
             resources.ApplyResources(this.rdbTr, "rdbTr");
             this.rdbTr.Name = "rdbTr";
             this.rdbTr.TabStop = true;
-            this.rdbTr.UseVisualStyleBackColor = true;
-            this.rdbTr.CheckedChanged += new System.EventHandler(this.rdbTr_CheckedChanged);
+            this.rdbTr.UseVisualStyleBackColor = true;            
             // 
             // label4
             // 

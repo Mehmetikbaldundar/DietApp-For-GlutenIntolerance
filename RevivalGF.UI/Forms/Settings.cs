@@ -3,6 +3,7 @@ using RevivalGF.Business.Services;
 using RevivalGF.Entites.Concrete;
 using RevivalGF.Entites.Enums;
 using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,7 +30,7 @@ namespace RevivalGF.UI.Forms
              main.Show();
              this.Hide();*/
         }
-        public static bool appReset;
+
         private void lblSaveChanges_Click(object sender, EventArgs e)
         {
             var user = Login.userNameControl;
@@ -62,33 +63,20 @@ namespace RevivalGF.UI.Forms
                 bodyAnalysis.DietCalorieControl = userService.DailyCalorieCalculator(userDetails, physicallyGoal);
 
                 bool check = userService.UpdateCheck(user, userDetails, physicallyGoal, bodyAnalysis, tbEmail.Text, tbUsername.Text);
-                if (check && appReset)
-                {
-                    DialogResult yesNoQuestion = MessageBox.Show("Language has changed.. Application Will Restart", "Warning", MessageBoxButtons.YesNo);
-                    if (DialogResult == DialogResult.Yes)
-                    {
-                        var changeLanguage = new ChangeLanguage();
-                        changeLanguage.UpdateConfig("language", "tr-TR");
-                        Application.Restart();
-                    }
-                    else
-                    {
-                        MessageBox.Show("language not been changed");
-                        tdbEng.Checked = true;
-                    }
-                }
+                if (check)
+                    chkEnable.Checked = false;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void Settings_Load(object sender, EventArgs e)
         {
-            FormLoadConfig();
+            FormLoadConfig();                       
+                rdbTr.CheckedChanged += new EventHandler(radioButtons_CheckedChanged);            
+                // tdbEng.CheckedChanged += new EventHandler(radioButtons_CheckedChanged);
         }
-
         private void FormLoadConfig()
         {
             var user = Login.userNameControl;
@@ -135,20 +123,17 @@ namespace RevivalGF.UI.Forms
             lblResetAccount.Enabled = false;
             lblDeleteAccount.Enabled = false;
         }
-
         private void tbHeight_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
-
         private void tbWeight_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
-
         private void chkEnable_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkEnable.Checked)
+            if (chkEnable.Checked == true)
             {
                 SecurityService security = new SecurityService();
                 string verificationControl = Interaction.InputBox("Please Write Password.", "Verification", "", 900, 400);
@@ -172,34 +157,49 @@ namespace RevivalGF.UI.Forms
                     lblResetAccount.Enabled = true;
                     lblDeleteAccount.Enabled = true;
                 }
+                else
+                    chkEnable.Checked = false;
             }
             else
-               chkEnable.Enabled = false;
+            {
+                chkEnable.Checked = false;
                 FormLoadConfig();
-        }
+            }
 
+        }
         private void tbPassword_MouseClick(object sender, MouseEventArgs e)
         {
             tbPassword.Clear();
             tbPassword.UseSystemPasswordChar = true;
         }
-
-
-
-        private void rdbTr_CheckedChanged(object sender, EventArgs e)
-        {
-            appReset = rdbTr.Checked;
-        }
-
         private void rdbDark_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-
         private void tbRepeatPasswprd_MouseClick(object sender, MouseEventArgs e)
         {
             tbRepeatPasswprd.Clear();
             tbRepeatPasswprd.UseSystemPasswordChar = true;
+        }
+        private void radioButtons_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+            var changeLanguage = new ChangeLanguage();
+            if (radioButton.Checked)
+            {
+                DialogResult yesNoQuestion = MessageBox.Show("Language has changed.. Application Will Restart", "Warning", MessageBoxButtons.YesNo);
+                if(yesNoQuestion == DialogResult.Yes)
+                {
+                    if (rdbTr.Checked)
+                        changeLanguage.UpdateConfig("language", "tr-TR");
+                    else
+                        changeLanguage.UpdateConfig("language", "en");
+
+                    Application.Restart();
+                }
+                else
+                    MessageBox.Show("language changing aborted");
+            }
         }
     }
 }

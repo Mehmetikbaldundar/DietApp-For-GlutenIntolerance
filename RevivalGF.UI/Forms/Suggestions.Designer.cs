@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Suggestions));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tbSearch = new System.Windows.Forms.TextBox();
+            this.cbSearch = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rtbGluten = new System.Windows.Forms.RichTextBox();
             this.rtbGlutenFree = new System.Windows.Forms.RichTextBox();
@@ -54,9 +54,8 @@
             // 
             // groupBox1
             // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.tbSearch);
+            this.groupBox1.Controls.Add(this.cbSearch);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.rtbGluten);
             this.groupBox1.Controls.Add(this.rtbGlutenFree);
@@ -65,18 +64,23 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.lblInfo);
             this.groupBox1.Controls.Add(this.label2);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
-            // tbSearch
+            // cbSearch
             // 
-            resources.ApplyResources(this.tbSearch, "tbSearch");
-            this.tbSearch.Name = "tbSearch";
+            this.cbSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            resources.ApplyResources(this.cbSearch, "cbSearch");
+            this.cbSearch.FormattingEnabled = true;
+            this.cbSearch.Name = "cbSearch";
+            this.cbSearch.SelectedIndexChanged += new System.EventHandler(this.cbSearch_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
-            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Image = global::RevivalGF.UI.Properties.Resources.plummy4;
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 
@@ -122,8 +126,8 @@
             // 
             // pbNext
             // 
-            resources.ApplyResources(this.pbNext, "pbNext");
             this.pbNext.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.pbNext, "pbNext");
             this.pbNext.Name = "pbNext";
             this.pbNext.TabStop = false;
             this.pbNext.DoubleClick += new System.EventHandler(this.pbNext_DoubleClick);
@@ -136,6 +140,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pbNext);
             this.Name = "Suggestions";
+            this.Load += new System.EventHandler(this.Suggestions_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -149,7 +154,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RichTextBox rtbGluten;
         private System.Windows.Forms.RichTextBox rtbGlutenFree;
@@ -159,5 +163,6 @@
         private System.Windows.Forms.Label lblInfo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pbNext;
+        private System.Windows.Forms.ComboBox cbSearch;
     }
 }
