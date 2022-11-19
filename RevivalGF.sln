@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RevivalGF.Entites", "Reviva
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RevivalGF.DataAccess", "RevivalGF.DataAccess\RevivalGF.DataAccess.csproj", "{83223325-FC03-433E-B29F-B6FA8EE14A48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RevivalGF.UI", "RevivalGF.UI\RevivalGF.UI.csproj", "{735EFE72-D692-48A5-ADFE-DB6A3CE6159E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackupRevivalGF.UI", "RevivalGF.UI\BackupRevivalGF.UI.csproj", "{735EFE72-D692-48A5-ADFE-DB6A3CE6159E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RevivalGF.Business", "RevivalGF.Business\RevivalGF.Business.csproj", "{6499D3EF-AE41-4455-A29A-F983C316045C}"
 EndProject
