@@ -173,7 +173,7 @@ namespace RevivalGF.Business.Services
         private bool UserRegistation(User user, UserDetails userDetails, PhysicallyGoal physicallyGoal, BodyAnalysis bodyAnalysis)
         {
             SecurityService security = new SecurityService();
-            user.Password = security.PasswordWithSha256(security.TextEncrypt(user.Password));
+            user.Password = PasswordWithSha256(security.TextEncrypt(user.Password));
             _userRepository.Add(user);
             int MainID = user.UserID;
             userDetails.DetailsID = MainID;
@@ -257,6 +257,17 @@ namespace RevivalGF.Business.Services
             else
                 return BodyMassIndex.ThirdDegreeObesity;
         }
+        public string PasswordWithSha256(string text)
+        {
+            SHA256 sha256Encrypting = new SHA256CryptoServiceProvider();
+            byte[] bytes = sha256Encrypting.ComputeHash(Encoding.UTF8.GetBytes(text));
+            StringBuilder builder = new StringBuilder();
+            foreach (var item in bytes)
+            {
+                builder.Append(item.ToString("x2"));
+            }
+            return builder.ToString();
+        }
         public bool LoginCheck(string username, string password)
         {
             SecurityService security = new SecurityService();
@@ -266,17 +277,18 @@ namespace RevivalGF.Business.Services
                 MessageBox.Show("User Not Found !!");
                 return false;
             }
-            return PasswordCheck(userNameControl, security, password);
+            PasswordCheck(userNameControl, security, password);
+
+            return true;
         }
         public bool PasswordCheck(User user, SecurityService security, string password)
         {
-            if (user.Password != security.PasswordWithSha256(security.TextEncrypt(password)))
+            if (user.Password != PasswordWithSha256(security.TextEncrypt(password)))
             {
                 MessageBox.Show("Password Incorrect! \n Please check and try again");
                 return false;
             }
-            else            
-                return true;                        
+            return true;
         }
         public User UsernameControl(string username)
         {
@@ -290,6 +302,7 @@ namespace RevivalGF.Business.Services
             if (name == "" || surname == "")
                 throw new Exception("Name,Surname and Email cannot be empty !!");
         }
+
         public UserDetails GetUserDetails(User user)
         {
             UserDetails userDetails = _detailsRepository.GetById(user.UserID);
@@ -305,6 +318,7 @@ namespace RevivalGF.Business.Services
             BodyAnalysis bodyAnalysis = _bodyAnalysisRepository.GetById(user.UserID);
             return bodyAnalysis;
         }
+
         public bool UpdateCheck(User user, UserDetails userDetails, PhysicallyGoal physicallyGoal, BodyAnalysis bodyAnalysis, string email, string username)
         {
             if (string.IsNullOrEmpty(user.UserName) || string.IsNullOrEmpty(user.Password) || string.IsNullOrEmpty(userDetails.Email))
@@ -341,7 +355,7 @@ namespace RevivalGF.Business.Services
         private bool UserUpdate(User user, UserDetails userDetails, PhysicallyGoal physicallyGoal, BodyAnalysis bodyAnalysis)
         {
             SecurityService security = new SecurityService();
-            user.Password = security.PasswordWithSha256(security.TextEncrypt(user.Password));
+            user.Password = PasswordWithSha256(security.TextEncrypt(user.Password));
             _userRepository.Update(user);
             int MainID = user.UserID;
             userDetails.DetailsID = MainID;
@@ -351,7 +365,6 @@ namespace RevivalGF.Business.Services
             bodyAnalysis.AnalysisID = MainID;
             _bodyAnalysisRepository.Update(bodyAnalysis);
             MessageBox.Show("Update Successful");
-
             return true;
         }
 

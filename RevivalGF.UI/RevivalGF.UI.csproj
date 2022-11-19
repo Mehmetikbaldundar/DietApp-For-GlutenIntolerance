@@ -127,12 +127,6 @@
     <Compile Include="Forms\Suggestions.Designer.cs">
       <DependentUpon>Suggestions.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\testing.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\testing.Designer.cs">
-      <DependentUpon>testing.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Activity.resx">
@@ -191,9 +185,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Suggestions.tr-TR.resx">
       <DependentUpon>Suggestions.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\testing.resx">
-      <DependentUpon>testing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,5 +1,4 @@
-﻿using RevivalGF.Business.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,27 +15,13 @@ namespace RevivalGF.UI.Forms
         public Suggestions()
         {
             InitializeComponent();
-            mealService = new MealService();
         }
-        MealService mealService;
+
         private void pbNext_DoubleClick(object sender, EventArgs e)
         {
-            Forms.MainForm main=new MainForm();
+            /*Forms.MainForm main=new MainForm();
             main.Show();
-            this.Hide();
+            this.Hide();*/
         }
-
-        private void Suggestions_Load(object sender, EventArgs e)
-        {
-            mealService.GetHaveAlternativeMeals(cbSearch);
-        }
-
-        private void cbSearch_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var mealName = cbSearch.SelectedItem.ToString();
-            mealService.GetAlternativeID(lblAlternative, mealName, rtbGluten,rtbGlutenFree);
-        }
-
-
     }
 }
