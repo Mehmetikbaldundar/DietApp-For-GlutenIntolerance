@@ -77,19 +77,6 @@ namespace RevivalGF.Business.Services
 
             return Encoding.UTF8.GetString(password);
         }
-
-        public string PasswordWithSha256(string text)
-        {
-            SHA256 sha256Encrypting = new SHA256CryptoServiceProvider();
-            byte[] bytes = sha256Encrypting.ComputeHash(Encoding.UTF8.GetBytes(text));
-            StringBuilder builder = new StringBuilder();
-            foreach (var item in bytes)
-            {
-                builder.Append(item.ToString("x2"));
-            }
-            return builder.ToString();
-        }        
     }
-    
 }
 

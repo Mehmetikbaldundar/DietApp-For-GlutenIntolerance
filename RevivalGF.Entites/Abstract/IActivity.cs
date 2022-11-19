@@ -15,8 +15,7 @@ namespace RevivalGF.Entites.Abstract
         Activities Activities { get; set; }
         decimal ActivityFaktor { get; set; }       
         decimal Calorie { get; set; }
-        int UserID { get; set; }
-        User User { get; set; }
+        List<User> Users { get; set; }
 
     }
 }

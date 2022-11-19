@@ -34,10 +34,6 @@ namespace RevivalGF.DataAccess.Mapping
                 .WithRequired(s => s.User)
                 .HasForeignKey(s => s.UserID);
 
-            this.HasMany(g => g.Activities)
-                .WithRequired(s => s.User)
-                .HasForeignKey(s => s.UserID);
-
             this.HasMany(g => g.Medicaments)
                 .WithRequired(s => s.User)
                 .HasForeignKey(s => s.UserID);
@@ -47,6 +43,7 @@ namespace RevivalGF.DataAccess.Mapping
 
             this.HasRequired(s => s.PhysicallyGoal)
                 .WithRequiredPrincipal(s => s.User);
+
 
             this.HasMany(s => s.Waters)
                 .WithRequired(s => s.User)
