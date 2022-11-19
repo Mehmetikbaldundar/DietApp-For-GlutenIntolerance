@@ -35,7 +35,6 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblActivityInput = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pbActvity = new System.Windows.Forms.PictureBox();
             this.dgwEatens = new System.Windows.Forms.DataGridView();
             this.btnShow = new System.Windows.Forms.Button();
@@ -80,7 +79,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbActvity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwEatens)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPortion)).BeginInit();
@@ -129,7 +127,6 @@
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.lblActivityInput);
-            this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.pbActvity);
             this.groupBox1.Controls.Add(this.dgwEatens);
             this.groupBox1.Controls.Add(this.btnShow);
@@ -175,14 +172,6 @@
             this.lblActivityInput.TabIndex = 27;
             this.lblActivityInput.Text = "Activity Input";
             this.lblActivityInput.Click += new System.EventHandler(this.lblActivityInput_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(922, 393);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.TabIndex = 22;
-            this.pictureBox2.TabStop = false;
             // 
             // pbActvity
             // 
@@ -585,7 +574,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbActvity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwEatens)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPortion)).EndInit();
@@ -641,7 +629,6 @@
         private System.Windows.Forms.Label lblFoodFat;
         private System.Windows.Forms.Label lblFoodCarbonhydrate;
         private System.Windows.Forms.Label lblMealName;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pbActvity;
         private System.Windows.Forms.Label lblActivityInput;
     }
