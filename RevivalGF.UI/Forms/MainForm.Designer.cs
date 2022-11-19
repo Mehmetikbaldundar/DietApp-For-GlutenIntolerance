@@ -356,7 +356,7 @@
             this.pictureBox19.Image = global::RevivalGF.UI.Properties.Resources.plummy3;
             this.pictureBox19.Location = new System.Drawing.Point(20, 71);
             this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(80, 95);
+            this.pictureBox19.Size = new System.Drawing.Size(80, 101);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox19.TabIndex = 15;
             this.pictureBox19.TabStop = false;
@@ -1025,12 +1025,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::RevivalGF.UI.Properties.Resources.main;
             this.ClientSize = new System.Drawing.Size(994, 610);
-            this.Controls.Add(this.pbTick);
-            this.Controls.Add(this.circularProgressBar1);
-            this.Controls.Add(this.ProgressBarWater);
             this.Controls.Add(this.gbPlummy6);
             this.Controls.Add(this.gbPlummy5v2);
             this.Controls.Add(this.gbPlummy4);
+            this.Controls.Add(this.pbTick);
+            this.Controls.Add(this.circularProgressBar1);
+            this.Controls.Add(this.ProgressBarWater);
             this.Controls.Add(this.gbPlummy2);
             this.Controls.Add(this.gbPlummy3);
             this.Controls.Add(this.gbPlummy1);

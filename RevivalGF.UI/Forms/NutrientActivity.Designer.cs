@@ -32,11 +32,11 @@
             this.progressBarCalorie = new System.Windows.Forms.ProgressBar();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnAddAct = new System.Windows.Forms.Button();
             this.lbActivity = new System.Windows.Forms.ListBox();
+            this.btnDeleteAct = new System.Windows.Forms.Button();
             this.cbActivity = new System.Windows.Forms.ComboBox();
-            this.lblDeleteActivity = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.lblAddActivity = new System.Windows.Forms.Label();
             this.tbDuration = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -44,16 +44,16 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnShow = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.cbCategories = new System.Windows.Forms.ComboBox();
-            this.numericUpDownPortion = new System.Windows.Forms.NumericUpDown();
+            this.nudPortion = new System.Windows.Forms.NumericUpDown();
             this.cbGluten = new System.Windows.Forms.CheckBox();
             this.dgwFoods = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbFoods = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.lblDeleteFood = new System.Windows.Forms.Label();
-            this.lblAddFood = new System.Windows.Forms.Label();
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -74,13 +74,14 @@
             this.lblCarbohydrate = new System.Windows.Forms.Label();
             this.lblDailyCalorie = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.lbFoods = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPortion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPortion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwFoods)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -118,11 +119,11 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.btnAddAct);
             this.groupBox2.Controls.Add(this.lbActivity);
+            this.groupBox2.Controls.Add(this.btnDeleteAct);
             this.groupBox2.Controls.Add(this.cbActivity);
-            this.groupBox2.Controls.Add(this.lblDeleteActivity);
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.lblAddActivity);
             this.groupBox2.Controls.Add(this.tbDuration);
             this.groupBox2.Controls.Add(this.label20);
             this.groupBox2.Controls.Add(this.label14);
@@ -135,15 +136,39 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Add Activity";
             // 
+            // btnAddAct
+            // 
+            this.btnAddAct.BackColor = System.Drawing.Color.Snow;
+            this.btnAddAct.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAddAct.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAddAct.Location = new System.Drawing.Point(325, 252);
+            this.btnAddAct.Name = "btnAddAct";
+            this.btnAddAct.Size = new System.Drawing.Size(75, 45);
+            this.btnAddAct.TabIndex = 13;
+            this.btnAddAct.Text = "Add";
+            this.btnAddAct.UseVisualStyleBackColor = false;
+            // 
             // lbActivity
             // 
             this.lbActivity.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbActivity.FormattingEnabled = true;
             this.lbActivity.ItemHeight = 24;
-            this.lbActivity.Location = new System.Drawing.Point(48, 249);
+            this.lbActivity.Location = new System.Drawing.Point(17, 248);
             this.lbActivity.Name = "lbActivity";
             this.lbActivity.Size = new System.Drawing.Size(184, 124);
             this.lbActivity.TabIndex = 7;
+            // 
+            // btnDeleteAct
+            // 
+            this.btnDeleteAct.BackColor = System.Drawing.Color.Snow;
+            this.btnDeleteAct.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDeleteAct.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnDeleteAct.Location = new System.Drawing.Point(207, 252);
+            this.btnDeleteAct.Name = "btnDeleteAct";
+            this.btnDeleteAct.Size = new System.Drawing.Size(96, 45);
+            this.btnDeleteAct.TabIndex = 12;
+            this.btnDeleteAct.Text = "Delete";
+            this.btnDeleteAct.UseVisualStyleBackColor = false;
             // 
             // cbActivity
             // 
@@ -154,17 +179,6 @@
             this.cbActivity.Size = new System.Drawing.Size(182, 32);
             this.cbActivity.TabIndex = 5;
             // 
-            // lblDeleteActivity
-            // 
-            this.lblDeleteActivity.AutoSize = true;
-            this.lblDeleteActivity.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblDeleteActivity.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDeleteActivity.Location = new System.Drawing.Point(260, 320);
-            this.lblDeleteActivity.Name = "lblDeleteActivity";
-            this.lblDeleteActivity.Size = new System.Drawing.Size(81, 38);
-            this.lblDeleteActivity.TabIndex = 1;
-            this.lblDeleteActivity.Text = "Delete";
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -173,17 +187,6 @@
             this.label13.Size = new System.Drawing.Size(153, 34);
             this.label13.TabIndex = 4;
             this.label13.Text = "Select Activity:";
-            // 
-            // lblAddActivity
-            // 
-            this.lblAddActivity.AutoSize = true;
-            this.lblAddActivity.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblAddActivity.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAddActivity.Location = new System.Drawing.Point(347, 320);
-            this.lblAddActivity.Name = "lblAddActivity";
-            this.lblAddActivity.Size = new System.Drawing.Size(54, 38);
-            this.lblAddActivity.TabIndex = 1;
-            this.lblAddActivity.Text = "Add";
             // 
             // tbDuration
             // 
@@ -247,21 +250,22 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.lbFoods);
+            this.groupBox1.Controls.Add(this.btnShow);
+            this.groupBox1.Controls.Add(this.btnAdd);
+            this.groupBox1.Controls.Add(this.btnDelete);
             this.groupBox1.Controls.Add(this.cbCategories);
-            this.groupBox1.Controls.Add(this.numericUpDownPortion);
+            this.groupBox1.Controls.Add(this.nudPortion);
             this.groupBox1.Controls.Add(this.cbGluten);
             this.groupBox1.Controls.Add(this.dgwFoods);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.lbFoods);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.lblDeleteFood);
-            this.groupBox1.Controls.Add(this.lblAddFood);
             this.groupBox1.Controls.Add(this.tbSearch);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.lblFoodCalorie);
-            this.groupBox1.Font = new System.Drawing.Font("Bahnschrift Condensed", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupBox1.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.Location = new System.Drawing.Point(20, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(434, 437);
@@ -270,121 +274,131 @@
             this.groupBox1.Text = "Add Nutrient:";
             this.groupBox1.UseCompatibleTextRendering = true;
             // 
+            // btnShow
+            // 
+            this.btnShow.BackColor = System.Drawing.Color.Snow;
+            this.btnShow.Location = new System.Drawing.Point(225, 312);
+            this.btnShow.Name = "btnShow";
+            this.btnShow.Size = new System.Drawing.Size(85, 35);
+            this.btnShow.TabIndex = 14;
+            this.btnShow.Text = "Show";
+            this.btnShow.UseVisualStyleBackColor = false;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.Snow;
+            this.btnAdd.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAdd.Location = new System.Drawing.Point(312, 389);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(68, 38);
+            this.btnAdd.TabIndex = 13;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Snow;
+            this.btnDelete.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnDelete.Location = new System.Drawing.Point(225, 389);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(77, 38);
+            this.btnDelete.TabIndex = 12;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // cbCategories
             // 
             this.cbCategories.Font = new System.Drawing.Font("Bahnschrift Condensed", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbCategories.FormattingEnabled = true;
-            this.cbCategories.Location = new System.Drawing.Point(143, 98);
+            this.cbCategories.Location = new System.Drawing.Point(126, 82);
             this.cbCategories.Name = "cbCategories";
-            this.cbCategories.Size = new System.Drawing.Size(161, 35);
+            this.cbCategories.Size = new System.Drawing.Size(290, 35);
             this.cbCategories.TabIndex = 11;
+            this.cbCategories.SelectedIndexChanged += new System.EventHandler(this.cbCategories_SelectedIndexChanged);
             // 
-            // numericUpDownPortion
+            // nudPortion
             // 
-            this.numericUpDownPortion.DecimalPlaces = 2;
-            this.numericUpDownPortion.Font = new System.Drawing.Font("Bahnschrift Condensed", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.numericUpDownPortion.Increment = new decimal(new int[] {
+            this.nudPortion.DecimalPlaces = 2;
+            this.nudPortion.Font = new System.Drawing.Font("Bahnschrift Condensed", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.nudPortion.Increment = new decimal(new int[] {
             25,
             0,
             0,
             131072});
-            this.numericUpDownPortion.Location = new System.Drawing.Point(305, 300);
-            this.numericUpDownPortion.Name = "numericUpDownPortion";
-            this.numericUpDownPortion.Size = new System.Drawing.Size(59, 34);
-            this.numericUpDownPortion.TabIndex = 10;
+            this.nudPortion.Location = new System.Drawing.Point(337, 283);
+            this.nudPortion.Name = "nudPortion";
+            this.nudPortion.Size = new System.Drawing.Size(59, 28);
+            this.nudPortion.TabIndex = 10;
             // 
             // cbGluten
             // 
             this.cbGluten.AutoSize = true;
-            this.cbGluten.Location = new System.Drawing.Point(382, 46);
+            this.cbGluten.Location = new System.Drawing.Point(376, 39);
             this.cbGluten.Name = "cbGluten";
             this.cbGluten.Size = new System.Drawing.Size(18, 17);
             this.cbGluten.TabIndex = 9;
             this.cbGluten.UseVisualStyleBackColor = true;
+            this.cbGluten.CheckedChanged += new System.EventHandler(this.cbGluten_CheckedChanged);
             // 
             // dgwFoods
             // 
             this.dgwFoods.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dgwFoods.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwFoods.Location = new System.Drawing.Point(20, 147);
+            this.dgwFoods.Location = new System.Drawing.Point(20, 123);
             this.dgwFoods.Name = "dgwFoods";
             this.dgwFoods.RowHeadersWidth = 51;
             this.dgwFoods.RowTemplate.Height = 24;
             this.dgwFoods.Size = new System.Drawing.Size(396, 150);
             this.dgwFoods.TabIndex = 8;
+            this.dgwFoods.SelectionChanged += new System.EventHandler(this.dgwFoods_SelectionChanged);
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(322, 39);
+            this.label2.Location = new System.Drawing.Point(270, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 34);
+            this.label2.Size = new System.Drawing.Size(94, 34);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Gluten Free:";
-            // 
-            // lbFoods
-            // 
-            this.lbFoods.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbFoods.FormattingEnabled = true;
-            this.lbFoods.ItemHeight = 24;
-            this.lbFoods.Location = new System.Drawing.Point(20, 300);
-            this.lbFoods.Name = "lbFoods";
-            this.lbFoods.Size = new System.Drawing.Size(158, 124);
-            this.lbFoods.TabIndex = 2;
+            this.label2.Text = "GlutenFree:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 96);
+            this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(14, 80);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 34);
+            this.label1.Size = new System.Drawing.Size(102, 29);
             this.label1.TabIndex = 4;
             this.label1.Text = "Categories:";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Bahnschrift Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label16.Location = new System.Drawing.Point(14, 35);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(86, 34);
+            this.label16.Size = new System.Drawing.Size(73, 29);
             this.label16.TabIndex = 4;
             this.label16.Text = "Search:";
             // 
-            // lblDeleteFood
-            // 
-            this.lblDeleteFood.AutoSize = true;
-            this.lblDeleteFood.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblDeleteFood.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDeleteFood.Location = new System.Drawing.Point(193, 386);
-            this.lblDeleteFood.Name = "lblDeleteFood";
-            this.lblDeleteFood.Size = new System.Drawing.Size(81, 38);
-            this.lblDeleteFood.TabIndex = 1;
-            this.lblDeleteFood.Text = "Delete";
-            // 
-            // lblAddFood
-            // 
-            this.lblAddFood.AutoSize = true;
-            this.lblAddFood.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblAddFood.Font = new System.Drawing.Font("Bahnschrift Condensed", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAddFood.Location = new System.Drawing.Point(289, 386);
-            this.lblAddFood.Name = "lblAddFood";
-            this.lblAddFood.Size = new System.Drawing.Size(54, 38);
-            this.lblAddFood.TabIndex = 1;
-            this.lblAddFood.Text = "Add";
-            // 
             // tbSearch
             // 
-            this.tbSearch.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbSearch.Location = new System.Drawing.Point(100, 39);
+            this.tbSearch.Font = new System.Drawing.Font("Bahnschrift Condensed", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.tbSearch.Location = new System.Drawing.Point(98, 39);
             this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(204, 32);
+            this.tbSearch.Size = new System.Drawing.Size(166, 28);
             this.tbSearch.TabIndex = 0;
+            this.tbSearch.TextChanged += new System.EventHandler(this.tbSearch_TextChanged);
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label17.Location = new System.Drawing.Point(189, 300);
+            this.label17.Location = new System.Drawing.Point(221, 282);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(107, 24);
             this.label17.TabIndex = 4;
@@ -394,7 +408,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.Location = new System.Drawing.Point(189, 347);
+            this.label11.Location = new System.Drawing.Point(221, 362);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(60, 24);
             this.label11.TabIndex = 4;
@@ -404,7 +418,7 @@
             // 
             this.lblFoodCalorie.AutoSize = true;
             this.lblFoodCalorie.Font = new System.Drawing.Font("Bahnschrift Condensed", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblFoodCalorie.Location = new System.Drawing.Point(301, 342);
+            this.lblFoodCalorie.Location = new System.Drawing.Point(301, 357);
             this.lblFoodCalorie.Name = "lblFoodCalorie";
             this.lblFoodCalorie.Size = new System.Drawing.Size(63, 30);
             this.lblFoodCalorie.TabIndex = 4;
@@ -575,6 +589,15 @@
             this.label7.TabIndex = 19;
             this.label7.Text = "Daily Calorie Intake:";
             // 
+            // lbFoods
+            // 
+            this.lbFoods.FormattingEnabled = true;
+            this.lbFoods.ItemHeight = 24;
+            this.lbFoods.Location = new System.Drawing.Point(20, 283);
+            this.lbFoods.Name = "lbFoods";
+            this.lbFoods.Size = new System.Drawing.Size(158, 124);
+            this.lbFoods.TabIndex = 15;
+            // 
             // NutrientActivity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -608,6 +631,8 @@
             this.MinimumSize = new System.Drawing.Size(987, 622);
             this.Name = "NutrientActivity";
             this.Text = "NutrientActivity";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NutrientActivity_FormClosed);
+            this.Load += new System.EventHandler(this.NutrientActivity_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -616,7 +641,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPortion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPortion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgwFoods)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
@@ -631,10 +656,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ListBox lbActivity;
-        private System.Windows.Forms.ComboBox cbActivity;
-        private System.Windows.Forms.Label lblDeleteActivity;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label lblAddActivity;
         private System.Windows.Forms.TextBox tbDuration;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label14;
@@ -642,14 +664,11 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDownPortion;
+        private System.Windows.Forms.NumericUpDown nudPortion;
         private System.Windows.Forms.CheckBox cbGluten;
         private System.Windows.Forms.DataGridView dgwFoods;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox lbFoods;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label lblDeleteFood;
-        private System.Windows.Forms.Label lblAddFood;
         private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label11;
@@ -668,9 +687,16 @@
         private System.Windows.Forms.ProgressBar progressBarCarbohydrate;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblCarbohydrate;
-        private System.Windows.Forms.ComboBox cbCategories;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblDailyCalorie;
         private System.Windows.Forms.Label label7;
+        public System.Windows.Forms.ComboBox cbActivity;
+        public System.Windows.Forms.ComboBox cbCategories;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnAddAct;
+        private System.Windows.Forms.Button btnDeleteAct;
+        private System.Windows.Forms.Button btnShow;
+        private System.Windows.Forms.ListBox lbFoods;
     }
 }
