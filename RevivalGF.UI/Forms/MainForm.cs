@@ -114,9 +114,11 @@ namespace RevivalGF.UI.Forms
  
         private void lblNutrientandActivity_Click(object sender, EventArgs e)
         {
-            Forms.NutrientActivity nutact = new NutrientActivity();
+           Forms.NutrientActivity nutact = new NutrientActivity();
+            
             this.Hide();
-            nutact.Show();
+            nutact.Show();            
+            
         }
 
         private void lblMedication_Click(object sender, EventArgs e)

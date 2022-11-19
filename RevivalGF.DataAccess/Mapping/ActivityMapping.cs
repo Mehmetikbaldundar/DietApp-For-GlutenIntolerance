@@ -29,15 +29,6 @@ namespace RevivalGF.DataAccess.Mapping
             this.Property(x => x.CreatedDate).IsRequired();
             this.Property(x => x.DeletedDate).IsOptional();
             this.Property(x => x.ModifiedDate).IsOptional();
-
-            this.HasMany(s => s.Users)
-                .WithMany(c => c.Activities)
-                .Map(cs =>
-                {
-                    cs.MapLeftKey("ActivityRefID");
-                    cs.MapRightKey("UserRefID");
-                    cs.ToTable("User Activities");
-                });
         }
     }
 }

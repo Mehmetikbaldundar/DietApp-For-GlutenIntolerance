@@ -34,6 +34,7 @@ namespace RevivalGF.Entites.Concrete
         public string ModifiedBy { get; set; }
         public Status Status { get; set; } = Status.Active;
         public virtual Meal RiskyFoods { get; set; }
-        public virtual ICollection<Meal> AlternativeFoods { get; } = new HashSet<Meal>();        
+        public virtual ICollection<Meal> AlternativeFoods { get; } = new HashSet<Meal>();
+
     }
 }

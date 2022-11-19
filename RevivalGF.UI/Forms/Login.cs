@@ -32,7 +32,7 @@ namespace RevivalGF.UI.Forms
         }
 
         public static User userNameControl;
-
+        public static string userPassword;
         private void pbNext_DoubleClick(object sender, EventArgs e)
         {
             userNameControl = userService.UsernameControl(tbUsername.Text);
@@ -47,6 +47,7 @@ namespace RevivalGF.UI.Forms
             if (check)
             {
                 MessageBox.Show("Login Succesful");
+                userPassword = tbPassword.Text;
                 MainForm main = new MainForm();
                 main.Show();
                 Hide();
