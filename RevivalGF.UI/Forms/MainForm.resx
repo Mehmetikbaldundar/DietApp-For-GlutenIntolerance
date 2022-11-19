@@ -117,7 +117,258 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblNutrientandActivity.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label15.Name" xml:space="preserve">
+    <value>label15</value>
+  </data>
+  <data name="&gt;&gt;richTextBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblUsername.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="gbPlummy4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>484, 63</value>
+  </data>
+  <data name="&gt;&gt;lblRecipes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gbPlummy3.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;richTextBox6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pictureBox5.Name" xml:space="preserve">
+    <value>pictureBox5</value>
+  </data>
+  <data name="label15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 9pt</value>
+  </data>
+  <data name="&gt;&gt;pictureBox8.Name" xml:space="preserve">
+    <value>pictureBox8</value>
+  </data>
+  <data name="&gt;&gt;lblSuggestions.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 18</value>
+  </data>
+  <data name="&gt;&gt;pbAddWater.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pbSettings.ZOrder" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="pictureBox10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 85</value>
+  </data>
+  <data name="lblWaterInfo.Text" xml:space="preserve">
+    <value>0 glass = 0 mL</value>
+  </data>
+  <data name="&gt;&gt;pbMinusWater.Name" xml:space="preserve">
+    <value>pbMinusWater</value>
+  </data>
+  <data name="&gt;&gt;pictureBox24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gbPlummy1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 174</value>
+  </data>
+  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-4, 5</value>
+  </data>
+  <data name="lblMedication.Location" type="System.Drawing.Point, System.Drawing">
+    <value>301, 21</value>
+  </data>
+  <data name="lblGluten.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="&gt;&gt;lblHeight.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pbAddWater.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy5v2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblGluten.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 15pt</value>
+  </data>
+  <data name="pictureBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 67</value>
+  </data>
+  <data name="pbWater.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="&gt;&gt;circularProgressBar1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBox7.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pictureBox16.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="richTextBox2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 10.2pt</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Age:</value>
+  </data>
+  <data name="lblSuggestionAttention.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblReports.Location" type="System.Drawing.Point, System.Drawing">
+    <value>530, 21</value>
+  </data>
+  <data name="&gt;&gt;pbPlummy4Next.Parent" xml:space="preserve">
+    <value>gbPlummy4</value>
+  </data>
+  <data name="&gt;&gt;lblWeight.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pbPlummy1Next.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;richTextBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox4.ZOrder" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="&gt;&gt;lblRecipesAttention.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;circularProgressBar1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;richTextBox2.Name" xml:space="preserve">
+    <value>richTextBox2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox7.Parent" xml:space="preserve">
+    <value>gbPlummy5v2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblRecipesAttention.Text" xml:space="preserve">
+    <value>Don't forget to check out our recipes section.</value>
+  </data>
+  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 278</value>
+  </data>
+  <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 30</value>
+  </data>
+  <data name="lblNutrientandActivity.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 13pt</value>
+  </data>
+  <data name="pbAddWater.TabIndex" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="&gt;&gt;lblGluten.Name" xml:space="preserve">
+    <value>lblGluten</value>
+  </data>
+  <data name="gbPlummy4.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="&gt;&gt;pbWater.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblReports.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblAge.Name" xml:space="preserve">
+    <value>lblAge</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>994, 610</value>
+  </data>
+  <data name="&gt;&gt;label10.Name" xml:space="preserve">
+    <value>label10</value>
+  </data>
+  <data name="&gt;&gt;pbPlummy3Next.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbWater.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="richTextBox3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 10.2pt</value>
+  </data>
+  <data name="&gt;&gt;lblWeight.Name" xml:space="preserve">
+    <value>lblWeight</value>
+  </data>
+  <data name="pictureBox20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 0</value>
+  </data>
+  <data name="lblSuggestions.Text" xml:space="preserve">
+    <value>Suggestions</value>
+  </data>
+  <data name="pictureBox13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 89</value>
+  </data>
+  <data name="gbPlummy5.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="pictureBox22.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;lblMedication.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox20.Name" xml:space="preserve">
+    <value>pictureBox20</value>
+  </data>
+  <data name="lblUsername.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 18</value>
+  </data>
+  <data name="&gt;&gt;richTextBox5.Parent" xml:space="preserve">
+    <value>gbPlummy5</value>
+  </data>
+  <data name="&gt;&gt;pbTick.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pictureBox23.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="&gt;&gt;richTextBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblMedication.Text" xml:space="preserve">
+    <value>Medication Tracking</value>
+  </data>
+  <data name="richTextBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>163, 85</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblSuggestionAttention.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pictureBox26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 85</value>
+  </data>
   <data name="pictureBox24.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAACAAAAAgACAYAAACyp9MwAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
@@ -1338,6 +1589,927 @@
         AABJRU5ErkJggg==
 </value>
   </data>
+  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="lblMedication.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 27</value>
+  </data>
+  <data name="&gt;&gt;lblGluten.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pbPlummy2Next.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 138</value>
+  </data>
+  <data name="pbPlummy3Next.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 138</value>
+  </data>
+  <data name="pictureBox25.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="lblRecipes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 27</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="richTextBox2.Text" xml:space="preserve">
+    <value>From here, you can enter the foods you eat and calculate your calories and add the exercises you do here.</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy4.Name" xml:space="preserve">
+    <value>gbPlummy4</value>
+  </data>
+  <data name="gbPlummy2.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblNutrientandActivity.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy2.Name" xml:space="preserve">
+    <value>gbPlummy2</value>
+  </data>
+  <data name="pbPlummy4Next.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 138</value>
+  </data>
+  <data name="label19.Text" xml:space="preserve">
+    <value>Percentage of Calories Intake</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.Name" xml:space="preserve">
+    <value>pictureBox3</value>
+  </data>
+  <data name="richTextBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 87</value>
+  </data>
+  <data name="pbPlummy2Next.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 47</value>
+  </data>
+  <data name="lblWaterInfo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 60</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Height:</value>
+  </data>
+  <data name="lblMedicationAttention.Size" type="System.Drawing.Size, System.Drawing">
+    <value>309, 24</value>
+  </data>
+  <data name="&gt;&gt;lblUsername.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="pbTick.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="lblRecipesAttention.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pbAddWater.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox10.Parent" xml:space="preserve">
+    <value>gbPlummy6</value>
+  </data>
+  <data name="&gt;&gt;lblRecipesAttention.Name" xml:space="preserve">
+    <value>lblRecipesAttention</value>
+  </data>
+  <data name="richTextBox7.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;lblWaterAttention.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblGlutenAttention.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 118</value>
+  </data>
+  <data name="gbPlummy1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>354, 101</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 18</value>
+  </data>
+  <data name="&gt;&gt;pictureBox25.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblRecipes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>653, 21</value>
+  </data>
+  <data name="&gt;&gt;lblDisease.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox13.Parent" xml:space="preserve">
+    <value>gbPlummy1</value>
+  </data>
+  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 9pt</value>
+  </data>
+  <data name="&gt;&gt;lblNutrientandActivity.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbPlummyNext6.Name" xml:space="preserve">
+    <value>pbPlummyNext6</value>
+  </data>
+  <data name="pictureBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>754, 3</value>
+  </data>
+  <data name="&gt;&gt;pictureBox14.Name" xml:space="preserve">
+    <value>pictureBox14</value>
+  </data>
+  <data name="&gt;&gt;pbMinusWater.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 18</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;calender.Name" xml:space="preserve">
+    <value>calender</value>
+  </data>
+  <data name="lblGluten.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblGluten.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 30</value>
+  </data>
+  <data name="lblReports.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblSuggestionAttention.Text" xml:space="preserve">
+    <value>Well, have you taken a look at our suggestions?</value>
+  </data>
+  <data name="&gt;&gt;pbPlummy3Next.Name" xml:space="preserve">
+    <value>pbPlummy3Next</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblMedicationAttention.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;richTextBox6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblReports.Text" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="&gt;&gt;pictureBox26.Name" xml:space="preserve">
+    <value>pictureBox26</value>
+  </data>
+  <data name="richTextBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="gbPlummy5v2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>645, 59</value>
+  </data>
+  <data name="&gt;&gt;pictureBox6.ZOrder" xml:space="preserve">
+    <value>39</value>
+  </data>
+  <data name="&gt;&gt;lblSuggestionAttention.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblUsername.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 207</value>
+  </data>
+  <data name="&gt;&gt;lblSuggestionAttention.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="pbWater.TabIndex" type="System.Int32, mscorlib">
+    <value>46</value>
+  </data>
+  <data name="pbPlummyNext5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 138</value>
+  </data>
+  <data name="pictureBox22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 95</value>
+  </data>
+  <data name="lblAge.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 243</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pbTick.Location" type="System.Drawing.Point, System.Drawing">
+    <value>272, 575</value>
+  </data>
+  <data name="lblHeight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 243</value>
+  </data>
+  <data name="gbPlummy2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 84</value>
+  </data>
+  <data name="pbAvatar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 101</value>
+  </data>
+  <data name="&gt;&gt;pbPlummyNext5.Name" xml:space="preserve">
+    <value>pbPlummyNext5</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="pbWater.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 141</value>
+  </data>
+  <data name="lblWeight.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="richTextBox5.Text" xml:space="preserve">
+    <value>You can also review our gluten-free recipes that we have specially selected for you here.</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Username:</value>
+  </data>
+  <data name="pictureBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>629, 3</value>
+  </data>
+  <data name="pictureBox9.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pbWater.Location" type="System.Drawing.Point, System.Drawing">
+    <value>49, 330</value>
+  </data>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblSuggestions.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMedicationAttention.Name" xml:space="preserve">
+    <value>lblMedicationAttention</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="&gt;&gt;pictureBox6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;richTextBox4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox14.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy6.Name" xml:space="preserve">
+    <value>gbPlummy6</value>
+  </data>
+  <data name="&gt;&gt;richTextBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pictureBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 66</value>
+  </data>
+  <data name="label10.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 9pt</value>
+  </data>
+  <data name="circularProgressBar1.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Ideal Weight:</value>
+  </data>
+  <data name="lblUsername.TabIndex" type="System.Int32, mscorlib">
+    <value>37</value>
+  </data>
+  <data name="pictureBox7.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pictureBox8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 85</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pictureBox19.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pictureBox13.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="&gt;&gt;lblWaterAttention.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="gbPlummy3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 191</value>
+  </data>
+  <data name="&gt;&gt;lblGlutenAttention.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="pbPlummy3Next.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 47</value>
+  </data>
+  <data name="lblMedicationAttention.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 40</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pictureBox8.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pbPlummyNext6.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="pbPlummyNext5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 47</value>
+  </data>
+  <data name="richTextBox5.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 10.2pt</value>
+  </data>
+  <data name="gbPlummy6.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;lblRecipes.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pbTick.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="label20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>721, 233</value>
+  </data>
+  <data name="lblWaterInfo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblWaterAttention.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1012, 657</value>
+  </data>
+  <data name="gbPlummy4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 191</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>42</value>
+  </data>
+  <data name="&gt;&gt;pictureBox12.ZOrder" xml:space="preserve">
+    <value>43</value>
+  </data>
+  <data name="&gt;&gt;pictureBox8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pictureBox8.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="pictureBox6.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="lblUsername.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 9pt</value>
+  </data>
+  <data name="lblReports.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="lblWeight.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 9pt</value>
+  </data>
+  <data name="lblReports.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 13pt</value>
+  </data>
+  <data name="&gt;&gt;pictureBox14.Parent" xml:space="preserve">
+    <value>gbPlummy2</value>
+  </data>
+  <data name="&gt;&gt;pbPlummy1Next.Name" xml:space="preserve">
+    <value>pbPlummy1Next</value>
+  </data>
+  <data name="&gt;&gt;pictureBox24.Parent" xml:space="preserve">
+    <value>gbPlummy5</value>
+  </data>
+  <data name="&gt;&gt;pbPlummy3Next.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblWeight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 18</value>
+  </data>
+  <data name="&gt;&gt;lblHeight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblRecipes.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;pictureBox19.Parent" xml:space="preserve">
+    <value>gbPlummy3</value>
+  </data>
+  <data name="&gt;&gt;pbTick.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pictureBox12.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="lblAge.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 9pt</value>
+  </data>
+  <data name="&gt;&gt;pbPlummyNext6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblHeight.TabIndex" type="System.Int32, mscorlib">
+    <value>39</value>
+  </data>
+  <data name="gbPlummy5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>250, 0</value>
+  </data>
+  <data name="&gt;&gt;pictureBox8.Parent" xml:space="preserve">
+    <value>gbPlummy5v2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pbPlummy1Next.Parent" xml:space="preserve">
+    <value>gbPlummy1</value>
+  </data>
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="lblIdealWeight.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy4.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="pbMinusWater.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="lblNutrientandActivity.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblIdealWeight.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblSuggestions.Name" xml:space="preserve">
+    <value>lblSuggestions</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 18</value>
+  </data>
+  <data name="&gt;&gt;lblGlutenAttention.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox12.Name" xml:space="preserve">
+    <value>pictureBox12</value>
+  </data>
+  <data name="&gt;&gt;pictureBox22.Parent" xml:space="preserve">
+    <value>gbPlummy4</value>
+  </data>
+  <data name="pbPlummy3Next.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="&gt;&gt;label20.Name" xml:space="preserve">
+    <value>label20</value>
+  </data>
+  <data name="lblIdealWeight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 18</value>
+  </data>
+  <data name="lblMedication.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="richTextBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 14</value>
+  </data>
+  <data name="lblIdealWeight.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 9pt</value>
+  </data>
+  <data name="lblReports.Size" type="System.Drawing.Size, System.Drawing">
+    <value>69, 27</value>
+  </data>
+  <data name="pictureBox19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 71</value>
+  </data>
+  <data name="&gt;&gt;pictureBox23.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label19.Name" xml:space="preserve">
+    <value>label19</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <data name="pictureBox23.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="richTextBox7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 10.2pt</value>
+  </data>
+  <data name="&gt;&gt;richTextBox1.Name" xml:space="preserve">
+    <value>richTextBox1</value>
+  </data>
+  <data name="&gt;&gt;lblWeight.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;pbPlummyNext5.Parent" xml:space="preserve">
+    <value>gbPlummy5v2</value>
+  </data>
+  <data name="&gt;&gt;lblMedication.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="pictureBox4.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="lblWaterAttention.Size" type="System.Drawing.Size, System.Drawing">
+    <value>308, 24</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 18</value>
+  </data>
+  <data name="label14.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 9pt</value>
+  </data>
+  <data name="&gt;&gt;pictureBox4.Name" xml:space="preserve">
+    <value>pictureBox4</value>
+  </data>
+  <data name="&gt;&gt;pictureBox12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblIdealWeight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label19.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 15pt</value>
+  </data>
+  <data name="pbSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>904, 4</value>
+  </data>
+  <data name="lblMedicationAttention.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="pictureBox3.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblWaterAttention.Text" xml:space="preserve">
+    <value>You drank very little water, drink some more.</value>
+  </data>
+  <data name="circularProgressBar1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 50pt, style=Bold</value>
+  </data>
+  <data name="lblWeight.TabIndex" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="pictureBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="lblMedication.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pbWater.Name" xml:space="preserve">
+    <value>pbWater</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblHeight.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 18</value>
+  </data>
+  <data name="richTextBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 14</value>
+  </data>
+  <data name="richTextBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 14</value>
+  </data>
+  <data name="&gt;&gt;richTextBox6.Parent" xml:space="preserve">
+    <value>gbPlummy5v2</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy5v2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pbPlummy1Next.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="lblGluten.Text" xml:space="preserve">
+    <value>0 gr</value>
+  </data>
+  <data name="&gt;&gt;richTextBox3.Name" xml:space="preserve">
+    <value>richTextBox3</value>
+  </data>
+  <data name="circularProgressBar1.Text" xml:space="preserve">
+    <value>%75</value>
+  </data>
+  <data name="label20.Text" xml:space="preserve">
+    <value>Gluten Weight Intake:</value>
+  </data>
+  <data name="pictureBox9.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;pictureBox19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox11.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;pbAvatar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblRecipes.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 13pt</value>
+  </data>
+  <data name="lblNutrientandActivity.Text" xml:space="preserve">
+    <value>Nutrient and Activity Input</value>
+  </data>
+  <data name="pictureBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="pbAvatar.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="lblSuggestions.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pictureBox20.Parent" xml:space="preserve">
+    <value>gbPlummy3</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="pictureBox24.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy5.Parent" xml:space="preserve">
+    <value>gbPlummy4</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy1.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;richTextBox5.Name" xml:space="preserve">
+    <value>richTextBox5</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;pictureBox25.Parent" xml:space="preserve">
+    <value>gbPlummy5</value>
+  </data>
+  <data name="&gt;&gt;pbTick.Name" xml:space="preserve">
+    <value>pbTick</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Weight:</value>
+  </data>
+  <data name="label14.TabIndex" type="System.Int32, mscorlib">
+    <value>35</value>
+  </data>
+  <data name="pbSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 65</value>
+  </data>
+  <data name="&gt;&gt;richTextBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pbAvatar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;richTextBox7.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pictureBox11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="&gt;&gt;pbSettings.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pbSettings.Name" xml:space="preserve">
+    <value>pbSettings</value>
+  </data>
+  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBox7.Name" xml:space="preserve">
+    <value>pictureBox7</value>
+  </data>
+  <data name="lblDisease.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 9pt</value>
+  </data>
+  <data name="&gt;&gt;lblAge.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox9.Parent" xml:space="preserve">
+    <value>gbPlummy6</value>
+  </data>
+  <data name="lblMedication.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 13pt</value>
+  </data>
+  <data name="lblIdealWeight.TabIndex" type="System.Int32, mscorlib">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;pictureBox10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblReports.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblGlutenAttention.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lblWaterAttention.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox26.Parent" xml:space="preserve">
+    <value>gbPlummy5</value>
+  </data>
+  <data name="lblDisease.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblRecipes.Text" xml:space="preserve">
+    <value>Recipes</value>
+  </data>
+  <data name="&gt;&gt;lblWaterInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pictureBox20.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;pbPlummy2Next.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="calender.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="lblUsername.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label19.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
+    <value>pictureBox2</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy1.Name" xml:space="preserve">
+    <value>gbPlummy1</value>
+  </data>
+  <data name="label12.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 9pt</value>
+  </data>
+  <data name="label20.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pictureBox24.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblNutrientandActivity.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="lblNutrientandActivity.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 24</value>
+  </data>
+  <data name="pictureBox9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 77</value>
+  </data>
+  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>286, 65</value>
+  </data>
+  <data name="pbAddWater.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 477</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="richTextBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 121</value>
+  </data>
+  <data name="lblDisease.Text" xml:space="preserve">
+    <value>Celiac</value>
+  </data>
+  <data name="lblWeight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 261</value>
+  </data>
+  <data name="&gt;&gt;pbSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pictureBox16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 85</value>
+  </data>
+  <data name="lblHeight.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pbTick.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblSuggestionAttention.Size" type="System.Drawing.Size, System.Drawing">
+    <value>323, 24</value>
+  </data>
+  <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 12pt</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy6.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pbPlummy2Next.Name" xml:space="preserve">
+    <value>pbPlummy2Next</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;ProgressBarWater.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lblWaterInfo.TabIndex" type="System.Int32, mscorlib">
+    <value>49</value>
+  </data>
+  <data name="&gt;&gt;richTextBox6.Name" xml:space="preserve">
+    <value>richTextBox6</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;richTextBox2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblSuggestionAttention.Name" xml:space="preserve">
+    <value>lblSuggestionAttention</value>
+  </data>
+  <data name="richTextBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 87</value>
+  </data>
+  <data name="lblGlutenAttention.Size" type="System.Drawing.Size, System.Drawing">
+    <value>309, 24</value>
+  </data>
+  <data name="&gt;&gt;lblWaterInfo.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;pbPlummyNext5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblGluten.Location" type="System.Drawing.Point, System.Drawing">
+    <value>915, 233</value>
+  </data>
+  <data name="gbPlummy6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 191</value>
+  </data>
+  <data name="&gt;&gt;pictureBox4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMedication.Name" xml:space="preserve">
+    <value>lblMedication</value>
+  </data>
+  <data name="&gt;&gt;lblHeight.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;pbPlummy1Next.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pictureBox11.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="&gt;&gt;pbPlummy4Next.Name" xml:space="preserve">
+    <value>pbPlummy4Next</value>
+  </data>
+  <data name="gbPlummy3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>306, 82</value>
+  </data>
+  <data name="&gt;&gt;label20.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pbPlummy2Next.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pictureBox22.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lblDisease.Name" xml:space="preserve">
+    <value>lblDisease</value>
+  </data>
+  <data name="&gt;&gt;richTextBox3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox13.Name" xml:space="preserve">
+    <value>pictureBox13</value>
+  </data>
+  <data name="&gt;&gt;pictureBox24.Name" xml:space="preserve">
+    <value>pictureBox24</value>
+  </data>
+  <data name="pictureBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>507, 3</value>
+  </data>
+  <data name="pbTick.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
   <data name="pictureBox25.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMQAAAC8CAYAAAAn1wHHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
@@ -1580,193 +2752,197 @@
         UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQeGZgsfx/k7X6nqCFSNoAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox26.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-</value>
+  <data name="&gt;&gt;gbPlummy4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="richTextBox6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 10.2pt</value>
+  </data>
+  <data name="&gt;&gt;ProgressBarWater.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblMedication.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="label15.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
+  </data>
+  <data name="&gt;&gt;pbAddWater.Name" xml:space="preserve">
+    <value>pbAddWater</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblSuggestions.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 13pt</value>
+  </data>
+  <data name="lblDisease.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 296</value>
+  </data>
+  <data name="&gt;&gt;pictureBox9.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label20.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 15pt</value>
+  </data>
+  <data name="pictureBox7.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="pictureBox16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 0</value>
+  </data>
+  <data name="&gt;&gt;lblSuggestions.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="lblMedicationAttention.Text" xml:space="preserve">
+    <value>Don't forget to take your medicine named xx!</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>406, 262</value>
+  </data>
+  <data name="&gt;&gt;richTextBox5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="richTextBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 14</value>
+  </data>
+  <data name="pictureBox13.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="pictureBox20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 85</value>
+  </data>
+  <data name="pictureBox24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 47</value>
+  </data>
+  <data name="&gt;&gt;lblGlutenAttention.Name" xml:space="preserve">
+    <value>lblGlutenAttention</value>
+  </data>
+  <data name="pbSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;pictureBox6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblMedicationAttention.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;pbMinusWater.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pbSettings.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="label10.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="pictureBox14.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.ZOrder" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblAge.Text" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 30</value>
+  </data>
+  <data name="pictureBox5.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pictureBox19.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pbWater.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;lblReports.Name" xml:space="preserve">
+    <value>lblReports</value>
+  </data>
+  <data name="&gt;&gt;pictureBox6.Name" xml:space="preserve">
+    <value>pictureBox6</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy5.Name" xml:space="preserve">
+    <value>gbPlummy5</value>
+  </data>
+  <data name="richTextBox4.Text" xml:space="preserve">
+    <value>You can view daily, weekly and monthly reports here.</value>
+  </data>
+  <data name="richTextBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 121</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy3.Name" xml:space="preserve">
+    <value>gbPlummy3</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 9pt</value>
+  </data>
+  <data name="pictureBox12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>193, 133</value>
+  </data>
+  <data name="&gt;&gt;richTextBox7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pictureBox12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>783, 81</value>
+  </data>
+  <data name="&gt;&gt;pictureBox9.Name" xml:space="preserve">
+    <value>pictureBox9</value>
+  </data>
+  <data name="pictureBox11.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pictureBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>235, 65</value>
+  </data>
+  <data name="&gt;&gt;lblNutrientandActivity.Name" xml:space="preserve">
+    <value>lblNutrientandActivity</value>
+  </data>
+  <data name="richTextBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 14</value>
+  </data>
+  <data name="pictureBox26.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;ProgressBarWater.Name" xml:space="preserve">
+    <value>ProgressBarWater</value>
+  </data>
+  <data name="lblSuggestions.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;lblRecipes.Name" xml:space="preserve">
+    <value>lblRecipes</value>
+  </data>
+  <data name="pictureBox24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 138</value>
+  </data>
+  <data name="&gt;&gt;pictureBox11.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblRecipesAttention.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lblHeight.Text" xml:space="preserve">
+    <value>160 cm</value>
+  </data>
+  <data name="&gt;&gt;pbAddWater.ZOrder" xml:space="preserve">
+    <value>14</value>
   </data>
   <data name="pictureBox12.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3487,4 +4663,843 @@
         hURERERE5AeJ+v8BemgSWy+oGmQAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="&gt;&gt;lblRecipesAttention.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="pictureBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;pbPlummy4Next.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="richTextBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="calender.Location" type="System.Drawing.Point, System.Drawing">
+    <value>354, 399</value>
+  </data>
+  <data name="lblWeight.Text" xml:space="preserve">
+    <value>50 kg</value>
+  </data>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Hello my name is Plummy!   I'm here to introduce the app to you. </value>
+  </data>
+  <data name="pictureBox23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 85</value>
+  </data>
+  <data name="pictureBox14.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="pbPlummy2Next.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="richTextBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="pictureBox26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 0</value>
+  </data>
+  <data name="lblRecipes.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pictureBox14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="richTextBox7.Text" xml:space="preserve">
+    <value>Finally, in this section, you can review our recommendations for a gluten-free diet.</value>
+  </data>
+  <data name="label12.TabIndex" type="System.Int32, mscorlib">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="richTextBox4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 14</value>
+  </data>
+  <data name="&gt;&gt;lblGluten.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbPlummyNext6.Parent" xml:space="preserve">
+    <value>gbPlummy6</value>
+  </data>
+  <data name="&gt;&gt;pbAvatar.ZOrder" xml:space="preserve">
+    <value>41</value>
+  </data>
+  <data name="circularProgressBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>262, 251</value>
+  </data>
+  <data name="&gt;&gt;pictureBox12.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pictureBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>272, 4</value>
+  </data>
+  <data name="lblGlutenAttention.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="richTextBox4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 10.2pt</value>
+  </data>
+  <data name="&gt;&gt;lblWeight.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>653, 278</value>
+  </data>
+  <data name="&gt;&gt;label20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblSuggestionAttention.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 195</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>212, 125</value>
+  </data>
+  <data name="&gt;&gt;pictureBox19.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;pictureBox10.Name" xml:space="preserve">
+    <value>pictureBox10</value>
+  </data>
+  <data name="pictureBox11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>658, 225</value>
+  </data>
+  <data name="richTextBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="pictureBox25.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="lblDisease.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 18</value>
+  </data>
+  <data name="pictureBox26.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+</value>
+  </data>
+  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pictureBox10.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;pbMinusWater.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="pictureBox10.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;richTextBox3.Parent" xml:space="preserve">
+    <value>gbPlummy3</value>
+  </data>
+  <data name="richTextBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="pictureBox22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 71</value>
+  </data>
+  <data name="gbPlummy6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>734, 53</value>
+  </data>
+  <data name="&gt;&gt;circularProgressBar1.Type" xml:space="preserve">
+    <value>CircularProgressBar.CircularProgressBar, CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3</value>
+  </data>
+  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="lblHeight.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 9pt</value>
+  </data>
+  <data name="richTextBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 105</value>
+  </data>
+  <data name="&gt;&gt;pictureBox22.Name" xml:space="preserve">
+    <value>pictureBox22</value>
+  </data>
+  <data name="lblDisease.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pbPlummyNext6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>197, 138</value>
+  </data>
+  <data name="lblGlutenAttention.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 296</value>
+  </data>
+  <data name="&gt;&gt;pbPlummyNext5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblAge.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 225</value>
+  </data>
+  <data name="lblRecipesAttention.Size" type="System.Drawing.Size, System.Drawing">
+    <value>307, 24</value>
+  </data>
+  <data name="&gt;&gt;lblDisease.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="pictureBox13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 77</value>
+  </data>
+  <data name="richTextBox1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 10.2pt</value>
+  </data>
+  <data name="pictureBox25.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 71</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Disease:</value>
+  </data>
+  <data name="&gt;&gt;pictureBox8.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;lblUsername.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBox25.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblSuggestionAttention.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label15.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;pbPlummy4Next.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="gbPlummy5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 191</value>
+  </data>
+  <data name="lblSuggestions.Location" type="System.Drawing.Point, System.Drawing">
+    <value>773, 21</value>
+  </data>
+  <data name="&gt;&gt;lblAge.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pbAddWater.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 41</value>
+  </data>
+  <data name="lblWaterInfo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Bahnschrift Condensed, 30pt</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy5v2.Name" xml:space="preserve">
+    <value>gbPlummy5v2</value>
+  </data>
+  <data name="&gt;&gt;ProgressBarWater.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pbTick.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 31</value>
+  </data>
+  <data name="&gt;&gt;richTextBox4.Name" xml:space="preserve">
+    <value>richTextBox4</value>
+  </data>
+  <data name="&gt;&gt;pictureBox16.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="pbPlummy4Next.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pictureBox19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 95</value>
+  </data>
+  <data name="&gt;&gt;pictureBox11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDisease.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pbPlummyNext6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pictureBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 89</value>
+  </data>
+  <data name="circularProgressBar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>681, 330</value>
+  </data>
+  <data name="&gt;&gt;pictureBox5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblHeight.Name" xml:space="preserve">
+    <value>lblHeight</value>
+  </data>
+  <data name="&gt;&gt;lblAge.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="pictureBox9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 89</value>
+  </data>
+  <data name="&gt;&gt;pictureBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblWaterAttention.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblUsername.Name" xml:space="preserve">
+    <value>lblUsername</value>
+  </data>
+  <data name="lblAge.Size" type="System.Drawing.Size, System.Drawing">
+    <value>18, 18</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;circularProgressBar1.Name" xml:space="preserve">
+    <value>circularProgressBar1</value>
+  </data>
+  <data name="&gt;&gt;pictureBox9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pictureBox20.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pbPlummyNext5.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="gbPlummy2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 191</value>
+  </data>
+  <data name="label14.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;lblIdealWeight.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;label19.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="pbPlummyNext6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 47</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 207</value>
+  </data>
+  <data name="label19.TabIndex" type="System.Int32, mscorlib">
+    <value>45</value>
+  </data>
+  <data name="richTextBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 121</value>
+  </data>
+  <data name="&gt;&gt;pictureBox16.Name" xml:space="preserve">
+    <value>pictureBox16</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox16.Parent" xml:space="preserve">
+    <value>gbPlummy2</value>
+  </data>
+  <data name="pbMinusWater.TabIndex" type="System.Int32, mscorlib">
+    <value>47</value>
+  </data>
+  <data name="lblWaterInfo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 521</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 261</value>
+  </data>
+  <data name="pictureBox22.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pbPlummy1Next.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pictureBox8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 0</value>
+  </data>
+  <data name="pictureBox23.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 0</value>
+  </data>
+  <data name="&gt;&gt;pictureBox23.Parent" xml:space="preserve">
+    <value>gbPlummy4</value>
+  </data>
+  <data name="lblIdealWeight.Text" xml:space="preserve">
+    <value>53 kg</value>
+  </data>
+  <data name="pbMinusWater.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 47</value>
+  </data>
+  <data name="&gt;&gt;richTextBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblSuggestions.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 27</value>
+  </data>
+  <data name="&gt;&gt;richTextBox2.Parent" xml:space="preserve">
+    <value>gbPlummy2</value>
+  </data>
+  <data name="lblGlutenAttention.Text" xml:space="preserve">
+    <value>You've consumed gluten! You made me angry.</value>
+  </data>
+  <data name="pbPlummy1Next.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 47</value>
+  </data>
+  <data name="ProgressBarWater.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 583</value>
+  </data>
+  <data name="pbMinusWater.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 471</value>
+  </data>
+  <data name="lblWaterAttention.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 82</value>
+  </data>
+  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="pictureBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 77</value>
+  </data>
+  <data name="&gt;&gt;richTextBox7.Parent" xml:space="preserve">
+    <value>gbPlummy6</value>
+  </data>
+  <data name="&gt;&gt;pictureBox19.Name" xml:space="preserve">
+    <value>pictureBox19</value>
+  </data>
+  <data name="&gt;&gt;pictureBox20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>1012, 657</value>
+  </data>
+  <data name="&gt;&gt;calender.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblRecipes.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="pictureBox26.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pbAvatar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 99</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pictureBox16.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="pbPlummy2Next.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="richTextBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblWaterInfo.Name" xml:space="preserve">
+    <value>lblWaterInfo</value>
+  </data>
+  <data name="richTextBox3.Text" xml:space="preserve">
+    <value>You can enter the medications you use here and track them.</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy5v2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pictureBox5.ZOrder" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="&gt;&gt;richTextBox7.Name" xml:space="preserve">
+    <value>richTextBox7</value>
+  </data>
+  <data name="pictureBox4.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;pictureBox26.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="gbPlummy5v2.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="richTextBox6.Text" xml:space="preserve">
+    <value>In this menu, you can access the recipes we have prepared specially for you.</value>
+  </data>
+  <data name="pbPlummyNext5.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="pictureBox14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 89</value>
+  </data>
+  <data name="ProgressBarWater.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 23</value>
+  </data>
+  <data name="&gt;&gt;lblIdealWeight.Name" xml:space="preserve">
+    <value>lblIdealWeight</value>
+  </data>
+  <data name="lblRecipesAttention.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 159</value>
+  </data>
+  <data name="pbAvatar.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="lblIdealWeight.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 278</value>
+  </data>
+  <data name="&gt;&gt;lblWaterAttention.Name" xml:space="preserve">
+    <value>lblWaterAttention</value>
+  </data>
+  <data name="lblNutrientandActivity.Size" type="System.Drawing.Size, System.Drawing">
+    <value>203, 27</value>
+  </data>
+  <data name="pictureBox24.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;calender.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MonthCalendar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureBox11.Name" xml:space="preserve">
+    <value>pictureBox11</value>
+  </data>
+  <data name="&gt;&gt;lblReports.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="pbPlummy1Next.Location" type="System.Drawing.Point, System.Drawing">
+    <value>198, 106</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Attention</value>
+  </data>
+  <data name="pbPlummy4Next.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 47</value>
+  </data>
+  <data name="&gt;&gt;richTextBox4.Parent" xml:space="preserve">
+    <value>gbPlummy4</value>
+  </data>
+  <data name="&gt;&gt;lblGluten.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="gbPlummy1.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="ProgressBarWater.TabIndex" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="label20.TabIndex" type="System.Int32, mscorlib">
+    <value>43</value>
+  </data>
+  <data name="lblRecipesAttention.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pbPlummy3Next.Parent" xml:space="preserve">
+    <value>gbPlummy3</value>
+  </data>
+  <data name="pictureBox12.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pictureBox25.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 95</value>
+  </data>
+  <data name="lblMedicationAttention.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pbPlummy3Next.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pictureBox4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>125, 65</value>
+  </data>
+  <data name="&gt;&gt;pictureBox23.Name" xml:space="preserve">
+    <value>pictureBox23</value>
+  </data>
+  <data name="gbPlummy5v2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>264, 191</value>
+  </data>
+  <data name="&gt;&gt;calender.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="pbPlummyNext6.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pictureBox14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 77</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 225</value>
+  </data>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 18</value>
+  </data>
+  <data name="pbPlummy4Next.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;pictureBox25.Name" xml:space="preserve">
+    <value>pictureBox25</value>
+  </data>
+  <data name="&gt;&gt;pbPlummy2Next.Parent" xml:space="preserve">
+    <value>gbPlummy2</value>
+  </data>
+  <data name="pictureBox10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 0</value>
+  </data>
+  <data name="&gt;&gt;pictureBox26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;richTextBox1.Parent" xml:space="preserve">
+    <value>gbPlummy1</value>
+  </data>
+  <data name="richTextBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>88, 14</value>
+  </data>
+  <data name="&gt;&gt;pictureBox13.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pictureBox10.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;lblWaterInfo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureBox20.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblUsername.Text" xml:space="preserve">
+    <value>User</value>
+  </data>
+  <data name="&gt;&gt;lblMedicationAttention.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lblAge.TabIndex" type="System.Int32, mscorlib">
+    <value>44</value>
+  </data>
+  <data name="&gt;&gt;gbPlummy2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;pictureBox16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbAvatar.Name" xml:space="preserve">
+    <value>pbAvatar</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>
