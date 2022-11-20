@@ -1,4 +1,5 @@
-﻿using RevivalGF.Business.Services;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using RevivalGF.Business.Services;
 using RevivalGF.DataAccess.Context;
 using RevivalGF.Entites.Concrete;
 using System;
@@ -11,7 +12,6 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 
 namespace RevivalGF.UI.Forms
@@ -28,10 +28,10 @@ namespace RevivalGF.UI.Forms
         
         private void Login_Load(object sender, EventArgs e)
         {            
-            tbPassword.UseSystemPasswordChar = true;  // for **** appearance
+            tbPassword.UseSystemPasswordChar = true;  // for **** appearance            
         }
 
-        public static User userNameControl;
+        public static Entites.Concrete.User userNameControl;
         public static string userPassword;
         private void pbNext_DoubleClick(object sender, EventArgs e)
         {
@@ -51,7 +51,7 @@ namespace RevivalGF.UI.Forms
                 MainForm main = new MainForm();
                 main.Show();
                 Hide();
-            }            
+            }           
         }
 
         private void lblRegister_DoubleClick(object sender, EventArgs e)
@@ -69,6 +69,6 @@ namespace RevivalGF.UI.Forms
         private void pbNext_Click(object sender, EventArgs e)
         {
             pbNext.Cursor = Cursors.WaitCursor;
-        }             
+        }        
     }
 }

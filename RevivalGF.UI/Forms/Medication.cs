@@ -1,4 +1,5 @@
-﻿using RevivalGF.DataAccess.Concrete;
+﻿using RevivalGF.Business.Services;
+using RevivalGF.DataAccess.Concrete;
 using RevivalGF.DataAccess.Context;
 using RevivalGF.Entites.Concrete;
 using System;
@@ -24,7 +25,9 @@ namespace RevivalGF.UI.Forms
             _userRepository = new UserRepository(db);
             _medicamentRepository=new MedicamentRepository(db);
             InitializeComponent();
+            userService = new UserService();
         }
+        UserService userService;
 
         private void pbNext_DoubleClick(object sender, EventArgs e)
         {
@@ -62,6 +65,7 @@ namespace RevivalGF.UI.Forms
         private void Medication_Load(object sender, EventArgs e)
         {
             ListMedicines();
+            userService.UserTheme(Login.userNameControl, this, Properties.Resources.medicationform, Properties.Resources.Dark_medicationform);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

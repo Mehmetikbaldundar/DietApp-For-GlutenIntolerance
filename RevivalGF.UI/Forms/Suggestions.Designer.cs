@@ -127,6 +127,7 @@
             // pbNext
             // 
             this.pbNext.BackColor = System.Drawing.Color.Transparent;
+            this.pbNext.Image = global::RevivalGF.UI.Properties.Resources.sustenium;
             resources.ApplyResources(this.pbNext, "pbNext");
             this.pbNext.Name = "pbNext";
             this.pbNext.TabStop = false;

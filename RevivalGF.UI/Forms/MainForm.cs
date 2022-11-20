@@ -35,7 +35,7 @@ namespace RevivalGF.UI.Forms
         {
             var userNameControl = Login.userNameControl;
             var userdetails = waterService.GetUserDetails(userNameControl);
-            
+            userService.UserTheme(userNameControl, this, Properties.Resources.main, Properties.Resources.Dark_main);
             if (userNameControl.Tutorial==true)
             {
                 gbPlummy1.Visible = true;
@@ -71,9 +71,7 @@ namespace RevivalGF.UI.Forms
             int glasscount = waterService.WaterCount(userNameControl);
             int waterml = glasscount * 250;
             lblWaterInfo.Text = glasscount.ToString() + " glass = " + waterml + " mL";
-            ProgressBar(glasscount);
-
-            circularProgressBarCalorie.
+            ProgressBar(glasscount);            
         }
         #region PlummySection
         private void pbPlummy1Next_DoubleClick(object sender, EventArgs e)
@@ -218,9 +216,5 @@ namespace RevivalGF.UI.Forms
             }
         }
 
-        public void CircularProgressbar() 
-        { 
-            circularProgressBarCalorie.Value
-        }
     }
 }

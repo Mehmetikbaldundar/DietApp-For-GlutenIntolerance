@@ -30,5 +30,7 @@ namespace RevivalGF.Entites.Concrete
         public Status Status { get; set; } = Status.Active;
         public UserDetails UserDetails { get; set; }
         public bool Tutorial { get; set; } = true;
+        public bool AppLanguage { get; set; } = true;
+        public bool AppTheme { get; set; } = true;
     }
 }

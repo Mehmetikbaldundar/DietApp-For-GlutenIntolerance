@@ -13,6 +13,7 @@ using Microsoft.VisualBasic;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Drawing;
 
 namespace RevivalGF.Business.Services
 {
@@ -275,8 +276,8 @@ namespace RevivalGF.Business.Services
                 MessageBox.Show("Password Incorrect! \n Please check and try again");
                 return false;
             }
-            else            
-                return true;                        
+            else
+                return true;
         }
         public User UsernameControl(string username)
         {
@@ -353,6 +354,22 @@ namespace RevivalGF.Business.Services
             MessageBox.Show("Update Successful");
 
             return true;
+        }
+        public void Language_Theme_Update(User user)
+        {
+            _userRepository.Update(user);
+        }
+        public void UserTheme(User user,Form form, Bitmap picture_true, Bitmap picture_false)
+        {
+            switch (user.AppTheme)
+            {
+                case true:
+                    form.BackgroundImage = picture_true;
+                    break;
+                case false:
+                    form.BackgroundImage= picture_false;
+                    break;               
+            }
         }
 
     }

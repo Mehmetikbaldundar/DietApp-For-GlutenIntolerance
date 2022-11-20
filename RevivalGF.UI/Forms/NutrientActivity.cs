@@ -1,4 +1,5 @@
-﻿using RevivalGF.DataAccess.Concrete;
+﻿using RevivalGF.Business.Services;
+using RevivalGF.DataAccess.Concrete;
 using RevivalGF.DataAccess.Context;
 using RevivalGF.Entites.Concrete;
 using RevivalGF.Entites.Enums;
@@ -27,10 +28,13 @@ namespace RevivalGF.UI.Forms
         {
             db = new RevivalGfDbContext();
             _mealRepository= new MealRepository(db);
-            _mealReportsRepository = new MealReportsRepository(db);
+            _mealReportsRepository = new MealReportsRepository(db);          
 
             InitializeComponent();
+            userService = new UserService();
         }
+        UserService userService;
+    
         private void pbNext_DoubleClick(object sender, EventArgs e)
         {
             MainForm main = new MainForm();
@@ -41,6 +45,7 @@ namespace RevivalGF.UI.Forms
         {
             cbCategories.DataSource = Enum.GetValues(typeof(MealCategories));
             var mealList = new List<Meal>();
+            userService.UserTheme(Login.userNameControl, this, Properties.Resources.main, Properties.Resources.Dark_main);
         }
         int mealID;
         
