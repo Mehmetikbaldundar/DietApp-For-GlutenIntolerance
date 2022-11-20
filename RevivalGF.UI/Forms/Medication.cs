@@ -16,13 +16,11 @@ namespace RevivalGF.UI.Forms
 {
     public partial class Medication : Form
     {
-        private readonly RevivalGfDbContext db;
-        private readonly UserRepository _userRepository;
+        private readonly RevivalGfDbContext db;        
         private readonly MedicamentRepository _medicamentRepository;
         public Medication()
         {
-            db = new RevivalGfDbContext();
-            _userRepository = new UserRepository(db);
+            db = new RevivalGfDbContext();            
             _medicamentRepository=new MedicamentRepository(db);
             InitializeComponent();
             userService = new UserService();

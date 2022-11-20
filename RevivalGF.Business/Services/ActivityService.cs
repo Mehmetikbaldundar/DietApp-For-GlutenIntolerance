@@ -19,13 +19,11 @@ namespace RevivalGF.Business.Services
     {
 
         private readonly RevivalGfDbContext db;
-        private readonly ActivityRepository _activityRepository;
-        private readonly UserRepository _userRepository;
+        private readonly ActivityRepository _activityRepository;        
         public ActivityService()
         {
             db = new RevivalGfDbContext();
-            _activityRepository = new ActivityRepository(db);
-            _userRepository = new UserRepository(db);
+            _activityRepository = new ActivityRepository(db);            
         }
 
         public bool ActivityAdd(Activity activity)
@@ -95,7 +93,6 @@ namespace RevivalGF.Business.Services
         }
         public void DailyActivities(DataGridView dataGridView, User user)
         {
-
             dataGridView.DataSource = db.Activities.Where(x => x.UserID == user.UserID).Where(x => x.DeletedDate == null)
                 .Select(x => new
                 {
@@ -119,7 +116,6 @@ namespace RevivalGF.Business.Services
                                 CalorieBurn = x.Calorie,
                             }).Sum(x => x.CalorieBurn).ToString();
             }
-
             return label.Text;
         }
         public void ActivityDelete(int selectedActivtyID)
