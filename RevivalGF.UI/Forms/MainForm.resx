@@ -2476,13 +2476,13 @@
     <value>721, 233</value>
   </data>
   <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 30</value>
+    <value>168, 30</value>
   </data>
   <data name="label20.TabIndex" type="System.Int32, mscorlib">
     <value>43</value>
   </data>
   <data name="label20.Text" xml:space="preserve">
-    <value>Gluten Weight Intake:</value>
+    <value>Gluten Risk Intake:</value>
   </data>
   <data name="&gt;&gt;label20.Name" xml:space="preserve">
     <value>label20</value>
@@ -2506,13 +2506,13 @@
     <value>915, 233</value>
   </data>
   <data name="lblGluten.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 30</value>
+    <value>28, 30</value>
   </data>
   <data name="lblGluten.TabIndex" type="System.Int32, mscorlib">
     <value>42</value>
   </data>
   <data name="lblGluten.Text" xml:space="preserve">
-    <value>0 gr</value>
+    <value>0 </value>
   </data>
   <data name="&gt;&gt;lblGluten.Name" xml:space="preserve">
     <value>lblGluten</value>
@@ -3484,7 +3484,7 @@
     <value>True</value>
   </data>
   <data name="lblSuggestionAttention.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 195</value>
+    <value>19, 171</value>
   </data>
   <data name="lblSuggestionAttention.Size" type="System.Drawing.Size, System.Drawing">
     <value>323, 24</value>
@@ -3511,7 +3511,7 @@
     <value>True</value>
   </data>
   <data name="lblRecipesAttention.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 159</value>
+    <value>19, 97</value>
   </data>
   <data name="lblRecipesAttention.Size" type="System.Drawing.Size, System.Drawing">
     <value>307, 24</value>
@@ -3533,60 +3533,6 @@
   </data>
   <data name="&gt;&gt;lblRecipesAttention.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="lblGlutenAttention.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblGlutenAttention.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 118</value>
-  </data>
-  <data name="lblGlutenAttention.Size" type="System.Drawing.Size, System.Drawing">
-    <value>309, 24</value>
-  </data>
-  <data name="lblGlutenAttention.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblGlutenAttention.Text" xml:space="preserve">
-    <value>You've consumed gluten! You made me angry.</value>
-  </data>
-  <data name="&gt;&gt;lblGlutenAttention.Name" xml:space="preserve">
-    <value>lblGlutenAttention</value>
-  </data>
-  <data name="&gt;&gt;lblGlutenAttention.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblGlutenAttention.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblGlutenAttention.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lblWaterAttention.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblWaterAttention.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 82</value>
-  </data>
-  <data name="lblWaterAttention.Size" type="System.Drawing.Size, System.Drawing">
-    <value>308, 24</value>
-  </data>
-  <data name="lblWaterAttention.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="lblWaterAttention.Text" xml:space="preserve">
-    <value>You drank very little water, drink some more.</value>
-  </data>
-  <data name="&gt;&gt;lblWaterAttention.Name" xml:space="preserve">
-    <value>lblWaterAttention</value>
-  </data>
-  <data name="&gt;&gt;lblWaterAttention.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblWaterAttention.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblWaterAttention.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="lblMedicationAttention.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3613,16 +3559,16 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;lblMedicationAttention.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="groupBox1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Bahnschrift Condensed, 12pt</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>212, 125</value>
+    <value>226, 191</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>406, 262</value>
+    <value>406, 268</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>51</value>
@@ -3640,7 +3586,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>41</value>
+    <value>42</value>
   </data>
   <data name="pictureBox12.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -5383,7 +5329,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox12.ZOrder" xml:space="preserve">
-    <value>42</value>
+    <value>41</value>
   </data>
   <data name="ProgressBarWater.Location" type="System.Drawing.Point, System.Drawing">
     <value>30, 583</value>
