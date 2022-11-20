@@ -1,4 +1,5 @@
-﻿using RevivalGF.DataAccess.Concrete;
+﻿using RevivalGF.Business.Services;
+using RevivalGF.DataAccess.Concrete;
 using RevivalGF.DataAccess.Context;
 using RevivalGF.Entites.Concrete;
 using RevivalGF.Entites.Enums;
@@ -23,11 +24,15 @@ namespace RevivalGF.UI.Forms
         private readonly RevivalGfDbContext db;
         private readonly MealRepository _mealRepository;
         private readonly MealReportsRepository _mealReportsRepository;
+        ReportService reportService;
+        UserService userService;
         public NutrientActivity()
         {
             db = new RevivalGfDbContext();
             _mealRepository= new MealRepository(db);
             _mealReportsRepository = new MealReportsRepository(db);
+            userService = new UserService();
+            reportService = new ReportService();
 
             InitializeComponent();
         }
@@ -41,6 +46,9 @@ namespace RevivalGF.UI.Forms
         {
             cbCategories.DataSource = Enum.GetValues(typeof(MealCategories));
             var mealList = new List<Meal>();
+            DailyCalorie();
+            btnAdd.Enabled= false;
+            NutrientCalculator();
         }
         int mealID;
         
@@ -161,7 +169,9 @@ namespace RevivalGF.UI.Forms
             lblFoodCarbonhydrate.Text = (eatenMeal.Carbonhydrade*portion).ToString("N");
             lblFoodFat.Text = (eatenMeal.Fat*portion).ToString("N");
             lblFoodProtein.Text = (eatenMeal.Protein*portion).ToString("N");
-            lblGluten.Text = (eatenMeal.GlutenRisk).ToString();
+            lblFoodGlutenRisk.Text = (eatenMeal.GlutenRisk).ToString();
+            btnAdd.Enabled = true;
+            int denme=(int)eatenMeal.GlutenRisk;
         }
 
         private static List<Meal> mealList=new List<Meal>();
@@ -169,19 +179,21 @@ namespace RevivalGF.UI.Forms
         private static decimal totalProtein;
         private static decimal totalFat;
         private static decimal totalCarbohydrate;
+        private static decimal totalGlutenRisk;
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-           mealList.Add(eatenMeal); 
-           MealReport mealReport= new MealReport()
-           { 
-               Portion= Convert.ToDecimal(nudPortion.Value.ToString()),
-               Meals=mealList,
-               TotalCalorie=Convert.ToDecimal(lblFoodCalorie.Text),
-               TotalCarbohydrate=Convert.ToDecimal(lblFoodCarbonhydrate.Text),
-               TotalFat=Convert.ToDecimal(lblFoodFat.Text), 
-               TotalProtein=Convert.ToDecimal(lblFoodProtein.Text),
-               UserID=Login.userNameControl.UserID,
+           mealList.Add(eatenMeal);
+            MealReport mealReport = new MealReport()
+            {
+                Portion = Convert.ToDecimal(nudPortion.Value.ToString()),
+                Meals = mealList,
+                TotalCalorie = Convert.ToDecimal(lblFoodCalorie.Text),
+                TotalCarbohydrate = Convert.ToDecimal(lblFoodCarbonhydrate.Text),
+                TotalFat = Convert.ToDecimal(lblFoodFat.Text),
+                TotalProtein = Convert.ToDecimal(lblFoodProtein.Text),
+                TotalGlutenRisk = (int)eatenMeal.GlutenRisk,
+               UserID =Login.userNameControl.UserID,
                ReportDate=DateTime.Now,
            };
             _mealReportsRepository.Add(mealReport);
@@ -192,7 +204,8 @@ namespace RevivalGF.UI.Forms
                 x.MealReportID
             }).ToList();
             NutrientCalculator();
-
+            DailyCalorie();
+            btnAdd.Enabled = false;
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -215,6 +228,7 @@ namespace RevivalGF.UI.Forms
 
                 MessageBox.Show("There isn't any Meal");
             }
+            DailyCalorie();
 
         }
 
@@ -229,22 +243,41 @@ namespace RevivalGF.UI.Forms
             totalCarbohydrate = 0;
             totalFat = 0;
             totalProtein= 0;
+            totalGlutenRisk = 0;
             foreach (var item in db.MealReports.Where(x => x.UserID == Login.userNameControl.UserID && x.Status == Entites.Enums.Status.Active))
             {
                 totalCalorie= totalCalorie + item.TotalCalorie;
                 totalCarbohydrate = totalCalorie + item.TotalCarbohydrate;
                 totalFat = totalCalorie + item.TotalFat;
                 totalProtein= totalCalorie + item.TotalProtein;
+                totalGlutenRisk = Convert.ToDecimal(totalGlutenRisk + ((int)item.TotalGlutenRisk));
+
             }
             
             lblTotalCalorie.Text= totalCalorie.ToString() +" kcal";
             lblCarbohydrate.Text = totalCarbohydrate.ToString() + " gr";
             lblFat.Text = totalFat.ToString() + " gr";
             lblProtein.Text = totalProtein.ToString() + " gr";
+            if (totalGlutenRisk>4)
+            {
+                lblGluten.BackColor = Color.Red;
+                lblGluten.Text = totalGlutenRisk.ToString() + " !";
+            }
+            else
+            {
+                lblGluten.BackColor = Color.Transparent;
+                lblGluten.Text = totalGlutenRisk.ToString() + " !";
+            }
+            
    
         }
 
-
+        private void DailyCalorie()
+        {
+            decimal necessaryCalorie = userService.GetBodyAnalysis(Login.userNameControl).DietCalorieControl;
+            decimal currentNecessaryCalories = reportService.CalorieUpdate(Activitytab.sportCalorie, necessaryCalorie); 
+            lblDailyCalorie.Text = currentNecessaryCalories.ToString() + " kcal";           
+        }
         private void lblActivityInput_Click(object sender, EventArgs e)
         {
             Forms.Activitytab activityform = new Forms.Activitytab();

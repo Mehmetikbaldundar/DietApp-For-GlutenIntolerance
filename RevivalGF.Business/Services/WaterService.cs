@@ -58,16 +58,5 @@ namespace RevivalGF.Business.Services
             _waterRepository.Add(water);
             return WaterCount(user);
         }
-
-
-
-
-        #region ProgressBar
-
-        public void CircularProgressBar(User user)
-        {
-            decimal calorie=db.BodyAnalyses.Where(x => x.AnalysisID == user.UserID && x.Status == Entites.Enums.Status.Active).Select(x => x.DietCalorieControl);
-        }
-        #endregion
     }
 }

@@ -107,9 +107,9 @@ namespace RevivalGF.Business.Services
 
                 }).Where(x => x.Date.Day == DateTime.Now.Day).ToList();
         }
-        public void CalorieBurn(Label label, User user)
+        public string CalorieBurn(Label label, User user)
         {
-            if (db.Activities.Where(x => x.UserID == user.UserID).FirstOrDefault() == null)
+            if (db.Activities.Where(x => x.UserID == user.UserID && x.Status == Status.Active).FirstOrDefault() == null)
                 label.Text = "0";
             else
             {
@@ -120,6 +120,7 @@ namespace RevivalGF.Business.Services
                             }).Sum(x => x.CalorieBurn).ToString();
             }
 
+            return label.Text;
         }
         public void ActivityDelete(int selectedActivtyID)
         {
