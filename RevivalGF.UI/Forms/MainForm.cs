@@ -72,6 +72,8 @@ namespace RevivalGF.UI.Forms
             int waterml = glasscount * 250;
             lblWaterInfo.Text = glasscount.ToString() + " glass = " + waterml + " mL";
             ProgressBar(glasscount);
+
+            circularProgressBarCalorie.
         }
         #region PlummySection
         private void pbPlummy1Next_DoubleClick(object sender, EventArgs e)
@@ -214,6 +216,11 @@ namespace RevivalGF.UI.Forms
                 ProgressBarWater.Value = 10;
                 pbTick.Visible = true;
             }
+        }
+
+        public void CircularProgressbar() 
+        { 
+            circularProgressBarCalorie.Value
         }
     }
 }
