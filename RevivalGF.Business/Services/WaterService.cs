@@ -15,12 +15,14 @@ namespace RevivalGF.Business.Services
         private readonly UserRepository _userRepository;
         private readonly UserDetailsRepository _detailsRepository;
         private readonly WaterRepository _waterRepository;
+        private readonly MealReportsRepository _mealReportsRepository;
         public WaterService()
         {
             db = new RevivalGfDbContext();
             _userRepository = new UserRepository(db);
             _detailsRepository = new UserDetailsRepository(db);
             _waterRepository = new WaterRepository(db);
+            _mealReportsRepository= new MealReportsRepository(db);
         }
         public void PlummyOffline(User user)
         {
@@ -58,9 +60,14 @@ namespace RevivalGF.Business.Services
         }
 
 
+
+
         #region ProgressBar
 
-     
+        public void CircularProgressBar(User user)
+        {
+            decimal calorie=db.BodyAnalyses.Where(x => x.AnalysisID == user.UserID && x.Status == Entites.Enums.Status.Active).Select(x => x.DietCalorieControl);
+        }
         #endregion
     }
 }
