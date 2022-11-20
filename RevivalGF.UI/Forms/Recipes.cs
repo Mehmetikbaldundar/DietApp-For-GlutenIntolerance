@@ -1,5 +1,4 @@
-﻿using RevivalGF.Business.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using RevivalGF.Business.Services;
 
 namespace RevivalGF.UI.Forms
 {
@@ -30,12 +29,12 @@ namespace RevivalGF.UI.Forms
             this.Hide();
         }
 
-        private void Recipes_Load(object sender, EventArgs e)
+        private void Recipes_Load_1(object sender, EventArgs e)
         {
             mealService.GetMealsForRecipe(cbRecipes);
         }
 
-        private void cbRecipes_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbRecipes_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             var mealName = cbRecipes.SelectedItem.ToString();
             mealService.GetRecipies(rtxtRecipies, mealName);

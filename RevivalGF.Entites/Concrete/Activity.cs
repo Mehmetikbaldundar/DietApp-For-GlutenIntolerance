@@ -13,14 +13,14 @@ namespace RevivalGF.Entites.Concrete
     {
         [Key]
         public int ActivityID { get; set; }
-        public Activities Activities { get; set; }        
+        public Activities Activities { get; set; }
         public decimal ActivityFaktor { get; set; }
         public int UserID { get; set; }
         public User User { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public DateTime? ModifiedDate { get; set; }
         public DateTime? DeletedDate { get; set; }
-        public string CreatedBy { get; set; } 
+        public string CreatedBy { get; set; }
         public string DeletedBy { get; set; }
         public string ModifiedBy { get; set; }
         public Status Status { get; set; } = Status.Active;

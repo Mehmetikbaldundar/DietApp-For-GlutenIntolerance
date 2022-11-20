@@ -25,18 +25,14 @@ namespace RevivalGF.UI.Forms
             main.Show();
             this.Hide();
         }
-
-        private void Suggestions_Load(object sender, EventArgs e)
+        private void Suggestions_Load_1(object sender, EventArgs e)
         {
             mealService.GetHaveAlternativeMeals(cbSearch);
         }
-
-        private void cbSearch_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbSearch_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             var mealName = cbSearch.SelectedItem.ToString();
-            mealService.GetAlternativeID(lblAlternative, mealName, rtbGluten,rtbGlutenFree);
+            mealService.GetAlternativeID(lblAlternative, mealName, rtbGluten, rtbGlutenFree);
         }
-
-
     }
 }

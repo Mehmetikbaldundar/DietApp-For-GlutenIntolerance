@@ -51,7 +51,7 @@ namespace RevivalGF.UI.Forms
             }
 
             try
-            {
+            {                
                 User NewUser = new User()
                 {
                     UserName = tbUsername.Text,

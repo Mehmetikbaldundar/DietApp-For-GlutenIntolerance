@@ -117,18 +117,45 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pbNext.Location" type="System.Drawing.Point, System.Drawing">
+    <value>164, 503</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pbNext.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="pbNext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 63</value>
+  </data>
+  <data name="pbNext.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pbNext.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="&gt;&gt;pbNext.Name" xml:space="preserve">
+    <value>pbNext</value>
+  </data>
+  <data name="&gt;&gt;pbNext.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbNext.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pbNext.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="lblDeleteAccount.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="lblDeleteAccount.Font" type="System.Drawing.Font, System.Drawing">
     <value>Bahnschrift Condensed, 12pt</value>
   </data>
   <data name="lblDeleteAccount.Location" type="System.Drawing.Point, System.Drawing">
     <value>22, 545</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblDeleteAccount.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
@@ -729,9 +756,6 @@
   <data name="label27.Font" type="System.Drawing.Font, System.Drawing">
     <value>Bahnschrift, 7.8pt</value>
   </data>
-  <data name="label27.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="label27.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 291</value>
   </data>
@@ -1233,33 +1257,6 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>33</value>
   </data>
-  <data name="pbNext.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 503</value>
-  </data>
-  <data name="pbNext.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="pbNext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 63</value>
-  </data>
-  <data name="pbNext.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="pbNext.TabIndex" type="System.Int32, mscorlib">
-    <value>76</value>
-  </data>
-  <data name="&gt;&gt;pbNext.Name" xml:space="preserve">
-    <value>pbNext</value>
-  </data>
-  <data name="&gt;&gt;pbNext.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pbNext.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;pbNext.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>176, 1</value>
   </data>
@@ -1288,7 +1285,7 @@
     <value>34</value>
   </data>
   <data name="dtpBirthDate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 289</value>
+    <value>107, 288</value>
   </data>
   <data name="dtpBirthDate.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 20</value>
@@ -1312,7 +1309,7 @@
     <value>True</value>
   </data>
   <data name="chkEnable.Location" type="System.Drawing.Point, System.Drawing">
-    <value>129, 137</value>
+    <value>125, 136</value>
   </data>
   <data name="chkEnable.Size" type="System.Drawing.Size, System.Drawing">
     <value>59, 17</value>
@@ -1342,16 +1339,16 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>244, 578</value>
+    <value>245, 579</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>260, 617</value>
+    <value>261, 618</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>260, 617</value>
+    <value>261, 618</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Settings</value>

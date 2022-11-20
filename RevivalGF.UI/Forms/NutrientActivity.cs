@@ -196,17 +196,26 @@ namespace RevivalGF.UI.Forms
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            var deletedmealrep = _mealReportsRepository.GetById(selectedeatenmealID);
-            deletedmealrep.DeletedDate = DateTime.Now;
-            _mealReportsRepository.Delete(deletedmealrep);
-            dgwEatens.DataSource = db.MealReports.Where(x => x.UserID == Login.userNameControl.UserID && x.Status == Entites.Enums.Status.Active).Select(x => new
+            try
             {
-                x.Portion,
-                x.ReportDate,
-                Meal = x.Meals.FirstOrDefault().MealName,
-                x.MealReportID
-            }).ToList();
-            NutrientCalculator();
+                var deletedmealrep = _mealReportsRepository.GetById(selectedeatenmealID);
+                deletedmealrep.DeletedDate = DateTime.Now;
+                _mealReportsRepository.Delete(deletedmealrep);
+                dgwEatens.DataSource = db.MealReports.Where(x => x.UserID == Login.userNameControl.UserID && x.Status == Entites.Enums.Status.Active).Select(x => new
+                {
+                    x.Portion,
+                    x.ReportDate,
+                    Meal = x.Meals.FirstOrDefault().MealName,
+                    x.MealReportID
+                }).ToList();
+                NutrientCalculator();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("There isn't any Meal");
+            }
+
         }
 
         private void dgwEatens_SelectionChanged(object sender, EventArgs e)
@@ -238,7 +247,7 @@ namespace RevivalGF.UI.Forms
 
         private void lblActivityInput_Click(object sender, EventArgs e)
         {
-            Forms.Activity activityform = new Forms.Activity();
+            Forms.Activitytab activityform = new Forms.Activitytab();
             this.Hide();
             activityform.Show();
         }

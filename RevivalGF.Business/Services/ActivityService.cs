@@ -93,11 +93,10 @@ namespace RevivalGF.Business.Services
             _activityRepository.Add(activity);
             return true;
         }
-
         public void DailyActivities(DataGridView dataGridView, User user)
         {
 
-            dataGridView.DataSource = db.Activities.Where(x => x.UserID == user.UserID).Where(x=>x.DeletedDate==null)
+            dataGridView.DataSource = db.Activities.Where(x => x.UserID == user.UserID).Where(x => x.DeletedDate == null)
                 .Select(x => new
                 {
                     x.ActivityID,
@@ -108,26 +107,26 @@ namespace RevivalGF.Business.Services
 
                 }).Where(x => x.Date.Day == DateTime.Now.Day).ToList();
         }
-
-        public void CalorieBurn(Label label,User user)
+        public void CalorieBurn(Label label, User user)
         {
             if (db.Activities.Where(x => x.UserID == user.UserID).FirstOrDefault() == null)
                 label.Text = "0";
             else
             {
                 label.Text = db.Activities.Where(x => x.UserID == user.UserID).Where(x => x.DeletedDate == null)
-                                .Select(x => new
-                                {
-                                    CalorieBurn = x.Calorie,
-                                }).Sum(x => x.CalorieBurn).ToString();
+                            .Select(x => new
+                            {
+                                CalorieBurn = x.Calorie,
+                            }).Sum(x => x.CalorieBurn).ToString();
             }
-            
+
         }
         public void ActivityDelete(int selectedActivtyID)
         {
             var ActivityDelete = _activityRepository.GetById(selectedActivtyID);
-            ActivityDelete.DeletedDate= DateTime.Now;
+            ActivityDelete.DeletedDate = DateTime.Now;
             _activityRepository.Delete(ActivityDelete);
         }
+
     }
 }
