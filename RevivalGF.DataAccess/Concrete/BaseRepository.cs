@@ -14,7 +14,7 @@ namespace RevivalGF.DataAccess.Concrete
     public class BaseRepository<T> : IRepository<T> where T : class, IBaseEntity
     {
         private readonly RevivalGfDbContext _revivalGfDbContext;
-        private DbSet<T> _table;
+        private readonly DbSet<T> _table;
 
         public BaseRepository(RevivalGfDbContext revivalGfDbContext)
         {

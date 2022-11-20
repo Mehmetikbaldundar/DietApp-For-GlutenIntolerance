@@ -152,11 +152,14 @@ namespace RevivalGF.Business.Services
             try
             {
                 MailMessage message = new MailMessage(appMail, mail, "Verification Code", "REVIVAL GF Application Registiration Code: '" + verificationCode + "'\n\nRevivalGF Team");
-                SmtpClient smtp = new SmtpClient("smtp-mail.outlook.com", 587);
-                smtp.EnableSsl = true;
-                smtp.UseDefaultCredentials = true;
-                smtp.Credentials = new NetworkCredential(appMail, sifre);
+                SmtpClient smtp = new SmtpClient("smtp-mail.outlook.com", 587)
+                {
+                    EnableSsl = true,
+                    UseDefaultCredentials = true,
+                    Credentials = new NetworkCredential(appMail, sifre),
+                };
                 smtp.Send(message);
+
                 string verificationControl = Interaction.InputBox("Please Write Verification Code.", "Verification", "", 900, 400);
                 if (verificationControl == verificationCode)
                     result = true;
@@ -359,7 +362,7 @@ namespace RevivalGF.Business.Services
         {
             _userRepository.Update(user);
         }
-        public void UserTheme(User user,Form form, Bitmap picture_true, Bitmap picture_false)
+        public void UserTheme(User user, Form form, Bitmap picture_true, Bitmap picture_false)
         {
             switch (user.AppTheme)
             {
@@ -367,8 +370,8 @@ namespace RevivalGF.Business.Services
                     form.BackgroundImage = picture_true;
                     break;
                 case false:
-                    form.BackgroundImage= picture_false;
-                    break;               
+                    form.BackgroundImage = picture_false;
+                    break;
             }
         }
 

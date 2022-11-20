@@ -14,15 +14,13 @@ namespace RevivalGF.Business.Services
         private readonly RevivalGfDbContext db;
         private readonly UserRepository _userRepository;
         private readonly UserDetailsRepository _detailsRepository;
-        private readonly WaterRepository _waterRepository;
-        private readonly MealReportsRepository _mealReportsRepository;
+        private readonly WaterRepository _waterRepository;        
         public WaterService()
         {
             db = new RevivalGfDbContext();
             _userRepository = new UserRepository(db);
             _detailsRepository = new UserDetailsRepository(db);
-            _waterRepository = new WaterRepository(db);
-            _mealReportsRepository= new MealReportsRepository(db);
+            _waterRepository = new WaterRepository(db);            
         }
         public void PlummyOffline(User user)
         {

@@ -29,14 +29,14 @@ namespace RevivalGF.UI.Forms
         public NutrientActivity()
         {
             db = new RevivalGfDbContext();
-            _mealRepository= new MealRepository(db);
+            _mealRepository = new MealRepository(db);
             _mealReportsRepository = new MealReportsRepository(db);
             userService = new UserService();
             reportService = new ReportService();
-            
+
             InitializeComponent();
         }
-    
+
         private void pbNext_DoubleClick(object sender, EventArgs e)
         {
             MainForm main = new MainForm();
@@ -49,18 +49,18 @@ namespace RevivalGF.UI.Forms
             var mealList = new List<Meal>();
             userService.UserTheme(Login.userNameControl, this, Properties.Resources.main, Properties.Resources.Dark_main);
             DailyCalorie();
-            btnAdd.Enabled= false;
+            btnAdd.Enabled = false;
             NutrientCalculator();
         }
         int mealID;
-        
+
         private void cbCategories_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ListMeal(); 
+            ListMeal();
         }
         private void cbGluten_CheckedChanged(object sender, EventArgs e)
         {
-           ListMeal();
+            ListMeal();
         }
 
         private void ListMeal()
@@ -116,7 +116,7 @@ namespace RevivalGF.UI.Forms
                     Fat = x.Fat,
                     Protein = x.Protein,
                     GlutenRisk = x.GlutenRisk,
-                    MealID= x.MealID,
+                    MealID = x.MealID,
 
                 }).ToList();
             }
@@ -141,7 +141,7 @@ namespace RevivalGF.UI.Forms
 
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
-            if (tbSearch.Text!="")
+            if (tbSearch.Text != "")
             {
                 ListMealbyText();
             }
@@ -152,7 +152,7 @@ namespace RevivalGF.UI.Forms
         }
         private void NutrientActivity_FormClosed(object sender, FormClosedEventArgs e)
         {
-           Application.Exit();
+            Application.Exit();
         }
         int selectedmealID;
         int selectedeatenmealID;
@@ -160,23 +160,23 @@ namespace RevivalGF.UI.Forms
         {
             selectedmealID = Convert.ToInt32(dgwFoods.CurrentRow.Cells["MealID"].Value);
         }
-        
+
         Meal eatenMeal;
         private void btnShow_Click(object sender, EventArgs e)
         {
             eatenMeal = _mealRepository.GetById(selectedmealID);
             decimal portion = Convert.ToDecimal(nudPortion.Value.ToString());
             lblMealName.Text = eatenMeal.MealName.ToString();
-            lblFoodCalorie.Text = (eatenMeal.Calorie*portion).ToString("N");
-            lblFoodCarbonhydrate.Text = (eatenMeal.Carbonhydrade*portion).ToString("N");
-            lblFoodFat.Text = (eatenMeal.Fat*portion).ToString("N");
-            lblFoodProtein.Text = (eatenMeal.Protein*portion).ToString("N");
+            lblFoodCalorie.Text = (eatenMeal.Calorie * portion).ToString("N");
+            lblFoodCarbonhydrate.Text = (eatenMeal.Carbonhydrade * portion).ToString("N");
+            lblFoodFat.Text = (eatenMeal.Fat * portion).ToString("N");
+            lblFoodProtein.Text = (eatenMeal.Protein * portion).ToString("N");
             lblFoodGlutenRisk.Text = (eatenMeal.GlutenRisk).ToString();
             btnAdd.Enabled = true;
-            int denme=(int)eatenMeal.GlutenRisk;
+            int denme = (int)eatenMeal.GlutenRisk;
         }
 
-        private static List<Meal> mealList=new List<Meal>();
+        private static List<Meal> mealList = new List<Meal>();
         private static decimal totalCalorie;
         private static decimal totalProtein;
         private static decimal totalFat;
@@ -185,7 +185,7 @@ namespace RevivalGF.UI.Forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-           mealList.Add(eatenMeal);
+            mealList.Add(eatenMeal);
             MealReport mealReport = new MealReport()
             {
                 Portion = Convert.ToDecimal(nudPortion.Value.ToString()),
@@ -195,12 +195,13 @@ namespace RevivalGF.UI.Forms
                 TotalFat = Convert.ToDecimal(lblFoodFat.Text),
                 TotalProtein = Convert.ToDecimal(lblFoodProtein.Text),
                 TotalGlutenRisk = (int)eatenMeal.GlutenRisk,
-               UserID =Login.userNameControl.UserID,
-               ReportDate=DateTime.Now,
-           };
+                UserID = Login.userNameControl.UserID,
+                ReportDate = DateTime.Now,
+            };
             _mealReportsRepository.Add(mealReport);
             dgwEatens.DataSource = db.MealReports.Where(x => x.UserID == Login.userNameControl.UserID && x.Status == Entites.Enums.Status.Active).Select(x => new
-            { x.Portion,
+            {
+                x.Portion,
                 x.ReportDate,
                 Meal = x.Meals.FirstOrDefault().MealName,
                 x.MealReportID
@@ -241,26 +242,26 @@ namespace RevivalGF.UI.Forms
 
         private void NutrientCalculator()
         {
-            totalCalorie= 0;
+            totalCalorie = 0;
             totalCarbohydrate = 0;
             totalFat = 0;
-            totalProtein= 0;
+            totalProtein = 0;
             totalGlutenRisk = 0;
             foreach (var item in db.MealReports.Where(x => x.UserID == Login.userNameControl.UserID && x.Status == Entites.Enums.Status.Active))
             {
-                totalCalorie= totalCalorie + item.TotalCalorie;
+                totalCalorie += item.TotalCalorie;
                 totalCarbohydrate = totalCalorie + item.TotalCarbohydrate;
                 totalFat = totalCalorie + item.TotalFat;
-                totalProtein= totalCalorie + item.TotalProtein;
+                totalProtein = totalCalorie + item.TotalProtein;
                 totalGlutenRisk = Convert.ToDecimal(totalGlutenRisk + ((int)item.TotalGlutenRisk));
 
             }
-            
-            lblTotalCalorie.Text= totalCalorie.ToString() +" kcal";
+
+            lblTotalCalorie.Text = totalCalorie.ToString() + " kcal";
             lblCarbohydrate.Text = totalCarbohydrate.ToString() + " gr";
             lblFat.Text = totalFat.ToString() + " gr";
             lblProtein.Text = totalProtein.ToString() + " gr";
-            if (totalGlutenRisk>4)
+            if (totalGlutenRisk > 4)
             {
                 lblGluten.BackColor = Color.Red;
                 lblGluten.Text = totalGlutenRisk.ToString() + " !";
@@ -270,15 +271,15 @@ namespace RevivalGF.UI.Forms
                 lblGluten.BackColor = Color.Transparent;
                 lblGluten.Text = totalGlutenRisk.ToString() + " !";
             }
-            
-   
+
+
         }
 
         private void DailyCalorie()
         {
             decimal necessaryCalorie = userService.GetBodyAnalysis(Login.userNameControl).DietCalorieControl;
-            decimal currentNecessaryCalories = reportService.CalorieUpdate(Activitytab.sportCalorie, necessaryCalorie); 
-            lblDailyCalorie.Text = currentNecessaryCalories.ToString() + " kcal";           
+            decimal currentNecessaryCalories = reportService.CalorieUpdate(Activitytab.sportCalorie, necessaryCalorie);
+            lblDailyCalorie.Text = currentNecessaryCalories.ToString() + " kcal";
         }
         private void lblActivityInput_Click(object sender, EventArgs e)
         {

@@ -10,7 +10,7 @@ namespace RevivalGF.Business.Services
 {
     public class SecurityService
     {
-        private string defaulthPassword = "1";
+        private readonly string defaulthPassword = "1";
 
         private byte[] Encrypt(byte[] data, byte[] Key, byte[] IV)
         {

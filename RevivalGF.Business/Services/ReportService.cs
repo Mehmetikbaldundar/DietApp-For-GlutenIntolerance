@@ -59,8 +59,7 @@ namespace RevivalGF.Business.Services
             else
             {
                 return "Don't forget to take your medicine" + db.Medicaments.Where(x => x.UserID == user.UserID && x.Status == Entites.Enums.Status.Active).Select(x => x.MedicamentName).FirstOrDefault().ToString() + " !";
-            }
-                        
+            }                        
         }
     }
 }
