@@ -126,14 +126,10 @@
     <value>Bahnschrift Condensed, 16.2pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 28</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>21, 34</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 27</value>
+    <value>132, 34</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -157,10 +153,14 @@
     <value>Microsoft Sans Serif, 15pt</value>
   </data>
   <data name="cbSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 159</value>
+    <value>100, 196</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cbSearch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="cbSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 33</value>
+    <value>216, 37</value>
   </data>
   <data name="cbSearch.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -178,13 +178,13 @@
     <value>0</value>
   </data>
   <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>271, 154</value>
+    <value>361, 190</value>
   </data>
   <data name="pictureBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36, 39</value>
+    <value>48, 48</value>
   </data>
   <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -205,13 +205,13 @@
     <value>1</value>
   </data>
   <data name="rtbGluten.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 197</value>
+    <value>11, 242</value>
   </data>
   <data name="rtbGluten.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="rtbGluten.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 121</value>
+    <value>308, 148</value>
   </data>
   <data name="rtbGluten.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -232,13 +232,13 @@
     <value>2</value>
   </data>
   <data name="rtbGlutenFree.Location" type="System.Drawing.Point, System.Drawing">
-    <value>337, 197</value>
+    <value>449, 242</value>
   </data>
   <data name="rtbGlutenFree.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="rtbGlutenFree.Size" type="System.Drawing.Size, System.Drawing">
-    <value>239, 121</value>
+    <value>317, 148</value>
   </data>
   <data name="rtbGlutenFree.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -265,13 +265,10 @@
     <value>Bahnschrift Condensed, 16.2pt</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 162</value>
-  </data>
-  <data name="label6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>4, 199</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 27</value>
+    <value>86, 34</value>
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -298,13 +295,10 @@
     <value>Bahnschrift Condensed, 16.2pt</value>
   </data>
   <data name="lblAlternative.Location" type="System.Drawing.Point, System.Drawing">
-    <value>339, 159</value>
-  </data>
-  <data name="lblAlternative.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>452, 196</value>
   </data>
   <data name="lblAlternative.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 27</value>
+    <value>114, 34</value>
   </data>
   <data name="lblAlternative.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -331,13 +325,10 @@
     <value>Bahnschrift Condensed, 16.2pt</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 88</value>
-  </data>
-  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>15, 108</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 27</value>
+    <value>133, 34</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -364,13 +355,10 @@
     <value>Bahnschrift Condensed, 16.2pt</value>
   </data>
   <data name="lblInfo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 52</value>
-  </data>
-  <data name="lblInfo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>15, 64</value>
   </data>
   <data name="lblInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>223, 27</value>
+    <value>283, 34</value>
   </data>
   <data name="lblInfo.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -397,13 +385,10 @@
     <value>Bahnschrift Condensed, 16.2pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 15</value>
-  </data>
-  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>15, 18</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 27</value>
+    <value>185, 34</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -424,16 +409,16 @@
     <value>8</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 58</value>
+    <value>15, 71</value>
   </data>
   <data name="groupBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="groupBox1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>597, 358</value>
+    <value>796, 441</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -451,13 +436,13 @@
     <value>1</value>
   </data>
   <data name="pbNext.Location" type="System.Drawing.Point, System.Drawing">
-    <value>625, 361</value>
+    <value>833, 444</value>
   </data>
   <data name="pbNext.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="pbNext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 84</value>
+    <value>109, 103</value>
   </data>
   <data name="pbNext.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -477,11 +462,14 @@
   <data name="&gt;&gt;pbNext.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>tr-TR</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>8, 16</value>
   </data>
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1811,16 +1799,16 @@
 </value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>742, 479</value>
+    <value>987, 580</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>3, 2, 3, 2</value>
   </data>
   <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>758, 518</value>
+    <value>1005, 627</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>758, 518</value>
+    <value>1005, 627</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Suggestions</value>

@@ -1777,8 +1777,17 @@
   <data name="richTextBox3.Text" xml:space="preserve">
     <value>Kullandığınız ilaçları buraya girip takibini yapabilirsiniz.</value>
   </data>
+  <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 30</value>
+  </data>
+  <data name="label20.Text" xml:space="preserve">
+    <value>Gluten Risk Düzeyi:</value>
+  </data>
   <data name="richTextBox2.Text" xml:space="preserve">
     <value>Buradan yediğiniz besinleri girerek kalori hesaplayabilir ve yaptığınız egzersizleri buraya ekleyebilirsiniz.</value>
+  </data>
+  <data name="gbPlummy2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 63</value>
   </data>
   <data name="lblWaterInfo.Size" type="System.Drawing.Size, System.Drawing">
     <value>276, 60</value>
@@ -1792,11 +1801,53 @@
   <data name="label19.Text" xml:space="preserve">
     <value>Alınan Kalori Yüzdesi</value>
   </data>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 18</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Sağlık Detay:</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 18</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>İdeal Kilo:</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>29, 18</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Kilo:</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 18</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Boy:</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 18</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Yaş:</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>72, 18</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Kullanıcı Adı:</value>
+  </data>
   <data name="lblSuggestions.Size" type="System.Drawing.Size, System.Drawing">
     <value>72, 27</value>
   </data>
   <data name="lblSuggestions.Text" xml:space="preserve">
     <value>Öneriler</value>
+  </data>
+  <data name="lblRecipes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 27</value>
+  </data>
+  <data name="lblRecipes.Text" xml:space="preserve">
+    <value>Tarifler</value>
   </data>
   <data name="lblReports.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 27</value>
@@ -1828,23 +1879,11 @@
   <data name="lblRecipesAttention.Text" xml:space="preserve">
     <value>Tarifler bölümümüze göz atmayı unutmayın.</value>
   </data>
-  <data name="lblGlutenAttention.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 24</value>
-  </data>
-  <data name="lblGlutenAttention.Text" xml:space="preserve">
-    <value>Gluten tükettiniz! Beni kızdırdın.</value>
-  </data>
-  <data name="lblWaterAttention.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 24</value>
-  </data>
-  <data name="lblWaterAttention.Text" xml:space="preserve">
-    <value>Çok az su içtin, biraz daha iç.</value>
-  </data>
   <data name="lblMedicationAttention.Size" type="System.Drawing.Size, System.Drawing">
-    <value>251, 24</value>
+    <value>231, 24</value>
   </data>
   <data name="lblMedicationAttention.Text" xml:space="preserve">
-    <value>xx isimli ilacınızı almayı unutmayın!</value>
+    <value>isimli ilacınızı almayı unutmayın!</value>
   </data>
   <data name="groupBox1.Text" xml:space="preserve">
     <value>Dikkat</value>

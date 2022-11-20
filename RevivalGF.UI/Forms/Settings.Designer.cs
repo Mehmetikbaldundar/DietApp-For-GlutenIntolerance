@@ -78,8 +78,8 @@
             // 
             // pbNext
             // 
-            this.pbNext.Image = global::RevivalGF.UI.Properties.Resources.nextbutton;
             resources.ApplyResources(this.pbNext, "pbNext");
+            this.pbNext.Image = global::RevivalGF.UI.Properties.Resources.nextbutton;
             this.pbNext.Name = "pbNext";
             this.pbNext.TabStop = false;
             this.pbNext.DoubleClick += new System.EventHandler(this.pbNext_DoubleClick);
@@ -154,14 +154,14 @@
             // 
             // cbGoal
             // 
-            this.cbGoal.FormattingEnabled = true;
             resources.ApplyResources(this.cbGoal, "cbGoal");
+            this.cbGoal.FormattingEnabled = true;
             this.cbGoal.Name = "cbGoal";
             // 
             // cbActivityLevel
             // 
-            this.cbActivityLevel.FormattingEnabled = true;
             resources.ApplyResources(this.cbActivityLevel, "cbActivityLevel");
+            this.cbActivityLevel.FormattingEnabled = true;
             this.cbActivityLevel.Name = "cbActivityLevel";
             // 
             // rdbMen
@@ -252,10 +252,10 @@
             // 
             // groupBox2
             // 
+            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.rdbLight);
             this.groupBox2.Controls.Add(this.rdbDark);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
@@ -280,10 +280,10 @@
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.tdbEng);
             this.groupBox1.Controls.Add(this.rdbTr);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
@@ -318,8 +318,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::RevivalGF.UI.Properties.Resources.settings;
             resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.Image = global::RevivalGF.UI.Properties.Resources.settings;
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.TabStop = false;
             // 

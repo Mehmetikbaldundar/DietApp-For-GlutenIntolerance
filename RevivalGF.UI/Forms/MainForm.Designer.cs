@@ -148,19 +148,19 @@
             // 
             // gbPlummy6
             // 
+            resources.ApplyResources(this.gbPlummy6, "gbPlummy6");
             this.gbPlummy6.BackColor = System.Drawing.Color.Transparent;
             this.gbPlummy6.Controls.Add(this.pbPlummyNext6);
             this.gbPlummy6.Controls.Add(this.richTextBox7);
             this.gbPlummy6.Controls.Add(this.pictureBox9);
             this.gbPlummy6.Controls.Add(this.pictureBox10);
-            resources.ApplyResources(this.gbPlummy6, "gbPlummy6");
             this.gbPlummy6.Name = "gbPlummy6";
             this.gbPlummy6.TabStop = false;
             // 
             // pbPlummyNext6
             // 
-            this.pbPlummyNext6.Image = global::RevivalGF.UI.Properties.Resources.nextbutton;
             resources.ApplyResources(this.pbPlummyNext6, "pbPlummyNext6");
+            this.pbPlummyNext6.Image = global::RevivalGF.UI.Properties.Resources.nextbutton;
             this.pbPlummyNext6.Name = "pbPlummyNext6";
             this.pbPlummyNext6.TabStop = false;
             this.pbPlummyNext6.DoubleClick += new System.EventHandler(this.pbPlummyNext6_DoubleClick);
@@ -173,39 +173,39 @@
             // 
             // pictureBox9
             // 
+            resources.ApplyResources(this.pictureBox9, "pictureBox9");
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.Image = global::RevivalGF.UI.Properties.Resources.plummyv2;
-            resources.ApplyResources(this.pictureBox9, "pictureBox9");
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.TabStop = false;
             // 
             // pictureBox10
             // 
-            this.pictureBox10.Image = global::RevivalGF.UI.Properties.Resources.arrow;
             resources.ApplyResources(this.pictureBox10, "pictureBox10");
+            this.pictureBox10.Image = global::RevivalGF.UI.Properties.Resources.arrow;
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.TabStop = false;
             // 
             // gbPlummy4
             // 
+            resources.ApplyResources(this.gbPlummy4, "gbPlummy4");
             this.gbPlummy4.BackColor = System.Drawing.Color.Transparent;
             this.gbPlummy4.Controls.Add(this.gbPlummy5);
             this.gbPlummy4.Controls.Add(this.pbPlummy4Next);
             this.gbPlummy4.Controls.Add(this.richTextBox4);
             this.gbPlummy4.Controls.Add(this.pictureBox22);
             this.gbPlummy4.Controls.Add(this.pictureBox23);
-            resources.ApplyResources(this.gbPlummy4, "gbPlummy4");
             this.gbPlummy4.Name = "gbPlummy4";
             this.gbPlummy4.TabStop = false;
             // 
             // gbPlummy5
             // 
+            resources.ApplyResources(this.gbPlummy5, "gbPlummy5");
             this.gbPlummy5.BackColor = System.Drawing.Color.Transparent;
             this.gbPlummy5.Controls.Add(this.richTextBox5);
             this.gbPlummy5.Controls.Add(this.pictureBox24);
             this.gbPlummy5.Controls.Add(this.pictureBox25);
             this.gbPlummy5.Controls.Add(this.pictureBox26);
-            resources.ApplyResources(this.gbPlummy5, "gbPlummy5");
             this.gbPlummy5.Name = "gbPlummy5";
             this.gbPlummy5.TabStop = false;
             // 
@@ -223,8 +223,8 @@
             // 
             // pictureBox25
             // 
-            this.pictureBox25.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.pictureBox25, "pictureBox25");
+            this.pictureBox25.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox25.Name = "pictureBox25";
             this.pictureBox25.TabStop = false;
             // 
@@ -236,8 +236,8 @@
             // 
             // pbPlummy4Next
             // 
-            this.pbPlummy4Next.Image = global::RevivalGF.UI.Properties.Resources.nextbutton;
             resources.ApplyResources(this.pbPlummy4Next, "pbPlummy4Next");
+            this.pbPlummy4Next.Image = global::RevivalGF.UI.Properties.Resources.nextbutton;
             this.pbPlummy4Next.Name = "pbPlummy4Next";
             this.pbPlummy4Next.TabStop = false;
             this.pbPlummy4Next.DoubleClick += new System.EventHandler(this.pbPlummy4Next_DoubleClick);
@@ -250,34 +250,34 @@
             // 
             // pictureBox22
             // 
+            resources.ApplyResources(this.pictureBox22, "pictureBox22");
             this.pictureBox22.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox22.Image = global::RevivalGF.UI.Properties.Resources.maskot1;
-            resources.ApplyResources(this.pictureBox22, "pictureBox22");
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.TabStop = false;
             // 
             // pictureBox23
             // 
-            this.pictureBox23.Image = global::RevivalGF.UI.Properties.Resources.arrow;
             resources.ApplyResources(this.pictureBox23, "pictureBox23");
+            this.pictureBox23.Image = global::RevivalGF.UI.Properties.Resources.arrow;
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.TabStop = false;
             // 
             // gbPlummy3
             // 
+            resources.ApplyResources(this.gbPlummy3, "gbPlummy3");
             this.gbPlummy3.BackColor = System.Drawing.Color.Transparent;
             this.gbPlummy3.Controls.Add(this.pbPlummy3Next);
             this.gbPlummy3.Controls.Add(this.richTextBox3);
             this.gbPlummy3.Controls.Add(this.pictureBox19);
             this.gbPlummy3.Controls.Add(this.pictureBox20);
-            resources.ApplyResources(this.gbPlummy3, "gbPlummy3");
             this.gbPlummy3.Name = "gbPlummy3";
             this.gbPlummy3.TabStop = false;
             // 
             // pbPlummy3Next
             // 
-            this.pbPlummy3Next.Image = global::RevivalGF.UI.Properties.Resources.nextbutton;
             resources.ApplyResources(this.pbPlummy3Next, "pbPlummy3Next");
+            this.pbPlummy3Next.Image = global::RevivalGF.UI.Properties.Resources.nextbutton;
             this.pbPlummy3Next.Name = "pbPlummy3Next";
             this.pbPlummy3Next.TabStop = false;
             this.pbPlummy3Next.DoubleClick += new System.EventHandler(this.pbPlummy3Next_DoubleClick);
@@ -290,33 +290,33 @@
             // 
             // pictureBox19
             // 
+            resources.ApplyResources(this.pictureBox19, "pictureBox19");
             this.pictureBox19.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox19.Image = global::RevivalGF.UI.Properties.Resources.plummy3;
-            resources.ApplyResources(this.pictureBox19, "pictureBox19");
             this.pictureBox19.Name = "pictureBox19";
             this.pictureBox19.TabStop = false;
             // 
             // pictureBox20
             // 
-            this.pictureBox20.Image = global::RevivalGF.UI.Properties.Resources.arrow;
             resources.ApplyResources(this.pictureBox20, "pictureBox20");
+            this.pictureBox20.Image = global::RevivalGF.UI.Properties.Resources.arrow;
             this.pictureBox20.Name = "pictureBox20";
             this.pictureBox20.TabStop = false;
             // 
             // gbPlummy1
             // 
+            resources.ApplyResources(this.gbPlummy1, "gbPlummy1");
             this.gbPlummy1.BackColor = System.Drawing.Color.Transparent;
             this.gbPlummy1.Controls.Add(this.pbPlummy1Next);
             this.gbPlummy1.Controls.Add(this.richTextBox1);
             this.gbPlummy1.Controls.Add(this.pictureBox13);
-            resources.ApplyResources(this.gbPlummy1, "gbPlummy1");
             this.gbPlummy1.Name = "gbPlummy1";
             this.gbPlummy1.TabStop = false;
             // 
             // pbPlummy1Next
             // 
-            this.pbPlummy1Next.Image = global::RevivalGF.UI.Properties.Resources.nextbutton;
             resources.ApplyResources(this.pbPlummy1Next, "pbPlummy1Next");
+            this.pbPlummy1Next.Image = global::RevivalGF.UI.Properties.Resources.nextbutton;
             this.pbPlummy1Next.Name = "pbPlummy1Next";
             this.pbPlummy1Next.TabStop = false;
             this.pbPlummy1Next.DoubleClick += new System.EventHandler(this.pbPlummy1Next_DoubleClick);
@@ -329,20 +329,20 @@
             // 
             // pictureBox13
             // 
+            resources.ApplyResources(this.pictureBox13, "pictureBox13");
             this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox13.Image = global::RevivalGF.UI.Properties.Resources.plummy4;
-            resources.ApplyResources(this.pictureBox13, "pictureBox13");
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.TabStop = false;
             // 
             // gbPlummy5v2
             // 
+            resources.ApplyResources(this.gbPlummy5v2, "gbPlummy5v2");
             this.gbPlummy5v2.BackColor = System.Drawing.Color.Transparent;
             this.gbPlummy5v2.Controls.Add(this.richTextBox6);
             this.gbPlummy5v2.Controls.Add(this.pbPlummyNext5);
             this.gbPlummy5v2.Controls.Add(this.pictureBox7);
             this.gbPlummy5v2.Controls.Add(this.pictureBox8);
-            resources.ApplyResources(this.gbPlummy5v2, "gbPlummy5v2");
             this.gbPlummy5v2.Name = "gbPlummy5v2";
             this.gbPlummy5v2.TabStop = false;
             // 
@@ -354,24 +354,24 @@
             // 
             // pbPlummyNext5
             // 
-            this.pbPlummyNext5.Image = global::RevivalGF.UI.Properties.Resources.nextbutton;
             resources.ApplyResources(this.pbPlummyNext5, "pbPlummyNext5");
+            this.pbPlummyNext5.Image = global::RevivalGF.UI.Properties.Resources.nextbutton;
             this.pbPlummyNext5.Name = "pbPlummyNext5";
             this.pbPlummyNext5.TabStop = false;
             this.pbPlummyNext5.DoubleClick += new System.EventHandler(this.pbPlummyNext5_DoubleClick);
             // 
             // pictureBox7
             // 
+            resources.ApplyResources(this.pictureBox7, "pictureBox7");
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Image = global::RevivalGF.UI.Properties.Resources.plummy4;
-            resources.ApplyResources(this.pictureBox7, "pictureBox7");
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.TabStop = false;
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = global::RevivalGF.UI.Properties.Resources.arrow;
             resources.ApplyResources(this.pictureBox8, "pictureBox8");
+            this.pictureBox8.Image = global::RevivalGF.UI.Properties.Resources.arrow;
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.TabStop = false;
             // 
@@ -389,19 +389,19 @@
             // 
             // gbPlummy2
             // 
+            resources.ApplyResources(this.gbPlummy2, "gbPlummy2");
             this.gbPlummy2.BackColor = System.Drawing.Color.Transparent;
             this.gbPlummy2.Controls.Add(this.pbPlummy2Next);
             this.gbPlummy2.Controls.Add(this.richTextBox2);
             this.gbPlummy2.Controls.Add(this.pictureBox14);
             this.gbPlummy2.Controls.Add(this.pictureBox16);
-            resources.ApplyResources(this.gbPlummy2, "gbPlummy2");
             this.gbPlummy2.Name = "gbPlummy2";
             this.gbPlummy2.TabStop = false;
             // 
             // pbPlummy2Next
             // 
-            this.pbPlummy2Next.Image = global::RevivalGF.UI.Properties.Resources.nextbutton;
             resources.ApplyResources(this.pbPlummy2Next, "pbPlummy2Next");
+            this.pbPlummy2Next.Image = global::RevivalGF.UI.Properties.Resources.nextbutton;
             this.pbPlummy2Next.Name = "pbPlummy2Next";
             this.pbPlummy2Next.TabStop = false;
             this.pbPlummy2Next.DoubleClick += new System.EventHandler(this.pbPlummy2Next_DoubleClick);
@@ -414,24 +414,24 @@
             // 
             // pictureBox14
             // 
+            resources.ApplyResources(this.pictureBox14, "pictureBox14");
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox14.Image = global::RevivalGF.UI.Properties.Resources.plummyv2;
-            resources.ApplyResources(this.pictureBox14, "pictureBox14");
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.TabStop = false;
             // 
             // pictureBox16
             // 
-            this.pictureBox16.Image = global::RevivalGF.UI.Properties.Resources.arrow;
             resources.ApplyResources(this.pictureBox16, "pictureBox16");
+            this.pictureBox16.Image = global::RevivalGF.UI.Properties.Resources.arrow;
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.TabStop = false;
             // 
             // pictureBox11
             // 
+            resources.ApplyResources(this.pictureBox11, "pictureBox11");
             this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox11.Image = global::RevivalGF.UI.Properties.Resources.attention;
-            resources.ApplyResources(this.pictureBox11, "pictureBox11");
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.TabStop = false;
             // 
@@ -443,26 +443,26 @@
             // 
             // pbAddWater
             // 
+            resources.ApplyResources(this.pbAddWater, "pbAddWater");
             this.pbAddWater.BackColor = System.Drawing.Color.Transparent;
             this.pbAddWater.Image = global::RevivalGF.UI.Properties.Resources.plus;
-            resources.ApplyResources(this.pbAddWater, "pbAddWater");
             this.pbAddWater.Name = "pbAddWater";
             this.pbAddWater.TabStop = false;
             this.pbAddWater.Click += new System.EventHandler(this.pbAddWater_Click_1);
             // 
             // pbMinusWater
             // 
+            resources.ApplyResources(this.pbMinusWater, "pbMinusWater");
             this.pbMinusWater.BackColor = System.Drawing.Color.Transparent;
             this.pbMinusWater.Image = global::RevivalGF.UI.Properties.Resources.minus;
-            resources.ApplyResources(this.pbMinusWater, "pbMinusWater");
             this.pbMinusWater.Name = "pbMinusWater";
             this.pbMinusWater.TabStop = false;
             this.pbMinusWater.Click += new System.EventHandler(this.pbMinusWater_Click_1);
             // 
             // pbWater
             // 
-            this.pbWater.Image = global::RevivalGF.UI.Properties.Resources.watergif;
             resources.ApplyResources(this.pbWater, "pbWater");
+            this.pbWater.Image = global::RevivalGF.UI.Properties.Resources.watergif;
             this.pbWater.Name = "pbWater";
             this.pbWater.TabStop = false;
             // 
@@ -582,68 +582,68 @@
             // 
             // pictureBox2
             // 
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::RevivalGF.UI.Properties.Resources.blue_button_clip_art_clkerm_vector_clip_art_5;
-            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.TabStop = false;
             // 
             // pbSettings
             // 
+            resources.ApplyResources(this.pbSettings, "pbSettings");
             this.pbSettings.BackColor = System.Drawing.Color.Transparent;
             this.pbSettings.Image = global::RevivalGF.UI.Properties.Resources.Windows_Settings_app_icon;
-            resources.ApplyResources(this.pbSettings, "pbSettings");
             this.pbSettings.Name = "pbSettings";
             this.pbSettings.TabStop = false;
             this.pbSettings.DoubleClick += new System.EventHandler(this.pbSettings_DoubleClick);
             // 
             // pictureBox5
             // 
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::RevivalGF.UI.Properties.Resources.blue_button_clip_art_clkerm_vector_clip_art_5;
-            resources.ApplyResources(this.pictureBox5, "pictureBox5");
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.TabStop = false;
             // 
             // pictureBox3
             // 
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::RevivalGF.UI.Properties.Resources.blue_button_clip_art_clkerm_vector_clip_art_5;
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox6
             // 
+            resources.ApplyResources(this.pictureBox6, "pictureBox6");
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Image = global::RevivalGF.UI.Properties.Resources.blue_button_clip_art_clkerm_vector_clip_art_5;
-            resources.ApplyResources(this.pictureBox6, "pictureBox6");
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.TabStop = false;
             // 
             // pictureBox4
             // 
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::RevivalGF.UI.Properties.Resources.blue_button_clip_art_clkerm_vector_clip_art_5;
-            resources.ApplyResources(this.pictureBox4, "pictureBox4");
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.TabStop = false;
             // 
             // pbAvatar
             // 
+            resources.ApplyResources(this.pbAvatar, "pbAvatar");
             this.pbAvatar.BackColor = System.Drawing.Color.MistyRose;
             this.pbAvatar.Image = global::RevivalGF.UI.Properties.Resources.avatar_women;
-            resources.ApplyResources(this.pbAvatar, "pbAvatar");
             this.pbAvatar.Name = "pbAvatar";
             this.pbAvatar.TabStop = false;
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.lblSuggestionAttention);
             this.groupBox1.Controls.Add(this.lblRecipesAttention);
             this.groupBox1.Controls.Add(this.lblMedicationAttention);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
@@ -664,24 +664,24 @@
             // 
             // pictureBox12
             // 
-            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             resources.ApplyResources(this.pictureBox12, "pictureBox12");
+            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.TabStop = false;
             // 
             // ProgressBarWater
             // 
+            resources.ApplyResources(this.ProgressBarWater, "ProgressBarWater");
             this.ProgressBarWater.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ProgressBarWater.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            resources.ApplyResources(this.ProgressBarWater, "ProgressBarWater");
             this.ProgressBarWater.Name = "ProgressBarWater";
             // 
             // circularProgressBarCalorie
             // 
+            resources.ApplyResources(this.circularProgressBarCalorie, "circularProgressBarCalorie");
             this.circularProgressBarCalorie.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
             this.circularProgressBarCalorie.AnimationSpeed = 500;
             this.circularProgressBarCalorie.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.circularProgressBarCalorie, "circularProgressBarCalorie");
             this.circularProgressBarCalorie.ForeColor = System.Drawing.Color.White;
             this.circularProgressBarCalorie.InnerColor = System.Drawing.Color.Transparent;
             this.circularProgressBarCalorie.InnerMargin = 2;
@@ -708,9 +708,9 @@
             // 
             // pbTick
             // 
+            resources.ApplyResources(this.pbTick, "pbTick");
             this.pbTick.BackColor = System.Drawing.Color.Transparent;
             this.pbTick.Image = global::RevivalGF.UI.Properties.Resources.verrification;
-            resources.ApplyResources(this.pbTick, "pbTick");
             this.pbTick.Name = "pbTick";
             this.pbTick.TabStop = false;
             // 
@@ -722,10 +722,10 @@
             this.Controls.Add(this.gbPlummy6);
             this.Controls.Add(this.gbPlummy5v2);
             this.Controls.Add(this.gbPlummy4);
+            this.Controls.Add(this.gbPlummy2);
             this.Controls.Add(this.pbTick);
             this.Controls.Add(this.circularProgressBarCalorie);
             this.Controls.Add(this.ProgressBarWater);
-            this.Controls.Add(this.gbPlummy2);
             this.Controls.Add(this.gbPlummy3);
             this.Controls.Add(this.gbPlummy1);
             this.Controls.Add(this.label20);

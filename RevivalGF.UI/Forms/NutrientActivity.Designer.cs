@@ -88,39 +88,40 @@
             // 
             // pbNext
             // 
+            resources.ApplyResources(this.pbNext, "pbNext");
             this.pbNext.BackColor = System.Drawing.Color.Transparent;
             this.pbNext.Image = global::RevivalGF.UI.Properties.Resources.sustenium;
-            resources.ApplyResources(this.pbNext, "pbNext");
             this.pbNext.Name = "pbNext";
             this.pbNext.TabStop = false;
             this.pbNext.DoubleClick += new System.EventHandler(this.pbNext_DoubleClick);
             // 
             // pictureBox4
             // 
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = global::RevivalGF.UI.Properties.Resources.fat;
-            resources.ApplyResources(this.pictureBox4, "pictureBox4");
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox5
             // 
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = global::RevivalGF.UI.Properties.Resources.protein;
-            resources.ApplyResources(this.pictureBox5, "pictureBox5");
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.TabStop = false;
             // 
             // pictureBox6
             // 
+            resources.ApplyResources(this.pictureBox6, "pictureBox6");
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Image = global::RevivalGF.UI.Properties.Resources.carbo;
-            resources.ApplyResources(this.pictureBox6, "pictureBox6");
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.TabStop = false;
             // 
             // groupBox1
             // 
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.lblActivityInput);
             this.groupBox1.Controls.Add(this.pbActvity);
@@ -149,7 +150,6 @@
             this.groupBox1.Controls.Add(this.lblFoodCarbonhydrate);
             this.groupBox1.Controls.Add(this.lblMealName);
             this.groupBox1.Controls.Add(this.lblFoodCalorie);
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             this.groupBox1.UseCompatibleTextRendering = true;
@@ -163,32 +163,32 @@
             // 
             // pbActvity
             // 
-            this.pbActvity.Image = global::RevivalGF.UI.Properties.Resources.blue_button_clip_art_clkerm_vector_clip_art_5;
             resources.ApplyResources(this.pbActvity, "pbActvity");
+            this.pbActvity.Image = global::RevivalGF.UI.Properties.Resources.blue_button_clip_art_clkerm_vector_clip_art_5;
             this.pbActvity.Name = "pbActvity";
             this.pbActvity.TabStop = false;
             // 
             // dgwEatens
             // 
+            resources.ApplyResources(this.dgwEatens, "dgwEatens");
             this.dgwEatens.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgwEatens.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.dgwEatens, "dgwEatens");
             this.dgwEatens.Name = "dgwEatens";
             this.dgwEatens.RowTemplate.Height = 24;
             this.dgwEatens.SelectionChanged += new System.EventHandler(this.dgwEatens_SelectionChanged);
             // 
             // btnShow
             // 
-            this.btnShow.BackColor = System.Drawing.Color.Snow;
             resources.ApplyResources(this.btnShow, "btnShow");
+            this.btnShow.BackColor = System.Drawing.Color.Snow;
             this.btnShow.Name = "btnShow";
             this.btnShow.UseVisualStyleBackColor = false;
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.Snow;
             resources.ApplyResources(this.btnAdd, "btnAdd");
+            this.btnAdd.BackColor = System.Drawing.Color.Snow;
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -196,8 +196,8 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.Snow;
             resources.ApplyResources(this.btnDelete, "btnDelete");
+            this.btnDelete.BackColor = System.Drawing.Color.Snow;
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -212,8 +212,8 @@
             // 
             // nudPortion
             // 
-            this.nudPortion.DecimalPlaces = 2;
             resources.ApplyResources(this.nudPortion, "nudPortion");
+            this.nudPortion.DecimalPlaces = 2;
             this.nudPortion.Increment = new decimal(new int[] {
             25,
             0,
@@ -230,9 +230,9 @@
             // 
             // dgwFoods
             // 
+            resources.ApplyResources(this.dgwFoods, "dgwFoods");
             this.dgwFoods.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dgwFoods.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.dgwFoods, "dgwFoods");
             this.dgwFoods.Name = "dgwFoods";
             this.dgwFoods.RowTemplate.Height = 24;
             this.dgwFoods.SelectionChanged += new System.EventHandler(this.dgwFoods_SelectionChanged);
@@ -350,9 +350,9 @@
             // 
             // pictureBox3
             // 
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::RevivalGF.UI.Properties.Resources.glutenpng;
-            resources.ApplyResources(this.pictureBox3, "pictureBox3");
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.TabStop = false;
             // 

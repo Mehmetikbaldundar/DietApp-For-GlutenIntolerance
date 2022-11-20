@@ -133,6 +133,9 @@
     <EmbeddedResource Include="Forms\Activitytab.resx">
       <DependentUpon>Activitytab.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Activitytab.tr-TR.resx">
+      <DependentUpon>Activitytab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

@@ -88,5 +88,7 @@ namespace RevivalGF.UI.Forms
         {
             Application.Exit();
         }
+
+        
     }
 }
