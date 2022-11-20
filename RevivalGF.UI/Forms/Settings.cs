@@ -26,56 +26,9 @@ namespace RevivalGF.UI.Forms
 
         private void pbNext_DoubleClick(object sender, EventArgs e)
         {
-            /* Forms.MainForm main=new MainForm();
+            Forms.MainForm main=new MainForm();
              main.Show();
-             this.Hide();*/
-        }
-
-        private void lblSaveChanges_Click(object sender, EventArgs e)
-        {
-            var user = Login.userNameControl;
-            var userDetails = userService.GetUserDetails(Login.userNameControl);
-            var physicallyGoal = userService.GetPhysicallyGoal(Login.userNameControl);
-            var bodyAnalysis = userService.GetBodyAnalysis(Login.userNameControl);
-            if (tbPassword.Text != tbRepeatPasswprd.Text)
-            {
-                MessageBox.Show("Passwords do not match");
-                return;
-            }
-
-            try
-            {
-                user.UserName = tbUsername.Text;
-                user.Password = tbPassword.Text;
-
-                userDetails.Email = tbEmail.Text;
-                userDetails.Name = tbFirstName.Text.Trim();
-                userDetails.Surname = tbLastName.Text.Trim();
-                userDetails.Gender = rdbWomen.Checked ? Gender.Woman : Gender.Man;
-                userDetails.Height = Convert.ToDouble(tbHeight.Text);
-                userDetails.Weight = Convert.ToDouble(tbWeight.Text);
-                userDetails.BirthDate = Convert.ToDateTime(dtpBirthDate.Value);
-
-                physicallyGoal.ActivityStatus = (ActivityStatus)cbActivityLevel.SelectedIndex + 1;
-                physicallyGoal.TargetedDiet = (TargetedDiet)cbGoal.SelectedIndex + 1;
-
-                bodyAnalysis.BodyMassIndex = userService.BodyMassIndexResult(userDetails);
-                bodyAnalysis.DietCalorieControl = userService.DailyCalorieCalculator(userDetails, physicallyGoal);
-
-                bool check = userService.UpdateCheck(user, userDetails, physicallyGoal, bodyAnalysis, tbEmail.Text, tbUsername.Text);
-                if (check)
-                    chkEnable.Checked = false;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        private void Settings_Load(object sender, EventArgs e)
-        {
-            FormLoadConfig();                       
-                rdbTr.CheckedChanged += new EventHandler(radioButtons_CheckedChanged);            
-                // tdbEng.CheckedChanged += new EventHandler(radioButtons_CheckedChanged);
+             this.Hide();
         }
         private void FormLoadConfig()
         {
@@ -123,15 +76,81 @@ namespace RevivalGF.UI.Forms
             lblResetAccount.Enabled = false;
             lblDeleteAccount.Enabled = false;
         }
-        private void tbHeight_KeyPress(object sender, KeyPressEventArgs e)
+        private void radioButtons_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+            var changeLanguage = new ChangeLanguage();
+            if (radioButton.Checked)
+            {
+                DialogResult yesNoQuestion = MessageBox.Show("Language has changed.. Application Will Restart", "Warning", MessageBoxButtons.YesNo);
+                if(yesNoQuestion == DialogResult.Yes)
+                {
+                    if (rdbTr.Checked)
+                        changeLanguage.UpdateConfig("language", "tr-TR");
+                    else
+                        changeLanguage.UpdateConfig("language", "en");
+
+                    Application.Restart();
+                }
+                else
+                    MessageBox.Show("language changing aborted");
+            }
+        }
+        private void lblSaveChanges_Click_1(object sender, EventArgs e)
+        {
+            var user = Login.userNameControl;
+            var userDetails = userService.GetUserDetails(Login.userNameControl);
+            var physicallyGoal = userService.GetPhysicallyGoal(Login.userNameControl);
+            var bodyAnalysis = userService.GetBodyAnalysis(Login.userNameControl);
+            if (tbPassword.Text != tbRepeatPasswprd.Text)
+            {
+                MessageBox.Show("Passwords do not match");
+                return;
+            }
+
+            try
+            {
+                user.UserName = tbUsername.Text;
+                user.Password = tbPassword.Text;
+
+                userDetails.Email = tbEmail.Text;
+                userDetails.Name = tbFirstName.Text.Trim();
+                userDetails.Surname = tbLastName.Text.Trim();
+                userDetails.Gender = rdbWomen.Checked ? Gender.Woman : Gender.Man;
+                userDetails.Height = Convert.ToDouble(tbHeight.Text);
+                userDetails.Weight = Convert.ToDouble(tbWeight.Text);
+                userDetails.BirthDate = Convert.ToDateTime(dtpBirthDate.Value);
+
+                physicallyGoal.ActivityStatus = (ActivityStatus)cbActivityLevel.SelectedIndex + 1;
+                physicallyGoal.TargetedDiet = (TargetedDiet)cbGoal.SelectedIndex + 1;
+
+                bodyAnalysis.BodyMassIndex = userService.BodyMassIndexResult(userDetails);
+                bodyAnalysis.DietCalorieControl = userService.DailyCalorieCalculator(userDetails, physicallyGoal);
+
+                bool check = userService.UpdateCheck(user, userDetails, physicallyGoal, bodyAnalysis, tbEmail.Text, tbUsername.Text);
+                if (check)
+                    chkEnable.Checked = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void Settings_Load_1(object sender, EventArgs e)
+        {
+            FormLoadConfig();
+            rdbTr.CheckedChanged += new EventHandler(radioButtons_CheckedChanged);
+            // tdbEng.CheckedChanged += new EventHandler(radioButtons_CheckedChanged);
+        }
+        private void tbHeight_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
-        private void tbWeight_KeyPress(object sender, KeyPressEventArgs e)
+        private void tbWeight_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
-        private void chkEnable_CheckedChanged(object sender, EventArgs e)
+        private void chkEnable_CheckedChanged_1(object sender, EventArgs e)
         {
             if (chkEnable.Checked == true)
             {
@@ -165,41 +184,29 @@ namespace RevivalGF.UI.Forms
                 chkEnable.Checked = false;
                 FormLoadConfig();
             }
-
         }
-        private void tbPassword_MouseClick(object sender, MouseEventArgs e)
+        private void tbPassword_MouseClick_1(object sender, MouseEventArgs e)
         {
             tbPassword.Clear();
             tbPassword.UseSystemPasswordChar = true;
         }
-        private void rdbDark_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void tbRepeatPasswprd_MouseClick(object sender, MouseEventArgs e)
+        private void tbRepeatPasswprd_MouseClick_1(object sender, MouseEventArgs e)
         {
             tbRepeatPasswprd.Clear();
             tbRepeatPasswprd.UseSystemPasswordChar = true;
         }
-        private void radioButtons_CheckedChanged(object sender, EventArgs e)
+        private void rdbDark_CheckedChanged_1(object sender, EventArgs e)
         {
-            RadioButton radioButton = sender as RadioButton;
-            var changeLanguage = new ChangeLanguage();
-            if (radioButton.Checked)
-            {
-                DialogResult yesNoQuestion = MessageBox.Show("Language has changed.. Application Will Restart", "Warning", MessageBoxButtons.YesNo);
-                if(yesNoQuestion == DialogResult.Yes)
-                {
-                    if (rdbTr.Checked)
-                        changeLanguage.UpdateConfig("language", "tr-TR");
-                    else
-                        changeLanguage.UpdateConfig("language", "en");
 
-                    Application.Restart();
-                }
-                else
-                    MessageBox.Show("language changing aborted");
-            }
+        }
+        private void rdbLight_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Settings_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

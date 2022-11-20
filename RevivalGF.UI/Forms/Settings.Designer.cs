@@ -104,11 +104,13 @@
             this.lblSaveChanges.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.lblSaveChanges.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblSaveChanges.Name = "lblSaveChanges";
+            this.lblSaveChanges.Click += new System.EventHandler(this.lblSaveChanges_Click_1);
             // 
             // tbRepeatPasswprd
             // 
             resources.ApplyResources(this.tbRepeatPasswprd, "tbRepeatPasswprd");
             this.tbRepeatPasswprd.Name = "tbRepeatPasswprd";
+            this.tbRepeatPasswprd.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbRepeatPasswprd_MouseClick_1);
             // 
             // tbEmail
             // 
@@ -119,6 +121,7 @@
             // 
             resources.ApplyResources(this.tbPassword, "tbPassword");
             this.tbPassword.Name = "tbPassword";
+            this.tbPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.tbPassword_MouseClick_1);
             // 
             // tbUsername
             // 
@@ -181,6 +184,7 @@
             // 
             resources.ApplyResources(this.tbWeight, "tbWeight");
             this.tbWeight.Name = "tbWeight";
+            this.tbWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbWeight_KeyPress_1);
             // 
             // tbLastName
             // 
@@ -191,6 +195,7 @@
             // 
             resources.ApplyResources(this.tbHeight, "tbHeight");
             this.tbHeight.Name = "tbHeight";
+            this.tbHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbHeight_KeyPress_1);
             // 
             // tbFirstName
             // 
@@ -265,6 +270,7 @@
             this.rdbLight.Name = "rdbLight";
             this.rdbLight.TabStop = true;
             this.rdbLight.UseVisualStyleBackColor = true;
+            this.rdbLight.CheckedChanged += new System.EventHandler(this.rdbLight_CheckedChanged);
             // 
             // rdbDark
             // 
@@ -272,6 +278,7 @@
             this.rdbDark.Name = "rdbDark";
             this.rdbDark.TabStop = true;
             this.rdbDark.UseVisualStyleBackColor = true;
+            this.rdbDark.CheckedChanged += new System.EventHandler(this.rdbDark_CheckedChanged_1);
             // 
             // groupBox1
             // 
@@ -328,6 +335,7 @@
             resources.ApplyResources(this.chkEnable, "chkEnable");
             this.chkEnable.Name = "chkEnable";
             this.chkEnable.UseVisualStyleBackColor = true;
+            this.chkEnable.CheckedChanged += new System.EventHandler(this.chkEnable_CheckedChanged_1);
             // 
             // Settings
             // 
@@ -369,6 +377,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Settings";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Settings_FormClosed);
+            this.Load += new System.EventHandler(this.Settings_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pbNext)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
