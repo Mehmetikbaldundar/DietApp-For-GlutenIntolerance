@@ -33,9 +33,10 @@ namespace RevivalGF.UI.Forms
             _mealReportsRepository = new MealReportsRepository(db);
             userService = new UserService();
             reportService = new ReportService();
-
+            
             InitializeComponent();
         }
+    
         private void pbNext_DoubleClick(object sender, EventArgs e)
         {
             MainForm main = new MainForm();
@@ -46,6 +47,7 @@ namespace RevivalGF.UI.Forms
         {
             cbCategories.DataSource = Enum.GetValues(typeof(MealCategories));
             var mealList = new List<Meal>();
+            userService.UserTheme(Login.userNameControl, this, Properties.Resources.main, Properties.Resources.Dark_main);
             DailyCalorie();
             btnAdd.Enabled= false;
             NutrientCalculator();

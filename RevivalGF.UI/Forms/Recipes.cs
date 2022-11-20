@@ -18,7 +18,9 @@ namespace RevivalGF.UI.Forms
         {
             InitializeComponent();
             mealService = new MealService();
+            userService= new UserService();
         }
+        UserService userService;
         MealService mealService;
     
 
@@ -32,6 +34,7 @@ namespace RevivalGF.UI.Forms
         private void Recipes_Load_1(object sender, EventArgs e)
         {
             mealService.GetMealsForRecipe(cbRecipes);
+            userService.UserTheme(Login.userNameControl, this, Properties.Resources.main, Properties.Resources.Dark_main);
         }
 
         private void cbRecipes_SelectedIndexChanged_1(object sender, EventArgs e)

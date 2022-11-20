@@ -306,6 +306,15 @@
   <ItemGroup>
     <None Include="Resources\Windows_Settings_app_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dark_blue-button-clip-art-clkerm-vector-clip-art-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dark_main.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dark_medicationform.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

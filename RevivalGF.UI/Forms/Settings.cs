@@ -2,6 +2,7 @@
 using RevivalGF.Business.Services;
 using RevivalGF.Entites.Concrete;
 using RevivalGF.Entites.Enums;
+using RevivalGF.UI.Properties;
 using System;
 using System.CodeDom.Compiler;
 using System.Collections.Generic;
@@ -26,9 +27,9 @@ namespace RevivalGF.UI.Forms
 
         private void pbNext_DoubleClick(object sender, EventArgs e)
         {
-            Forms.MainForm main=new MainForm();
-             main.Show();
-             this.Hide();
+            Forms.MainForm main = new MainForm();
+            main.Show();
+            this.Hide();
         }
         private void FormLoadConfig()
         {
@@ -75,25 +76,85 @@ namespace RevivalGF.UI.Forms
             lblSaveChanges.Enabled = false;
             lblResetAccount.Enabled = false;
             lblDeleteAccount.Enabled = false;
+            if (Login.userNameControl.AppLanguage == true)
+            {
+                rdbTr.CheckedChanged += new EventHandler(radioButtons_CheckedChanged);                
+                tdbEng.Checked = true;
+                tdbEng.Enabled = false;
+            }
+            else
+            {
+                tdbEng.CheckedChanged += new EventHandler(radioButtons_CheckedChanged);
+                rdbTr.Checked= true;
+                rdbTr.Enabled= false;
+            }
+
+            if (Login.userNameControl.AppTheme == true)
+            {
+                rdbDark.CheckedChanged += new EventHandler(radioButtons_Theme_CheckedChanged);
+                rdbLight.Checked = true;
+                rdbLight.Enabled = false;
+            }
+            else
+            {
+                rdbLight.CheckedChanged += new EventHandler(radioButtons_Theme_CheckedChanged);
+                rdbDark.Checked = true;
+                rdbDark.Enabled = false;
+            }
+
+
         }
         private void radioButtons_CheckedChanged(object sender, EventArgs e)
         {
+            var user = Login.userNameControl;
             RadioButton radioButton = sender as RadioButton;
             var changeLanguage = new ChangeLanguage();
             if (radioButton.Checked)
             {
                 DialogResult yesNoQuestion = MessageBox.Show("Language has changed.. Application Will Restart", "Warning", MessageBoxButtons.YesNo);
-                if(yesNoQuestion == DialogResult.Yes)
+                if (yesNoQuestion == DialogResult.Yes)
                 {
                     if (rdbTr.Checked)
+                    {
                         changeLanguage.UpdateConfig("language", "tr-TR");
+                        user.AppLanguage = false;
+                        userService.Language_Theme_Update(user);
+                    }
                     else
+                    {
                         changeLanguage.UpdateConfig("language", "en");
-
+                        user.AppLanguage = true;
+                        userService.Language_Theme_Update(user);
+                    }
                     Application.Restart();
                 }
                 else
                     MessageBox.Show("language changing aborted");
+            }
+        }
+        private void radioButtons_Theme_CheckedChanged(object sender, EventArgs e)
+        {
+            var user = Login.userNameControl;
+            RadioButton radioButton = sender as RadioButton;            
+            if (radioButton.Checked)
+            {
+                DialogResult yesNoQuestion = MessageBox.Show("Theme has changed.. Application Will Restart", "Warning", MessageBoxButtons.YesNo);
+                if (yesNoQuestion == DialogResult.Yes)
+                {
+                    if (rdbDark.Checked)
+                    {                        
+                        user.AppTheme = false;
+                        userService.Language_Theme_Update(user);
+                    }
+                    else
+                    {                        
+                        user.AppTheme = true;
+                        userService.Language_Theme_Update(user);
+                    }
+                    Application.Restart();
+                }
+                else
+                    MessageBox.Show("Theme changing aborted");
             }
         }
         private void lblSaveChanges_Click_1(object sender, EventArgs e)
@@ -139,8 +200,15 @@ namespace RevivalGF.UI.Forms
         private void Settings_Load_1(object sender, EventArgs e)
         {
             FormLoadConfig();
-            rdbTr.CheckedChanged += new EventHandler(radioButtons_CheckedChanged);
-            // tdbEng.CheckedChanged += new EventHandler(radioButtons_CheckedChanged);
+            switch (Login.userNameControl.AppTheme)
+            {
+                case true:
+                    BackColor = Color.Silver;
+                    break;
+                case false:
+                    BackColor = Color.DimGray;
+                    break;
+            }
         }
         private void tbHeight_KeyPress_1(object sender, KeyPressEventArgs e)
         {
@@ -195,15 +263,6 @@ namespace RevivalGF.UI.Forms
             tbRepeatPasswprd.Clear();
             tbRepeatPasswprd.UseSystemPasswordChar = true;
         }
-        private void rdbDark_CheckedChanged_1(object sender, EventArgs e)
-        {
-
-        }
-        private void rdbLight_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Settings_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();

@@ -37,7 +37,7 @@ namespace RevivalGF.UI.Forms
         {
             var userNameControl = Login.userNameControl;
             var userdetails = waterService.GetUserDetails(userNameControl);
-            
+            userService.UserTheme(userNameControl, this, Properties.Resources.main, Properties.Resources.Dark_main);
             if (userNameControl.Tutorial==true)
             {
                 gbPlummy1.Visible = true;
@@ -214,7 +214,6 @@ namespace RevivalGF.UI.Forms
                 circularProgressBarCalorie.Value = 100;
                 circularProgressBarCalorie.Text = "100 %";
             }
-
         }
         #endregion
     }

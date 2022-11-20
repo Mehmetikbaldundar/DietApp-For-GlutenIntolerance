@@ -22,5 +22,7 @@ namespace RevivalGF.Entites.Abstract
         List<Water> Waters { get; set; }
         UserDetails UserDetails { get; set; }
         bool Tutorial { get; set; }
+        bool AppLanguage { get; set; }
+        bool AppTheme { get; set; }
     }
 }

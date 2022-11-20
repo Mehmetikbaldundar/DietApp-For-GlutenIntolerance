@@ -270,7 +270,6 @@
             this.rdbLight.Name = "rdbLight";
             this.rdbLight.TabStop = true;
             this.rdbLight.UseVisualStyleBackColor = true;
-            this.rdbLight.CheckedChanged += new System.EventHandler(this.rdbLight_CheckedChanged);
             // 
             // rdbDark
             // 
@@ -278,7 +277,6 @@
             this.rdbDark.Name = "rdbDark";
             this.rdbDark.TabStop = true;
             this.rdbDark.UseVisualStyleBackColor = true;
-            this.rdbDark.CheckedChanged += new System.EventHandler(this.rdbDark_CheckedChanged_1);
             // 
             // groupBox1
             // 
@@ -341,6 +339,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.Controls.Add(this.chkEnable);
             this.Controls.Add(this.dtpBirthDate);
             this.Controls.Add(this.pbNext);

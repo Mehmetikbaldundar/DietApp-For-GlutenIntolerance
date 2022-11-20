@@ -12,12 +12,18 @@ namespace RevivalGF.UI.Forms
         {
             InitializeComponent();
             activityService = new ActivityService();
+            userService= new UserService();
         }
+        UserService userService;
         ActivityService activityService;
         private void Activity_Load(object sender, EventArgs e)
         {
             cbActivity.DataSource = Enum.GetValues(typeof(Activities));
-            activityService.DailyActivities(dataGridView1, Login.userNameControl);
+            activityService.DailyActivities(dataGridView1, Login.userNameControl);            
+            activityService.CalorieBurn(lblSportCalorie, Login.userNameControl);
+            
+            userService.UserTheme(Login.userNameControl, this, Properties.Resources.main, Properties.Resources.Dark_main);
+            
             sportCalorie = Convert.ToDecimal(activityService.CalorieBurn(lblSportCalorie, Login.userNameControl));
         }
         public static decimal sportCalorie;
