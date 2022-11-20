@@ -98,8 +98,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblSuggestionAttention = new System.Windows.Forms.Label();
             this.lblRecipesAttention = new System.Windows.Forms.Label();
-            this.lblGlutenAttention = new System.Windows.Forms.Label();
-            this.lblWaterAttention = new System.Windows.Forms.Label();
             this.lblMedicationAttention = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.ProgressBarWater = new System.Windows.Forms.ProgressBar();
@@ -644,8 +642,6 @@
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.lblSuggestionAttention);
             this.groupBox1.Controls.Add(this.lblRecipesAttention);
-            this.groupBox1.Controls.Add(this.lblGlutenAttention);
-            this.groupBox1.Controls.Add(this.lblWaterAttention);
             this.groupBox1.Controls.Add(this.lblMedicationAttention);
             resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
@@ -660,16 +656,6 @@
             // 
             resources.ApplyResources(this.lblRecipesAttention, "lblRecipesAttention");
             this.lblRecipesAttention.Name = "lblRecipesAttention";
-            // 
-            // lblGlutenAttention
-            // 
-            resources.ApplyResources(this.lblGlutenAttention, "lblGlutenAttention");
-            this.lblGlutenAttention.Name = "lblGlutenAttention";
-            // 
-            // lblWaterAttention
-            // 
-            resources.ApplyResources(this.lblWaterAttention, "lblWaterAttention");
-            this.lblWaterAttention.Name = "lblWaterAttention";
             // 
             // lblMedicationAttention
             // 
@@ -774,8 +760,8 @@
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pbAvatar);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox12);
+            this.Controls.Add(this.groupBox1);
             this.Name = "MainForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -897,8 +883,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblSuggestionAttention;
         private System.Windows.Forms.Label lblRecipesAttention;
-        private System.Windows.Forms.Label lblGlutenAttention;
-        private System.Windows.Forms.Label lblWaterAttention;
         private System.Windows.Forms.Label lblMedicationAttention;
         private System.Windows.Forms.PictureBox pictureBox12;
         public System.Windows.Forms.ProgressBar ProgressBarWater;

@@ -21,16 +21,18 @@ namespace RevivalGF.UI.Forms
 {
     public partial class MainForm : Form
     {
-
         public MainForm()
         {
             userService = new UserService();
             waterService=new WaterService();
+            reportService= new ReportService();
             InitializeComponent();
         }
         UserService userService;
         WaterService waterService;
-       
+        ReportService reportService;
+
+        public static decimal currentNecessaryCalories; //The required calories, which change with the sports and the food that the user eats.
         private void MainForm_Load(object sender, EventArgs e)
         {
             var userNameControl = Login.userNameControl;
@@ -56,8 +58,11 @@ namespace RevivalGF.UI.Forms
             lblAge.Text = (DateTime.Now.Year - userdetails.BirthDate.Year).ToString();        
             lblHeight.Text = userdetails.Height.ToString() + " " + "cm";
             lblWeight.Text = userdetails.Weight.ToString() + " " + "kg";
-            lblIdealWeight.Text = Math.Round(IdealWeight(userdetails)).ToString() + " " + "kg";
+            lblIdealWeight.Text = Math.Round(reportService.IdealWeight(userdetails)).ToString() + " " + "kg";
             lblDisease.Text = userdetails.GlutenIntolerance.ToString();
+
+            lblGluten.Text = reportService.GlutenQuery(userNameControl);
+            lblMedicationAttention.Text = reportService.MedicineQuery(userNameControl);
 
             if ((int)userdetails.Gender==1)
             {
@@ -67,13 +72,17 @@ namespace RevivalGF.UI.Forms
             {
                 pbAvatar.Image = Properties.Resources.avatar_women;
             }
-
             int glasscount = waterService.WaterCount(userNameControl);
             int waterml = glasscount * 250;
             lblWaterInfo.Text = glasscount.ToString() + " glass = " + waterml + " mL";
-            ProgressBar(glasscount);            
+            ProgressBar(glasscount);
+            decimal necessaryCalorie = userService.GetBodyAnalysis(userNameControl).DietCalorieControl;
+            currentNecessaryCalories = reportService.CalorieUpdate(Activitytab.sportCalorie, necessaryCalorie);
+            CircularProgressbar();
         }
-        #region PlummySection
+
+        //The events here will only work when the Plummy feature is active.
+        #region PlummySection     
         private void pbPlummy1Next_DoubleClick(object sender, EventArgs e)
         {
             gbPlummy1.Visible = false;
@@ -111,69 +120,48 @@ namespace RevivalGF.UI.Forms
         }
         #endregion
 
- 
+        #region TransitionEventsBetweenForms
         private void lblNutrientandActivity_Click(object sender, EventArgs e)
         {
-           Forms.NutrientActivity nutact = new NutrientActivity();
-            
-            this.Hide();
-            nutact.Show();            
-            
+            NutrientActivity nutact = new NutrientActivity();
+            Hide();
+            nutact.Show();
         }
-
         private void lblMedication_Click(object sender, EventArgs e)
         {
-            Forms.Medication medication = new Medication();
+            Medication medication = new Medication();
             medication.Show();
-            this.Hide();
+            Hide();
         }
-
         private void lblReports_Click(object sender, EventArgs e)
         {
-            Forms.Reports reports = new Reports();
+            Reports reports = new Reports();
             reports.Show();
-            this.Hide();
-
+            Hide();
         }
-
         private void lblRecipes_DoubleClick(object sender, EventArgs e)
         {
-            Forms.Recipes recipes = new Recipes();
+            Recipes recipes = new Recipes();
             recipes.Show();
-            this.Hide();
+            Hide();
         }
 
         private void lblSuggestions_DoubleClick(object sender, EventArgs e)
         {
-            Forms.Suggestions suggestions = new Suggestions();
+            Suggestions suggestions = new Suggestions();
             suggestions.Show();
-            this.Hide();
+            Hide();
         }
 
         private void pbSettings_DoubleClick(object sender, EventArgs e)
         {
-            Forms.Settings settings = new Settings();
+            Settings settings = new Settings();
             settings.Show();
-            this.Hide();
+            Hide();
         }
-
-        #region IdealWeightCalcute
-        private double IdealWeight(UserDetails userdetails)
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            double weight = userdetails.Weight;
-            double height = userdetails.Height;
-            int gender = (int)userdetails.Gender;
-            double idealweight = 0;
-            if (gender == 1)
-            {
-                idealweight = 50 + 2.3 * ((height / 2.54) - 60);
-                return idealweight;
-            }
-            else
-            {
-                idealweight = 45.5 + 2.3 * ((height / 2.54) - 60);
-                return idealweight;
-            }
+            Application.Exit();
         }
         #endregion
         private void pbMinusWater_Click_1(object sender, EventArgs e)
@@ -194,17 +182,14 @@ namespace RevivalGF.UI.Forms
             ProgressBar(glasscount);
         }
 
-        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-
-        public void ProgressBar(int glasscount)
+        #region MethodsUsedinThisForm
+        //This method is written for the progress of the water progress bar.
+        public void ProgressBar(int glasscount) 
         {
             ProgressBarWater.Minimum = 0;
             ProgressBarWater.Maximum = 10;
             ProgressBarWater.Step = 1;
-            if (glasscount<10)
+            if (glasscount < 10)
             {
                 ProgressBarWater.Value = glasscount;
                 pbTick.Visible = false;
@@ -215,6 +200,21 @@ namespace RevivalGF.UI.Forms
                 pbTick.Visible = true;
             }
         }
-
+        //This method is written for the progress of the calorie circular progress bar.
+        public void CircularProgressbar()
+        {
+            int percentOfTakenCalorie = reportService.CircularBarCalorie(currentNecessaryCalories, Login.userNameControl);
+            if (percentOfTakenCalorie <= 100)
+            {
+                circularProgressBarCalorie.Value = percentOfTakenCalorie;
+                circularProgressBarCalorie.Text = percentOfTakenCalorie.ToString() + " %";
+            }
+            else
+            {
+                circularProgressBarCalorie.Value = 100;
+                circularProgressBarCalorie.Text = "100 %";
+            }
+        }
+        #endregion
     }
 }

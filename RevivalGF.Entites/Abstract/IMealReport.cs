@@ -16,6 +16,7 @@ namespace RevivalGF.Entites.Abstract
         decimal TotalProtein { get; set; }
         decimal TotalFat { get; set; }
         decimal TotalCarbohydrate { get; set; }
+        decimal TotalGlutenRisk { get; set; }
 
         List<Meal> Meals { get; set; }
         int UserID { get; set; }

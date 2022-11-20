@@ -21,9 +21,12 @@ namespace RevivalGF.UI.Forms
             cbActivity.DataSource = Enum.GetValues(typeof(Activities));
             activityService.DailyActivities(dataGridView1, Login.userNameControl);            
             activityService.CalorieBurn(lblSportCalorie, Login.userNameControl);
+            
             userService.UserTheme(Login.userNameControl, this, Properties.Resources.main, Properties.Resources.Dark_main);
+            
+            sportCalorie = Convert.ToDecimal(activityService.CalorieBurn(lblSportCalorie, Login.userNameControl));
         }
-
+        public static decimal sportCalorie;
         private void btnAddAct_Click(object sender, EventArgs e)
         {
             try
@@ -45,7 +48,7 @@ namespace RevivalGF.UI.Forms
             {
                 MessageBox.Show(ex.Message);
             }
-            activityService.CalorieBurn(lblSportCalorie,Login.userNameControl);
+           sportCalorie= Convert.ToDecimal(activityService.CalorieBurn(lblSportCalorie,Login.userNameControl));
         }
 
         public int selectedActivityID;
@@ -60,7 +63,7 @@ namespace RevivalGF.UI.Forms
             {
                 activityService.ActivityDelete(selectedActivityID);
                 activityService.DailyActivities(dataGridView1, Login.userNameControl);
-                activityService.CalorieBurn(lblSportCalorie, Login.userNameControl);
+                sportCalorie = Convert.ToDecimal(activityService.CalorieBurn(lblSportCalorie, Login.userNameControl));
             }
             catch (Exception)
             {

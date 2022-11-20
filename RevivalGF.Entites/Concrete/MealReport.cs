@@ -29,5 +29,6 @@ namespace RevivalGF.Entites.Concrete
         public decimal TotalProtein { get; set; } = 0;
         public decimal TotalFat { get; set; } = 0;
         public decimal TotalCarbohydrate { get; set; } = 0;
+        public decimal TotalGlutenRisk { get; set; }
     }
 }
